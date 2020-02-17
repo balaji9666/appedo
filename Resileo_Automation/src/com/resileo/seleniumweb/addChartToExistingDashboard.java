@@ -11,7 +11,7 @@ public class addChartToExistingDashboard extends ReusableMethods {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
+	ExtentTest test;//dsdvsv
 
 	@Before
 	public void setUp() throws Exception {
