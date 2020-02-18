@@ -27,7 +27,7 @@ public class ReusableMethods extends ObjectRepository {
 					"C:\\chromedriver.exe");
 			browser = new ChromeDriver();
 		} else {
-
+S
 			browser = new FirefoxDriver();
 		}
 	}
