@@ -24,7 +24,7 @@ public class ReusableMethods extends ObjectRepository {
 
 		} else if (LogPerformance == "LogPerformancechrome") {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\chromedriver.exe");
+					"C:\\chromedriver.exe");//for git
 			browser = new ChromeDriver();
 		} else {
 S
