@@ -24,7 +24,7 @@ public class ReusableMethods extends ObjectRepository {
 
 		} else if (LogPerformance == "LogPerformancechrome") {
 			System.setProperty("webdriver.chrome.driver",
-					"D:\\APPEDO E19 AUTOMATE\\Resilient FrameworkEvoluation2019\\Resileo_Automation\\lib\\chromedriver.exe");
+					"C:\\chromedriver.exe");
 			browser = new ChromeDriver();
 		} else {
 
