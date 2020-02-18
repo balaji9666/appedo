@@ -387,6 +387,9 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_verifyChartAdded = "xpath://span[@class='clrblack']";
 	String appedo_myDashboardDropdown = "id:ddMcName";
 	String appedo_selectMyDashboard = "xpath://span[@class='mat-option-text'][contains(text(),'appedo2')]";
+	String appedo_selectMyDashboard2 = "xpath://span[@class='mat-option-text'][contains(text(),'mytest')]";
+	String appedo_selectMyDashboard1 ="xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option[1]/span[1]";
+	String appedo_dashboardDropdown1 = "xpath://mat-select[@id='myDash']//div[@class='mat-select-arrow']";
 	String appedo_dashboardDropdown = "xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/app-login-header[1]/mat-toolbar[1]/div[3]/mat-form-field[2]/div[1]/div[1]/div[1]";
 	String appedo_removeChartclick = "xpath://div[@id='idx0']//mat-icon[@class='clrred mat-icon notranslate material-icons mat-icon-no-color'][contains(text(),'highlight_off')]";
 
@@ -496,7 +499,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_db_viewQuery_mapEnterprise = "id:mapent0";
 	String appedo_db_viewQuery_mapEnterpriseQuery = "id:mapent";
 	String appedo_db_viewQuery_addEnterprise = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/db-ent-map[1]/div[2]/div[1]/mat-form-field[1]/div[1]";
-	String appedo_db_viewQuery_EnterpriseName = "xpath://span[contains(text(),'Sample01')]";
+	String appedo_db_viewQuery_EnterpriseName = "xpath://span[contains(text(),'qwerty')]";
 	String appedo_visualization_click = "name:visualization";
 	String appedo_selectArrow = "xpath://mat-select[@id='mat-select-5']//div[@class='mat-select-arrow']";
 	String appedo_visualizerChartTypeStamp = "id:visual1";
@@ -519,6 +522,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_db_addQuery_filterBy="id:filterpopup";
 	String appedo_db_addQuery_SelcolName="xpath://input[@placeholder='Select Column']";
 	String appedo_db_addQuery_selUserID="xpath://span[contains(text(),'user_id')]";
+	String appedo_db_addQuery_selUserID1="xpath:/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/mat-option[1]/span[1]";
 	String appedo_db_addQuery_filVal="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/db-addedit-query[1]/mat-card[1]/mat-card-content[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/mat-form-field[3]/div[1]/div[1]/div[1]/input[1]";
 	String appedo_db_BtnaddtoFilter="id:addtofilter";
 	String appedo_db_filBySelModulecode="xpath:/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/mat-option[1]/span[1]";

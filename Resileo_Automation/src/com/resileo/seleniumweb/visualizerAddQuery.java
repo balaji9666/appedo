@@ -20,7 +20,7 @@ public class visualizerAddQuery extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginss();
 	}
 
 	@Test

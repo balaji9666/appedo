@@ -117,8 +117,9 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 			Thread.sleep(5000);
 			WaitforObject(appedo_db_addQuery_SelcolName);
 			browser.findElement(getObject(appedo_db_addQuery_SelcolName)).click();
-			browser.findElement(getObject(appedo_db_addQuery_SelcolName)).sendKeys("user");
-			browser.findElement(getObject(appedo_db_addQuery_selUserID)).click();
+			browser.findElement(getObject(appedo_db_addQuery_SelcolName)).sendKeys("user_id");
+			Thread.sleep(3000);
+			browser.findElement(getObject(appedo_db_addQuery_selUserID1)).click();
 			browser.findElement(getObject(appedo_db_addQuery_filVal)).sendKeys("816");
 			// Click on Add Save button
 			browser.findElement(getObject(appedo_db_BtnaddtoFilter)).click();
@@ -396,9 +397,9 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 					browser.findElement(getObject(appedo_db_editMapDrilldownChartId)).sendKeys(str1);
 					
 					// Click on run query
-					Thread.sleep(2000);
-					WaitforObject(appedo_db_addQuery_runQuery);
-					browser.findElement(getObject(appedo_db_addQuery_runQuery)).click();
+					Thread.sleep(5000);
+					//WaitforObject(appedo_db_addQuery_runQuery);
+					//browser.findElement(getObject(appedo_db_addQuery_runQuery)).click();
 
 					// Click on save icon
 					Thread.sleep(3000);
