@@ -1,11 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="YT" thread-count="1" >
- <test name="GURU99TestNGAnt">
+<suite name="Appedo">
+  <test thread-count="5" name="Test Env">
     <classes>
-       <class name="com.resileo.seleniumweb.allClass">
-       </class>
+      <class name="com.resileo.seleniumweb.availabilityMonitorPOST"/>
+      <class name="com.resileo.seleniumweb.alertSettingAvmMethodRunner"/>
+      <class name="com.resileo.seleniumweb.avmMethodRunnerGET"/>
+      <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
+      <class name="com.resileo.seleniumweb.appedoMenuVerification"/>
+      <class name="com.resileo.seleniumweb.settingChangePassword"/>
+      <class name="com.resileo.seleniumweb.selectTheme"/>
+      <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingNetwork"/>
+      <class name="com.resileo.seleniumweb.viewSUMGraph"/>
+      <class name="com.resileo.seleniumweb.manageEnterpriseMethodRunner"/>
+      <class name="com.resileo.seleniumweb.avmLocation"/>
+      <class name="com.resileo.seleniumweb.Template"/>
+      <class name="com.resileo.seleniumweb.availabilityMonitorGET"/>
+      <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
+      <class name="com.resileo.seleniumweb.forgotPassword"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsNetwork"/>
+      <class name="com.resileo.seleniumweb.avmMethodRunnerPOST"/>
+      <class name="com.resileo.seleniumweb.viewOADChartMethodRunner"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsDB"/>
+      <class name="com.resileo.seleniumweb.sumMethodRunner"/>
+      <class name="com.resileo.seleniumweb.sumScrolldownOption"/>
+      <class name="com.resileo.seleniumweb.viewAvmGraph"/>
+      <class name="com.resileo.seleniumweb.alertSettingDBMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
+      <class name="com.resileo.seleniumweb.schedulerMethodRunner"/>
+      <class name="com.resileo.seleniumweb.sumScript"/>
+      <class name="com.resileo.seleniumweb.enterpriseOwnerAvm"/>
+      <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
+      <class name="com.resileo.seleniumweb.calendar"/>
+      <class name="com.resileo.seleniumweb.alertSettingOSMethodRunner"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsApp"/>
+      <class name="com.resileo.seleniumweb.alertSettingOS"/>
+      <class name="com.resileo.seleniumweb.visualizerEnterpriseMethodRunner"/>
+      <class name="com.resileo.seleniumweb.configureMetricsMethodRunner"/>
+      <class name="com.resileo.seleniumweb.rumEnterpriseUser"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsOS"/>
+      <class name="com.resileo.seleniumweb.editDeleteOADRunner"/>
+      <class name="com.resileo.seleniumweb.appedoRegistration"/>
+      <class name="com.resileo.seleniumweb.configureMetrics"/>
+      <class name="com.resileo.seleniumweb.availabilityMonitorPUT"/>
+      <class name="com.resileo.seleniumweb.alertSettingLogMethodRunner"/>
+      <class name="com.resileo.seleniumweb.rumModule"/>
+      <class name="com.resileo.seleniumweb.functionAutorefresh"/>
+      <class name="com.resileo.seleniumweb.avmMethodRunnerHEAD"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsApp"/>
+      <class name="com.resileo.seleniumweb.visualizerMethodRunner"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsOSMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingAvm"/>
+      <class name="com.resileo.seleniumweb.fileUpload"/>
+      <class name="com.resileo.seleniumweb.sumScriptMethodRunner"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsAppMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerAddQuery"/>
+      <class name="com.resileo.seleniumweb.downloadAgents"/>
+      <class name="com.resileo.seleniumweb.rumMethodRunner"/>
+      <class name="com.resileo.seleniumweb.settingUpdateProfile"/>
+      <class name="com.resileo.seleniumweb.LaunchUrl"/>
+      <class name="com.resileo.seleniumweb.availabilityMonitoringHEAD"/>
+      <class name="com.resileo.seleniumweb.visualizerNormalDrillDown"/>
+      <class name="com.resileo.seleniumweb.alertSettingNetworkMethodRunner"/>
+      <class name="com.resileo.seleniumweb.addChartToExistingDashboard"/>
+      <class name="com.resileo.seleniumweb.visualizerNormalDrilldownMethodRunner"/>
+      <class name="com.resileo.seleniumweb.sumEnterpriseUser"/>
+      <class name="com.resileo.seleniumweb.enterpriseOwnerAvmMethodRunner"/>
+      <class name="com.resileo.seleniumweb.manageEnterprise"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsLog"/>
+      <class name="com.resileo.seleniumweb.visualizer"/>
+      <class name="com.resileo.seleniumweb.sumModule"/>
+      <class name="com.resileo.seleniumweb.viewOADGraph"/>
+      <class name="com.resileo.seleniumweb.SumTransactionTest"/>
+      <class name="com.resileo.seleniumweb.sumTransactionMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerAddQueryMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingMobile"/>
+      <class name="com.resileo.seleniumweb.sumEnterpriseOwner"/>
+      <class name="com.resileo.seleniumweb.alertSettingApp"/>
+      <class name="com.resileo.seleniumweb.availabilityMonitorWSDL"/>
+      <class name="com.resileo.seleniumweb.resizeCharts"/>
+      <class name="com.resileo.seleniumweb.methodRunnerDashboard"/>
+      <class name="com.resileo.seleniumweb.avmDetails"/>
+      <class name="com.resileo.seleniumweb.visualizerParameterization"/>
+      <class name="com.resileo.seleniumweb.createDashboardChart1"/>
+      <class name="com.resileo.seleniumweb.appedoSystemMetricsStatus"/>
+      <class name="com.resileo.seleniumweb.rumEnterpriseOwner"/>
+      <class name="com.resileo.seleniumweb.loadTesting"/>
+      <class name="com.resileo.seleniumweb.sumDeactivate"/>
+      <class name="com.resileo.seleniumweb.systemMetricsCopyMetrics"/>
+      <class name="com.resileo.seleniumweb.alertSettingLog"/>
+      <class name="com.resileo.seleniumweb.alertSettingDB"/>
+      <class name="com.resileo.seleniumweb.avmMethodRunnerPUT"/>
+      <class name="com.resileo.seleniumweb.sumActivate"/>
+      <class name="com.resileo.seleniumweb.alertSettings"/>
+      <class name="com.resileo.seleniumweb.avmSlaPolicy"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsDB"/>
+      <class name="com.resileo.seleniumweb.visualizerViewQueriesMethodRunner"/>
+      <class name="com.resileo.seleniumweb.addCustomMetricsDBMethodRunner"/>
+      <class name="com.resileo.seleniumweb.sumTransaction"/>
+      <class name="com.resileo.seleniumweb.sumEnterprise"/>
+      <class name="com.resileo.seleniumweb.alertSettingAppMethodRunner"/>
+      <class name="com.resileo.seleniumweb.rumEnterpriseMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerViewQuery"/>
+      <class name="com.resileo.seleniumweb.scheduler"/>
+      <class name="com.resileo.seleniumweb.editDeleteOAD"/>
+      <class name="com.resileo.seleniumweb.rumUserEnterpriseRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerEnterprise"/>
+      <class name="com.resileo.seleniumweb.avmMethodRunnerWSDL"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserAvm"/>
     </classes>
-  </test>
- </suite>
-
+  </test> <!-- Test Env -->
+</suite> <!-- Appedo -->

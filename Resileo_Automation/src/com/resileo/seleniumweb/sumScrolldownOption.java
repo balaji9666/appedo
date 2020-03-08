@@ -1,5 +1,8 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,7 +21,7 @@ public class sumScrolldownOption extends ReusableMethods {
 	String EditTestName;
 	String Status;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginMithi();
@@ -92,7 +95,7 @@ public class sumScrolldownOption extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void teardown() throws Exception {
 		browser.close();
 	}

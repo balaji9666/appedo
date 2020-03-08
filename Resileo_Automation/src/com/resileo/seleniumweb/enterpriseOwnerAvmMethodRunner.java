@@ -1,12 +1,12 @@
 package com.resileo.seleniumweb;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 
 public class enterpriseOwnerAvmMethodRunner extends ReusableMethods {
 	enterpriseOwnerAvm run = new enterpriseOwnerAvm();
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNagas();

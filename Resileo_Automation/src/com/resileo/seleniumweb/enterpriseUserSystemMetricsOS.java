@@ -1,9 +1,11 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
-
-import static org.junit.Assert.*;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -18,7 +20,7 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 	ExtentReports extent = new ExtentReports("allclass.html", false);
 	ExtentTest test;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginA();
@@ -154,7 +156,7 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void Signout() throws Exception {
 		Thread.sleep(1000);
 		logout();
@@ -173,7 +175,7 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

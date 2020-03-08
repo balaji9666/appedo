@@ -1,8 +1,10 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
-import static org.junit.Assert.*;
-
 import org.apache.commons.lang3.RandomStringUtils;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -17,7 +19,7 @@ public class visualizerAddQuery extends ReusableMethods {
 	ExtentTest test;
 	String queryName;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNalini();
@@ -242,7 +244,7 @@ public class visualizerAddQuery extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		
 		// Click Logout
@@ -261,7 +263,7 @@ public class visualizerAddQuery extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 

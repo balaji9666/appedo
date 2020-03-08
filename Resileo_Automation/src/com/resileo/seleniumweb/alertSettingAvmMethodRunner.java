@@ -1,15 +1,14 @@
 package com.resileo.seleniumweb;
 
-import static org.junit.Assert.fail;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 
 public class alertSettingAvmMethodRunner extends ReusableMethods {
 	alertSettingAvm run = new alertSettingAvm();
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginD();
@@ -25,13 +24,13 @@ public class alertSettingAvmMethodRunner extends ReusableMethods {
 		run.deleteAvm();
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

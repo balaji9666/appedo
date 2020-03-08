@@ -1,10 +1,12 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import static org.junit.Assert.*;
 
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 	String str1;
 	String chartName;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNagas();
@@ -461,7 +463,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void logoutModule() throws Exception {
 
 		// Click on sign out
@@ -482,7 +484,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

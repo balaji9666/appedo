@@ -1,5 +1,9 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
-import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class alertSettings extends ReusableMethods {
 	String Mail;
 	String Mail1;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginA();
@@ -230,7 +232,7 @@ public class alertSettings extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void Signout() throws Exception {
 		Thread.sleep(5000);
 		logout();
@@ -249,7 +251,7 @@ public class alertSettings extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

@@ -1,8 +1,15 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
-import static org.junit.Assert.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -14,7 +21,8 @@ public class selectTheme extends ReusableMethods {
 	ExtentReports extent = new ExtentReports("allclass.html", false);
 	ExtentTest test;
 
-	@Before
+	@BeforeMethod
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNagas();
@@ -126,7 +134,8 @@ public class selectTheme extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
+	@AfterMethod
 	public void tearDown() throws Exception {
 		logout();
 		
@@ -144,7 +153,7 @@ public class selectTheme extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			AssertJUnit.fail(verificationErrorString);
 		}
 	}
 }

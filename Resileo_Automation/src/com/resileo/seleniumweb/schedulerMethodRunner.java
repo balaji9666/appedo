@@ -1,13 +1,12 @@
 package com.resileo.seleniumweb;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 
 public class schedulerMethodRunner extends ReusableMethods {
 	scheduler run = new scheduler();
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNalini();

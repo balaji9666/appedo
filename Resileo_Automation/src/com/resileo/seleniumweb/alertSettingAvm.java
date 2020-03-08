@@ -1,12 +1,14 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import static org.junit.Assert.*;
-
 import java.awt.Robot;
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class alertSettingAvm extends ReusableMethods {
 	String alert;
 	String deleteAlert;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginD();
@@ -356,7 +358,7 @@ public class alertSettingAvm extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void logoutAVMModule() throws Exception {
 		Thread.sleep(5000);
 		logout();
@@ -371,7 +373,7 @@ public class alertSettingAvm extends ReusableMethods {
 		browser.close();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

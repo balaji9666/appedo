@@ -1,5 +1,8 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -16,7 +19,7 @@ public class loadTesting extends ReusableMethods {
 	ExtentTest test;
 	String str1;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginA();
@@ -207,7 +210,7 @@ public class loadTesting extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		logout();
 

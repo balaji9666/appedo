@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="53970" started-at="2020-03-08T18:27:00Z" finished-at="2020-03-08T18:27:54Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="53970" started-at="2020-03-08T18:27:00Z" finished-at="2020-03-08T18:27:54Z">
+      <class name="com.resileo.seleniumweb.selectTheme">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.selectTheme@10ab905]" name="setUp" is-config="true" duration-ms="21709" started-at="2020-03-08T23:57:00Z" finished-at="2020-03-08T23:57:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="appedoselectTheme()[pri:0, instance:com.resileo.seleniumweb.selectTheme@10ab905]" name="appedoselectTheme" duration-ms="30344" started-at="2020-03-08T23:57:22Z" finished-at="2020-03-08T23:57:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appedoselectTheme -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.selectTheme@10ab905]" name="tearDown" is-config="true" duration-ms="1905" started-at="2020-03-08T23:57:52Z" finished-at="2020-03-08T23:57:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.resileo.seleniumweb.selectTheme -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,5 +1,8 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.junit.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -12,7 +15,7 @@ public class settingChangePassword extends ReusableMethods {
 	ExtentReports extent = new ExtentReports("allclass.html", false);
 	ExtentTest test;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginrt();
@@ -149,7 +152,7 @@ public class settingChangePassword extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.close();
 	}

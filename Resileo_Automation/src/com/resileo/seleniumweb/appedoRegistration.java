@@ -1,5 +1,8 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.*;
 import org.openqa.selenium.By;
@@ -15,7 +18,7 @@ public class appedoRegistration extends ReusableMethods {
 	ExtentReports extent = new ExtentReports("allclass.html", false);
 	ExtentTest test;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		launchURL();
@@ -119,7 +122,7 @@ public class appedoRegistration extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.close();
 	}

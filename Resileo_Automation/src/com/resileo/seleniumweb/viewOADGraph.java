@@ -1,11 +1,13 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-
-import static org.junit.Assert.*;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class viewOADGraph extends ReusableMethods {
 	ExtentTest test;
 	String viewChart = "PROD COMBINED_INSTANCE -> t3.xlarge";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginrt();
@@ -383,7 +385,7 @@ public class viewOADGraph extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void logoutFromApp() throws Exception {
 		logout();
 		
@@ -399,7 +401,7 @@ public class viewOADGraph extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

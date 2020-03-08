@@ -1,5 +1,8 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,7 +22,7 @@ public class sumActivate extends ReusableMethods {
 	String EditTestName;
 	String Status;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginN();
@@ -122,7 +125,7 @@ public class sumActivate extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void teardown() throws Exception {
 		browser.close();
 	}

@@ -1,13 +1,14 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-import static org.junit.Assert.*;
 
 import java.awt.Robot;
 import java.util.List;
@@ -27,7 +28,7 @@ public class sumTransaction extends ReusableMethods {
 	String DeleteTestName;
 	String sumeditname;
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		//loginNalini();
@@ -299,7 +300,7 @@ public class sumTransaction extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void teardown() throws Exception {
 		browser.close();
 	}

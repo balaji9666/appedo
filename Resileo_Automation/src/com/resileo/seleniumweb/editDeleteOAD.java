@@ -1,9 +1,11 @@
 package com.resileo.seleniumweb;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.junit.*;
 import org.openqa.selenium.By;
-
-import static org.junit.Assert.*;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -20,7 +22,7 @@ public class editDeleteOAD extends ReusableMethods {
 	String alphabet = "abcefghijk";
 	String myEditText = "test" + RandomStringUtils.random(4, alphabet);
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginKalai();
@@ -279,7 +281,7 @@ public class editDeleteOAD extends ReusableMethods {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void logoutFromApp() throws Exception {
 		logout();
 		
@@ -297,7 +299,7 @@ public class editDeleteOAD extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

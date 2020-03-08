@@ -1,15 +1,14 @@
 package com.resileo.seleniumweb;
 
-import static org.junit.Assert.fail;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 
 public class sumMethodRunner extends ReusableMethods {
 	sumModule run = new sumModule();
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginN();
@@ -23,13 +22,13 @@ public class sumMethodRunner extends ReusableMethods {
 		run.deleteSUM();
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }
