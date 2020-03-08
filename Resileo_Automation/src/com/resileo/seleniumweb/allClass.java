@@ -11,11 +11,11 @@ import org.junit.runners.Suite.SuiteClasses;
 	// Total Scripts - 64
 //1. Login
 //2. Logout
-	appedoRegistration.class,
+/*	appedoRegistration.class,
 	forgotPassword.class,
 	appedoMenuMethodRunner.class,
-	downloadAgents.class,
-	selectTheme.class,
+	downloadAgents.class,*/
+	selectTheme.class,/*
 	settingChangePassword.class, 
 	settingUpdateProfile.class,
 	manageEnterpriseMethodRunner.class,
@@ -74,7 +74,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	visualizerNormalDrilldownMethodRunner.class,
 	visualizerNormalDrilldownViewchartsinDashboard.class,
 	visualizerParameterizationMethodRunner.class,
-	loadTesting.class
+	loadTesting.class*/
 	//sumDeactivate.class,
 	//sumActivate.class,
 	
