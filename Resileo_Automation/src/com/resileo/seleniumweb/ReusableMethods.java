@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,7 +27,11 @@ public class ReusableMethods extends ObjectRepository {
 			System.setProperty("webdriver.chrome.driver",
 					"lib/chromedriver.exe");
 			
-			browser = new ChromeDriver();
+			//For Headless Operation
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--headless","window-size=1920,1080");
+			
+			browser = new ChromeDriver(options);
 		} else {
 			
 			browser = new FirefoxDriver();
