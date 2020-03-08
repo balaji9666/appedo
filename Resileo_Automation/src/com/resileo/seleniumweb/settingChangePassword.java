@@ -15,7 +15,7 @@ public class settingChangePassword extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginrt();
 	}
 
 	@Test
@@ -94,7 +94,7 @@ public class settingChangePassword extends ReusableMethods {
 			Thread.sleep(2000);
 			browser.get("https://test.appedo.com/login");
 			browser.manage().window().maximize();
-			browser.findElement(getObject(appedo_login_txtUsername)).sendKeys("nagaskannan94@gmail.com");
+			browser.findElement(getObject(appedo_login_txtUsername)).sendKeys("rajasreek@softsmith.com");
 			browser.findElement(getObject(appedo_login_txtPassword)).sendKeys("appedo123");
 
 			// click Login Button

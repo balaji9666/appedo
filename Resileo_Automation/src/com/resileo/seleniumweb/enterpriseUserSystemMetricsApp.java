@@ -18,7 +18,7 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginA();
 	}
 
 	@Test
@@ -125,6 +125,7 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 			browser.findElement(getObject(appedo_enterprise_addToMyChart)).click();
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).click();
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).sendKeys(dashboardname);
+			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_btnSave)).click();
 
 			// Verify chart added

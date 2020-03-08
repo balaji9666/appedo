@@ -12,14 +12,14 @@ public class sumScriptMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginA();
 	}
 
 	@Test
 	public void doTest() throws Exception {
 		run.setBrowser(browser);
 		run.createSUM();
-		//run.editSUM();
+		run.editSUM();
 		run.deleteSUM();
 	}
 

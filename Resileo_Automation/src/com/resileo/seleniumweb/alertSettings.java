@@ -28,7 +28,7 @@ public class alertSettings extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginA();
 	}
 
 	@Test

@@ -24,7 +24,7 @@ public class avmSlaPolicy extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginMithi();
+		loginD();
 	}
 
 	@Test

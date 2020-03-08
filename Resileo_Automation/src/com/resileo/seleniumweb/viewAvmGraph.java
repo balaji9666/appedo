@@ -19,7 +19,7 @@ public class viewAvmGraph extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginD();
 	}
 
 	@Test
@@ -105,7 +105,7 @@ public class viewAvmGraph extends ReusableMethods {
 			browser.findElement(getObject(appedo_avm_addTochart)).click();
 
 			// Click on My dash board drop down
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_myDashboardDropdown);
 			browser.findElement(getObject(appedo_myDashboardDropdown)).click();
 
@@ -137,8 +137,10 @@ public class viewAvmGraph extends ReusableMethods {
 
 			// Select dash board Appedo2
 			Thread.sleep(2000);
-			WaitforObject(appedo_selectMyDashboard);
-			browser.findElement(getObject(appedo_selectMyDashboard)).click();
+			//WaitforObject(appedo_selectMyDashboard);
+			//browser.findElement(By.xpath("//span[contains(text(),chartName)]");
+				//	getObject(appedo_selectMyDashboard)).click();
+			browser.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option[1]/span[1]")).click();
 
 			// click on Remove chart icon
 			Thread.sleep(7000);

@@ -58,7 +58,7 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			browser.findElement(getObject(appedo_link_EndUserMonitors)).click();
 
 			// click on Link AVM
-			Thread.sleep(5000);
+			Thread.sleep(7000);
 			WaitforObject(appedo_link_avm);
 			browser.findElement(getObject(appedo_link_avm)).click();
 
@@ -250,11 +250,15 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			// click on Save Button
 			WaitforObject(appedo_avm_btnsave);
 			browser.findElement(getObject(appedo_avm_btnsave)).click();
+			//Thread.sleep(5000);
 
 			// Verify AVM Test added
 			WaitforObject(appedo_avm_verifyadd);
 			String verifyMsg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 
+			//Thread.sleep(5000);
+			String add1=browser.findElement(getObject(appedo_avm_verifyadd)).getText();
+			//System.out.println("verify:"+add1);
 			if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()
 					.equalsIgnoreCase("Successfully Added Availability Test")) {
 				test.log(LogStatus.PASS, "AVM :" + verifyMsg);
@@ -262,7 +266,9 @@ public class availabilityMonitorPOST extends ReusableMethods {
 				test.log(LogStatus.FAIL, "AVM added failed");
 			}
 
-		} catch (Exception e) {
+		} 
+		
+		catch (Exception e) {
 			test.log(LogStatus.FAIL, e.getMessage());
 			System.out.println(e.getMessage());
 			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
@@ -272,27 +278,29 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			extent.flush();
 		}
 	}
-
+	
+	
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");			
-
+			test = extent.startTest("AVM Edit", "Edit AVM module");	
+			Thread.sleep(5000);
 			// Click on edit icon
-			Thread.sleep(2000);
-			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
+			browser.findElement(By.xpath("//mat-icon[@id='edit0']")).click();
+			//List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr/td"));
 
-			int totalrows = table.size();
+			//int totalrows = table.size();
+			//System.out.println(totalrows);
 
-			for (int i = 0; i < totalrows; i++) {
+			//for (int i = 0; i < totalrows; i++) {
 
-				EditTest = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[4]")).getText()
-						.toString();
+				//EditTest = browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "] /td[4]")).getText()
+				//.toString();
 
-				if (EditTest.equalsIgnoreCase(TestName))
+				//if (EditTest.equalsIgnoreCase(TestName)) 
 
-				{
-					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
+				{ 
+					//browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
 
 					// Create Random Characters
 					Thread.sleep(3000);
@@ -344,7 +352,7 @@ public class availabilityMonitorPOST extends ReusableMethods {
 					WaitforObject(appedo_avm_btnsave);
 					browser.findElement(getObject(appedo_avm_btnsave)).click();
 
-					// Verify AVM Test Updated
+					// Verify AVM Test added
 					WaitforObject(appedo_avm_verifyadd);
 					String verifyMsg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 
@@ -352,12 +360,12 @@ public class availabilityMonitorPOST extends ReusableMethods {
 							.equalsIgnoreCase("Successfully Updated Availability Test")) {
 						test.log(LogStatus.PASS, "AVM :" + verifyMsg);
 					} else {
-						test.log(LogStatus.FAIL, "AVM Update failed");
+						test.log(LogStatus.FAIL, "AVM added failed");
 					}
 					extent.endTest(test);
 					extent.flush();
 				}
-			}
+			//}
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, e.getMessage());
 			System.out.println(e.getMessage());
@@ -375,17 +383,20 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			Thread.sleep(2000);
 
 			// click on delete icon we created recently
-			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
+			Thread.sleep(5000);
+			browser.findElement(By.xpath("//mat-icon[@id='del0']")).click();
+			//System.out.println("delete");
+			//List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 
-			int totalrows = table.size();
-			for (int i = 0; i < totalrows; i++) {
-				DeleteTestName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[4]"))
-						.getText().toString();
+		//	int totalrows = table.size();
+		//	for (int i = 0; i < totalrows; i++) {
+		//DeleteTestName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[4]"))
+				//		.getText().toString();
 				Thread.sleep(2000);
-				if (DeleteTestName.equalsIgnoreCase(TestNameEdit))
+				//if (DeleteTestName.equalsIgnoreCase(TestNameEdit))
 
 				{
-					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
+					//browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
 
 					// Accept confirmation Pop up
 					browser.switchTo().alert().accept();
@@ -401,10 +412,11 @@ public class availabilityMonitorPOST extends ReusableMethods {
 
 					extent.endTest(test);
 					extent.flush();
-					break;
-				}
-			}
-		} catch (Exception e) {
+						}
+
+			//}
+		}
+	catch (Exception e) {
 			test.log(LogStatus.FAIL, e.getMessage());
 			System.out.println(e.getMessage());
 			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
@@ -412,8 +424,9 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			test.log(LogStatus.FAIL, "Test Failed", image);
 			extent.endTest(test);
 			extent.flush();
-		}
 	}
+		}
+	
 
 	@After
 	public void logoutAVMModule() throws Exception {
@@ -434,5 +447,7 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			fail(verificationErrorString);
 		}
 	}
+
+	
 
 }

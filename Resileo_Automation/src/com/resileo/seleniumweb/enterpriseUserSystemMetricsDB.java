@@ -21,7 +21,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginKalai();
+		loginA();
 	}
 
 	@Test

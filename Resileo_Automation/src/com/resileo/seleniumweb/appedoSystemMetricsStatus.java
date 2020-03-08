@@ -23,7 +23,7 @@ public class appedoSystemMetricsStatus extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNagas();
+		loginrt();
 	}
 	@Test
 	// Rename Test Method Below

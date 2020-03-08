@@ -17,7 +17,7 @@ public class calendar extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginrt();
 	}
 
 	@Test
@@ -45,8 +45,8 @@ public class calendar extends ReusableMethods {
 
 			// Select dash board Appedo2
 			Thread.sleep(2000);
-			WaitforObject(appedo_selectMyDashboard);
-			browser.findElement(getObject(appedo_selectMyDashboard)).click();
+			WaitforObject(appedo_selectMyDashboard1);
+			browser.findElement(getObject(appedo_selectMyDashboard1)).click();
 			test.log(LogStatus.PASS, "Dashboard Charts Viewed Successfully");
 			Thread.sleep(5000);
 

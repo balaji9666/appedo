@@ -568,13 +568,13 @@ public class visualizerParameterization extends ReusableMethods {
 							browser.findElement(getObject(appedo_db_removeChart)).click();
 							
 							// Confirmation of alert
-							browser.switchTo().alert().dismiss();
+							browser.switchTo().alert().accept();
 
 							// Verify Dash board Deletion
 							Thread.sleep(7000);
 							//WaitforObject(appedo_dashboard_verifyDelete);
 							//String Msg3 = browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText();
-							if (browser.findElement(getObject(appedo_toggleMenu)).isDisplayed()) 
+							if (browser.findElement(getObject(appedo_systemMetrics_verifyGraphsNetwork)).isDisplayed()) 
 							//if(browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText().contains(Msg3)) 
 							{
 								test.log(LogStatus.PASS, "Dashboard Deletion :  Successfully deleted");

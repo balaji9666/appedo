@@ -33,7 +33,7 @@ public class alertSettingAvm extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginD();
 	}
 
 	@Test

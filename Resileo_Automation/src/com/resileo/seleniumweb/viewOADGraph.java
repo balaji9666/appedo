@@ -26,7 +26,7 @@ public class viewOADGraph extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		sysTestlogin();
+		loginrt();
 	}
 
 	@Test

@@ -12,7 +12,7 @@ public class visualizerMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginss();
+		loginN();
 	}
 
 	@Test

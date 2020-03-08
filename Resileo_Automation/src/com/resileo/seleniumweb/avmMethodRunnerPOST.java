@@ -19,5 +19,6 @@ public class avmMethodRunnerPOST extends ReusableMethods {
 		run.EditAVMModule();
 		run.DeleteAVMModule();
 		run.logoutAVMModule();
+		
 	}
 }

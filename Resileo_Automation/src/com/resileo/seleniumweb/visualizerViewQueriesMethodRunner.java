@@ -8,19 +8,17 @@ import org.junit.Test;
 
 public class visualizerViewQueriesMethodRunner extends ReusableMethods {
 	visualizerViewQuery run = new visualizerViewQuery();
-	//visualizerAddQuery run1 = new visualizerAddQuery();
 
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginss();
+		loginNalini();
 	}
 
 	@Test
 	public void doTest() throws Exception {
 
 		run.setBrowser(browser);
-		//run1.addQueryToDB();
 		run.viewQueriesEdit();
 		run.viewQueriesDelete();
 		run.logoutAppedo();

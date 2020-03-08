@@ -16,7 +16,7 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		login();
+		loginNagas();
 	}
 
 	@Test
@@ -28,35 +28,34 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 			browser.findElement(getObject(appedo_dashboardMenu)).click();
 
 			// click on dash board drop down
-			Thread.sleep(5000);
-			WaitforObject(appedo_dashboardDropdown1);
-			browser.findElement(getObject(appedo_dashboardDropdown1)).click();
+			Thread.sleep(2000);
+			WaitforObject(appedo_dashboardDropdown);
+			browser.findElement(getObject(appedo_dashboardDropdown)).click();
 
 			// Select dash board Appedo2
 			Thread.sleep(2000);
-			WaitforObject(appedo_selectMyDashboard2);
-			browser.findElement(getObject(appedo_selectMyDashboard2)).click();
+			WaitforObject(appedo_selectMyDashboard);
+			browser.findElement(getObject(appedo_selectMyDashboard)).click();
 			test.log(LogStatus.PASS, "Dashboard Charts Viewed Successfully");
 			
 			// click on Remove chart icon
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_db_dashboardRemove);
 			browser.findElement(getObject(appedo_db_dashboardRemove)).click();
 			
 			// Confirm Alert
-			browser.switchTo().alert().dismiss();
+			browser.switchTo().alert().accept();
 			
 			// Verify chart removed
-			WaitforObject(appedo_toggleMenu);
-			//String verifyMsg2 = browser.findElement(getObject(appedo_verifyChartAdded)).getText().toString();
-			/*if (browser.findElement(getObject(appedo_verifyChartAdded)).getText()
-					.equalsIgnoreCase("Successfully removed")) */
-				if (browser.findElement(getObject(appedo_toggleMenu)).isDisplayed());
+			WaitforObject(appedo_verifyChartAdded);
+			String verifyMsg2 = browser.findElement(getObject(appedo_verifyChartAdded)).getText().toString();
+			if (browser.findElement(getObject(appedo_verifyChartAdded)).getText()
+					.equalsIgnoreCase("Successfully removed")) 
 			{
-				test.log(LogStatus.PASS, "Dashboard Charts : " + "Removed Successful");
-			} /*else {
+				test.log(LogStatus.PASS, "Dashboard Charts : " + verifyMsg2);
+			} else {
 				test.log(LogStatus.FAIL, "Failed to remove chart");
-			}*/
+			}
 			Thread.sleep(2000);
 			
 			// Click on Toggle menu
@@ -74,17 +73,17 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 			browser.findElement(getObject(appedo_deleteDB)).click();
 
 			// Accept alert
-			browser.switchTo().alert().dismiss();
+			browser.switchTo().alert().accept();
 
 			// Verify DB connector
-			WaitforObject(appedo_signout);
-			//String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
-			if (browser.findElement(getObject(appedo_signout)).isDisplayed());
+			WaitforObject(appedo_db_verify);
+			String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
+			if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteDB)) 
 			{
 				test.log(LogStatus.PASS, "Database Connector deleted Successfully");
-			} /*else {
+			} else {
 				test.log(LogStatus.FAIL, "Failed to delete Database Connector");
-			}*/
+			}
 
 			// Click Logout
 			WaitforObject(appedo_signout);

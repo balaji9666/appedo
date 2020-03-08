@@ -15,7 +15,7 @@ public class alertSettingDB extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginKalai();
+		loginrt();
 	}
 
 	@Test
@@ -101,7 +101,7 @@ public class alertSettingDB extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Failed to add alert");
 			}
-			extent.endTest(test);//nothing 
+			extent.endTest(test);
 			extent.flush();
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, e.getMessage());

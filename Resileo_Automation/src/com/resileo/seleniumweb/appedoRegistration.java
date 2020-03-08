@@ -2,6 +2,8 @@ package com.resileo.seleniumweb;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.*;
+import org.openqa.selenium.By;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -17,6 +19,7 @@ public class appedoRegistration extends ReusableMethods {
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		launchURL();
+		System.out.print("Launch");
 	}
 
 	@Test
@@ -25,13 +28,13 @@ public class appedoRegistration extends ReusableMethods {
 			test = extent.startTest("Register for Appedo Login, Registering new users with valid credentials");
 
 			// Click on Register Link
-			browser.findElement(getObject(appedo_reg_link)).click();
+		browser.findElement(getObject(appedo_reg_link)).click();
+		System.out.println("Reg");
 			WaitforObject(appedo_reg_txtUserID);
 
-			// Enter text fields
+			 //Enter text fields
 			String alphabet = "abcdef";
 			String textuserID = RandomStringUtils.random(6, alphabet) + "test@gmail.com";
-
 			// Entering invalid details
 			browser.findElement(getObject(appedo_reg_txtUserID)).sendKeys("abc");
 			browser.findElement(getObject(appedo_reg_txtFirstName)).sendKeys("te");
@@ -71,6 +74,12 @@ public class appedoRegistration extends ReusableMethods {
 			WaitforObject(appedo_reg_txtUserID);
 			browser.findElement(getObject(appedo_reg_txtUserID)).clear();
 			browser.findElement(getObject(appedo_reg_txtUserID)).sendKeys(textuserID);
+			browser.findElement(By.id("email")).clear();
+			
+			System.out.println("Clear");
+			//browser.findElement(By.id("email")).sendKeys("auto1@getnada.com");
+			//System.out.println("data");
+			//browser.findElement(getObject(appedo_reg_txtUserID)).sendKeys("auto2@getnada.com");
 			browser.findElement(getObject(appedo_reg_txtFirstName)).clear();
 			browser.findElement(getObject(appedo_reg_txtFirstName)).sendKeys("Registration");
 			browser.findElement(getObject(appedo_reg_txtLastName)).clear();
@@ -80,7 +89,7 @@ public class appedoRegistration extends ReusableMethods {
 			browser.findElement(getObject(appedo_reg_txtConfirmPassword)).clear();
 			browser.findElement(getObject(appedo_reg_txtConfirmPassword)).sendKeys("appedo");
 			browser.findElement(getObject(appedo_reg_txtMobile)).clear();
-			browser.findElement(getObject(appedo_reg_txtMobile)).sendKeys("+918815007690");
+			browser.findElement(getObject(appedo_reg_txtMobile)).sendKeys("+918815007696");
 
 			// Click on Sign up icon
 			WaitforObject(appedo_reg_btnSignup);

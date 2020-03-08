@@ -29,7 +29,7 @@ public class avmDetails extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		sysTestlogin();
+		loginD();
 	}
 
 	@Test

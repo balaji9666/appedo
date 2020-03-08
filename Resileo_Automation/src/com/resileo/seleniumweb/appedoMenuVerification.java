@@ -18,7 +18,7 @@ public class appedoMenuVerification extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginrt();
 	}
 
 	@Test
@@ -39,7 +39,7 @@ public class appedoMenuVerification extends ReusableMethods {
 			// Click on settings menu
 			WaitforObject(appedo_settingMenu);
 			browser.findElement(getObject(appedo_settingMenu)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			
 			// Verify Settings Menu
 			if (browser.findElement(getObject(appedo_settingList)).getText().contains("Alert Settings")) 
@@ -63,15 +63,18 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoDashboardMenu() {
 		try {
+		
 			test = extent.startTest("Appedo - DashBoard Menu", "Verifying the DashBoard Menu");
 			browser.navigate().refresh();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 
 			// Click on Dash board menu
 			WaitforObject(appedo_dashboardMenu);
 			browser.findElement(getObject(appedo_dashboardMenu)).click();
-
+			WaitforObject(appedo_dropdown_myDashboard);
+						
 			// Verify the DashboardMenu
+			
 			if (browser.findElement(getObject(appedo_dropdown_myDashboard)).isDisplayed())
 			{
 				test.log(LogStatus.PASS, "Appedo - Dashboard Menu: " + " DashBoard menu verified successfully");
@@ -83,7 +86,9 @@ public class appedoMenuVerification extends ReusableMethods {
 			// Click on toggle menu
 			WaitforObject(appedo_toggleMenu);
 			browser.findElement(getObject(appedo_toggleMenu)).click();
+			System.out.println("toggle");
 			browser.findElement(getObject(appedo_toggleMenu)).click();
+			System.out.println("toggle1");
 			extent.endTest(test);
 			extent.flush();
 		} catch (Exception e) {

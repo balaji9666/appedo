@@ -11,7 +11,7 @@ public class addCustomMetricsOSMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNagas();
+		loginA();
 	}
 
 	@Test

@@ -12,7 +12,7 @@ public class alertSettingDBMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginKalai();
+		loginrt();
 	}
 
 	@Test

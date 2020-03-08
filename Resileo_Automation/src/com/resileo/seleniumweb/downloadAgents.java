@@ -16,7 +16,7 @@ public class downloadAgents extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginrt();
 	}
 
 	@Test

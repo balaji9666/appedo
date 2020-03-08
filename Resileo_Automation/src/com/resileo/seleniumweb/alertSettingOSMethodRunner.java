@@ -12,7 +12,7 @@ public class alertSettingOSMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginrt();
 	}
 
 	@Test

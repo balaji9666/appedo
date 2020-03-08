@@ -9,7 +9,7 @@ public class viewOADChartMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		sysTestlogin();
+		loginrt();
 	}
 
 	@Test

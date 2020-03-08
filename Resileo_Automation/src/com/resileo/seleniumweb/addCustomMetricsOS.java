@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import static org.junit.Assert.*;
 
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -21,7 +22,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNagas();
+		loginA();
 	}
 
 	@Test
@@ -38,7 +39,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-			String alphabet = "abcefghijk";
+			String alphabet = "abcd";
 			String OSChartName = "test" + RandomStringUtils.random(4, alphabet);
 
 			// Click on OS link
@@ -56,8 +57,11 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_createMetrics)).click();
 
 			// Select a category
-			WaitforObject(appedo_systemMetrics_customSelect);
-			browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
+			//WaitforObject(appedo_systemMetrics_customSelect);
+			//browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_M);
+			robot.keyPress(KeyEvent.VK_ENTER);
 
 			// Click on counter name
 			WaitforObject(appedo_systemMetrics_counterName);
@@ -135,9 +139,11 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
 			
 			// Click on a Category
-			WaitforObject(appedo_systemMetrics_categoryOption);
-			browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
-
+			//WaitforObject(appedo_systemMetrics_categoryOption);
+			//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_M);
+			robot.keyPress(KeyEvent.VK_ENTER);
 			// Select a Category
 			WaitforObject(appedo_systemMetrics_menuOption);
 			browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();
@@ -162,12 +168,12 @@ public class addCustomMetricsOS extends ReusableMethods {
 			Thread.sleep(10000);
 			
 			// Scroll down
-			Robot robot = new Robot();
-			robot.mouseWheel(200);
+			Robot robot1 = new Robot();
+			robot1.mouseWheel(200);
 			
 			// Verify added metrics in chart
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).getText();
-			if (expectedChart.contains("server::Nagaraj")) 
+			if (expectedChart.contains("Not Available_Solaris")) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in DB");
 			} else {

@@ -12,7 +12,7 @@ public class sumTransactionMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginA();
 	}
 
 	@Test

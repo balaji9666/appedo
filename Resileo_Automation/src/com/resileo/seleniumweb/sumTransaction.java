@@ -31,7 +31,7 @@ public class sumTransaction extends ReusableMethods {
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		//loginNalini();
-		loginRK();
+		loginA();
 	}
 
 	@Test

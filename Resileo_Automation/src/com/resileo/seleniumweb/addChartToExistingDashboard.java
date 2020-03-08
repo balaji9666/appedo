@@ -24,7 +24,7 @@ public class addChartToExistingDashboard extends ReusableMethods {
 		try {
 			test = extent.startTest("Add chart to existing Dashboard", "Adding a chart into existing dashboard");
 
-			// Verify login lognin
+			// Verify login
 			WaitforObject(appedo_verifyLogin);
 			String UserName = browser.findElement(getObject(appedo_verifyLogin)).getText();
 			WaitforObject(appedo_verifyLogin);

@@ -17,7 +17,7 @@ public class visualizerEnterprise extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginss();
+		loginNalini();
 	}
 
 	@Test
@@ -41,8 +41,8 @@ public class visualizerEnterprise extends ReusableMethods {
 			browser.findElement(getObject(appedo_link_Visualizer)).click();
 
 			// Click on view queries
-			//WaitforObject(appedo_db_viewQueries);
-			//browser.findElement(getObject(appedo_db_viewQueries)).click();
+			WaitforObject(appedo_db_viewQueries);
+			browser.findElement(getObject(appedo_db_viewQueries)).click();
 
 			// Click on Add Enterprise icon
 			WaitforObject(appedo_db_viewQuery_mapEnterprise);

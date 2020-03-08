@@ -25,7 +25,7 @@ public class alertSettingMobile extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNalini();
+		loginA();
 	}
 
 	@Test
@@ -103,7 +103,7 @@ public class alertSettingMobile extends ReusableMethods {
 			browser.findElement(getObject(appedo_alertSms)).click();
 			
 			// Enter text Mobile number
-			mobileNumber = "+919791218722";
+			mobileNumber = "+919578784858";
 			browser.findElement(getObject(appedo_txtMobile)).sendKeys(mobileNumber);
 			
 			// click on save and add
@@ -182,7 +182,7 @@ public class alertSettingMobile extends ReusableMethods {
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
-			Thread.sleep(12000);
+			Thread.sleep(20000);
 			
 			// Click on select table
 			WaitforObject(appedo_db_addQuery_selectTable);
@@ -204,7 +204,7 @@ public class alertSettingMobile extends ReusableMethods {
 			browser.findElement(getObject(appedo_alertSms_selectAColumn)).click();
 			
 			// Click on Filter value Type
-			browser.findElement(getObject(appedo_alertSms_filterValueType)).sendKeys("817");
+			browser.findElement(getObject(appedo_alertSms_filterValueType)).sendKeys("252");
 			
 			// Add Filter
 			browser.findElement(getObject(appedo_alertSms_addToFilter)).click();

@@ -16,7 +16,7 @@ public class visualizer extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		login();
+		loginNalini();
 	}
 
 	@Test
@@ -139,8 +139,7 @@ public class visualizer extends ReusableMethods {
 			test = extent.startTest("Map Enterprise to DB", "Mapping enterprise to DB");
 			
 			// Click map enterprise
-			//WaitforObject(appedo_db_mapEnterprise);
-			Thread.sleep(2000);
+			WaitforObject(appedo_db_mapEnterprise);
 			browser.findElement(getObject(appedo_db_mapEnterprise)).click();
 			
 			// Click on add enterprise

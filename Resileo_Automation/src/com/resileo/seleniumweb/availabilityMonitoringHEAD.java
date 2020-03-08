@@ -29,7 +29,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginD();
 	}
 
 	@Test

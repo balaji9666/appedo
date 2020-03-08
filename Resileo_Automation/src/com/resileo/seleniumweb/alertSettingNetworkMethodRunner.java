@@ -12,7 +12,7 @@ public class alertSettingNetworkMethodRunner extends ReusableMethods {
 	@Before
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginNagas();
+		loginrt();
 	}
 
 	@Test
