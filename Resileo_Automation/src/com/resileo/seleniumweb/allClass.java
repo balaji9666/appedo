@@ -17,7 +17,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	downloadAgents.class,*/
 	selectTheme.class,/*
 	settingChangePassword.class, 
-	settingUpdateProfile.class,
+	settingUpdateProfile.class,-----
 	manageEnterpriseMethodRunner.class,
 	alertSettingMethodRunner.class,
 	alertSettingMobileMethodRunner.class,
