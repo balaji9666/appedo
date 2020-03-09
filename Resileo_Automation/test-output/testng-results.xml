@@ -2,104 +2,104 @@
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Appedo Test Env" duration-ms="288594" started-at="2020-03-08T18:53:38Z" finished-at="2020-03-08T18:58:27Z">
+  <suite name="Appedo Test Env" duration-ms="364092" started-at="2020-03-09T17:15:46Z" finished-at="2020-03-09T17:21:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="288594" started-at="2020-03-08T18:53:38Z" finished-at="2020-03-08T18:58:27Z">
-      <class name="com.resileo.seleniumweb.downloadAgents">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="setUp" is-config="true" duration-ms="14762" started-at="2020-03-09T00:25:26Z" finished-at="2020-03-09T00:25:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="DownloadAgents()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="DownloadAgents" duration-ms="32091" started-at="2020-03-09T00:25:41Z" finished-at="2020-03-09T00:26:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DownloadAgents -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="tearDown" is-config="true" duration-ms="1958" started-at="2020-03-09T00:26:13Z" finished-at="2020-03-09T00:26:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.resileo.seleniumweb.downloadAgents -->
+    <test name="Test" duration-ms="364092" started-at="2020-03-09T17:15:46Z" finished-at="2020-03-09T17:21:50Z">
       <class name="com.resileo.seleniumweb.settingUpdateProfile">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="setUp" is-config="true" duration-ms="15184" started-at="2020-03-09T00:27:37Z" finished-at="2020-03-09T00:27:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="setUp" is-config="true" duration-ms="20291" started-at="2020-03-09T22:50:50Z" finished-at="2020-03-09T22:51:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="updateProfileSetting()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="updateProfileSetting" duration-ms="34177" started-at="2020-03-09T00:27:52Z" finished-at="2020-03-09T00:28:26Z">
+        <test-method status="PASS" signature="updateProfileSetting()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="updateProfileSetting" duration-ms="39734" started-at="2020-03-09T22:51:10Z" finished-at="2020-03-09T22:51:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateProfileSetting -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="tearDown" is-config="true" duration-ms="465" started-at="2020-03-09T00:28:26Z" finished-at="2020-03-09T00:28:27Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.settingUpdateProfile@1db50c5]" name="tearDown" is-config="true" duration-ms="626" started-at="2020-03-09T22:51:50Z" finished-at="2020-03-09T22:51:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.resileo.seleniumweb.settingUpdateProfile -->
-      <class name="com.resileo.seleniumweb.appedoMenuMethodRunner">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="setUp" is-config="true" duration-ms="15061" started-at="2020-03-09T00:24:19Z" finished-at="2020-03-09T00:24:34Z">
+      <class name="com.resileo.seleniumweb.downloadAgents">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="setUp" is-config="true" duration-ms="24915" started-at="2020-03-09T22:48:02Z" finished-at="2020-03-09T22:48:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doTest()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="doTest" duration-ms="50995" started-at="2020-03-09T00:24:34Z" finished-at="2020-03-09T00:25:25Z">
+        <test-method status="PASS" signature="DownloadAgents()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="DownloadAgents" duration-ms="35490" started-at="2020-03-09T22:48:27Z" finished-at="2020-03-09T22:49:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DownloadAgents -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.downloadAgents@ceb130]" name="tearDown" is-config="true" duration-ms="1767" started-at="2020-03-09T22:49:03Z" finished-at="2020-03-09T22:49:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.resileo.seleniumweb.downloadAgents -->
+      <class name="com.resileo.seleniumweb.appedoMenuMethodRunner">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="setUp" is-config="true" duration-ms="21122" started-at="2020-03-09T22:46:46Z" finished-at="2020-03-09T22:47:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="doTest()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="doTest" duration-ms="54772" started-at="2020-03-09T22:47:07Z" finished-at="2020-03-09T22:48:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="tearDown" is-config="true" duration-ms="711" started-at="2020-03-09T00:25:25Z" finished-at="2020-03-09T00:25:26Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.appedoMenuMethodRunner@6a04ae]" name="tearDown" is-config="true" duration-ms="817" started-at="2020-03-09T22:48:01Z" finished-at="2020-03-09T22:48:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.resileo.seleniumweb.appedoMenuMethodRunner -->
       <class name="com.resileo.seleniumweb.forgotPassword">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="setUp" is-config="true" duration-ms="4981" started-at="2020-03-09T00:23:59Z" finished-at="2020-03-09T00:24:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="setUp" is-config="true" duration-ms="5147" started-at="2020-03-09T22:46:20Z" finished-at="2020-03-09T22:46:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="ForgotPassword()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="ForgotPassword" duration-ms="14022" started-at="2020-03-09T00:24:04Z" finished-at="2020-03-09T00:24:18Z">
+        <test-method status="PASS" signature="ForgotPassword()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="ForgotPassword" duration-ms="19139" started-at="2020-03-09T22:46:25Z" finished-at="2020-03-09T22:46:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ForgotPassword -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="teardown" is-config="true" duration-ms="833" started-at="2020-03-09T00:24:18Z" finished-at="2020-03-09T00:24:19Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.resileo.seleniumweb.forgotPassword@178436e]" name="teardown" is-config="true" duration-ms="1310" started-at="2020-03-09T22:46:44Z" finished-at="2020-03-09T22:46:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.resileo.seleniumweb.forgotPassword -->
       <class name="com.resileo.seleniumweb.appedoRegistration">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="setUp" is-config="true" duration-ms="16814" started-at="2020-03-09T00:23:38Z" finished-at="2020-03-09T00:23:55Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="setUp" is-config="true" duration-ms="25864" started-at="2020-03-09T22:45:46Z" finished-at="2020-03-09T22:46:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="UserRegistration()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="UserRegistration" duration-ms="4570" started-at="2020-03-09T00:23:55Z" finished-at="2020-03-09T00:23:59Z">
+        <test-method status="PASS" signature="UserRegistration()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="UserRegistration" duration-ms="7690" started-at="2020-03-09T22:46:12Z" finished-at="2020-03-09T22:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserRegistration -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="tearDown" is-config="true" duration-ms="33" started-at="2020-03-09T00:23:59Z" finished-at="2020-03-09T00:23:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.appedoRegistration@da0940]" name="tearDown" is-config="true" duration-ms="45" started-at="2020-03-09T22:46:20Z" finished-at="2020-03-09T22:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.resileo.seleniumweb.appedoRegistration -->
       <class name="com.resileo.seleniumweb.selectTheme">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="setUp" is-config="true" duration-ms="15795" started-at="2020-03-09T00:26:15Z" finished-at="2020-03-09T00:26:31Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="setUp" is-config="true" duration-ms="24493" started-at="2020-03-09T22:49:04Z" finished-at="2020-03-09T22:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="appedoselectTheme()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="appedoselectTheme" duration-ms="30280" started-at="2020-03-09T00:26:31Z" finished-at="2020-03-09T00:27:01Z">
+        <test-method status="PASS" signature="appedoselectTheme()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="appedoselectTheme" duration-ms="34796" started-at="2020-03-09T22:49:29Z" finished-at="2020-03-09T22:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appedoselectTheme -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="tearDown" is-config="true" duration-ms="1218" started-at="2020-03-09T00:27:01Z" finished-at="2020-03-09T00:27:02Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.selectTheme@a035a0]" name="tearDown" is-config="true" duration-ms="2555" started-at="2020-03-09T22:50:04Z" finished-at="2020-03-09T22:50:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.resileo.seleniumweb.selectTheme -->
       <class name="com.resileo.seleniumweb.settingChangePassword">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="setUp" is-config="true" duration-ms="15000" started-at="2020-03-09T00:27:02Z" finished-at="2020-03-09T00:27:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="setUp" is-config="true" duration-ms="19931" started-at="2020-03-09T22:50:06Z" finished-at="2020-03-09T22:50:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="passwordChangeSetting()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="passwordChangeSetting" duration-ms="19599" started-at="2020-03-09T00:27:17Z" finished-at="2020-03-09T00:27:37Z">
+        <test-method status="PASS" signature="passwordChangeSetting()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="passwordChangeSetting" duration-ms="23523" started-at="2020-03-09T22:50:26Z" finished-at="2020-03-09T22:50:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordChangeSetting -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="tearDown" is-config="true" duration-ms="32" started-at="2020-03-09T00:27:37Z" finished-at="2020-03-09T00:27:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.resileo.seleniumweb.settingChangePassword@1b467e9]" name="tearDown" is-config="true" duration-ms="43" started-at="2020-03-09T22:50:50Z" finished-at="2020-03-09T22:50:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
