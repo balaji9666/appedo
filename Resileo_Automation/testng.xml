@@ -3,7 +3,7 @@
 <suite name="Appedo Test Env">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.resileo.seleniumweb.appedoRegistration"/>
+      <class name="appedoRegistration"/>
 	  <class name="com.resileo.seleniumweb.forgotPassword"/>
 	  <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
 	  <class name="com.resileo.seleniumweb.downloadAgents"/>
