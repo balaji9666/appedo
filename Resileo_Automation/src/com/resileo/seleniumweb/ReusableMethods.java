@@ -25,7 +25,7 @@ public class ReusableMethods extends ObjectRepository {
 
 		} else if (LogPerformance == "LogPerformancechrome") {
 			System.setProperty("webdriver.chrome.driver",
-					"lib/chromedriver");
+					"lib/chromedriver.exe");
 			
 			//For Headless Operation
 			ChromeOptions options=new ChromeOptions();
