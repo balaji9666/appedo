@@ -8,7 +8,7 @@ public class ObjectMap{
 	
 	
 public By getObject(String strElement) throws Exception {
-	Logger log = Logger.getLogger("Appedo");
+	Logger log = Logger.getLogger("Resileo");
 
 		
 		// retrieve the specified object from the object list
