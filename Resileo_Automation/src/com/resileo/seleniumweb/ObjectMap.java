@@ -1,7 +1,5 @@
 package com.resileo.seleniumweb;
 
-
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -10,7 +8,7 @@ public class ObjectMap{
 	
 	
 public By getObject(String strElement) throws Exception {
-	Logger log = Logger.getLogger("Resileo");
+	Logger log = Logger.getLogger("Appedo");
 
 		
 		// retrieve the specified object from the object list
