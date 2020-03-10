@@ -17,10 +17,10 @@ import org.junit.runners.Suite.SuiteClasses;
 	/*appedoRegistration.class, 
 	forgotPassword.class,
 	appedoMenuMethodRunner.class,
-	downloadAgents.class,*/
-	selectTheme.class,/*
+	downloadAgents.class,
+	selectTheme.class,
 	settingChangePassword.class, 
-	settingUpdateProfile.class,-----
+	settingUpdateProfile.class,
 	manageEnterpriseMethodRunner.class,
 	alertSettingMethodRunner.class,
 	alertSettingMobileMethodRunner.class,
