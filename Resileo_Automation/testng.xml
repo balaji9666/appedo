@@ -6,7 +6,7 @@
       <class name="com.resileo.seleniumweb.appedoRegistration"/>
 	  <class name="com.resileo.seleniumweb.forgotPassword"/>
 	  <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
-	  <class name="com.resileo.seleniumweb.downloadAgdents"/>
+	  <class name="com.resileo.seleniumweb.downloadAgents"/>
 	  <class name="com.resileo.seleniumweb.selectTheme"/>
       <class name="com.resileo.seleniumweb.settingChangePassword"/>
 	  <class name="com.resileo.seleniumweb.settingUpdateProfile"/>
