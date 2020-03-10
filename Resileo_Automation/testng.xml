@@ -3,13 +3,13 @@
 <suite name="Appedo Test Env">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.resileo.seleniumweb.appedoRegistration"/>
+  <!--     <class name="com.resileo.seleniumweb.appedoRegistration"/>
 	  <class name="com.resileo.seleniumweb.forgotPassword"/>
 	  <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
-	  <class name="com.resileo.seleniumweb.downloadAgents"/>
+	  <class name="com.resileo.seleniumweb.downloadAgents"/>  -->
 	  <class name="com.resileo.seleniumweb.selectTheme"/>
-	  <class name="com.resileo.seleniumweb.settingChangePassword"/>
-	  <class name="com.resileo.seleniumweb.settingUpdateProfile"/>
+	<!--    <class name="com.resileo.seleniumweb.settingChangePassword"/>
+	  <class name="com.resileo.seleniumweb.settingUpdateProfile"/> -->
     </classes>
   </test> <!-- Test Env -->
 </suite> <!-- Appedo -->
