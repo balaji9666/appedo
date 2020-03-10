@@ -9,13 +9,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.ExtentReports;
+
 public class ReusableMethods extends ObjectRepository {
 	public WebDriver browser;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 	FileUtilities drawData = new FileUtilities();
-
+	ExtentReports extent = new ExtentReports("allclass.html", false);
+	
 	// For Application Login. Please change the "Change This" Part For your
 	// Application
 	public void InitiateTest(String LogPerformance) throws Exception {

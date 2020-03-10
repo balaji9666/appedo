@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 
-import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -14,7 +14,7 @@ public class appedoRegistration extends ReusableMethods {
 
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
+	//ExtentReports extent = new ExtentReports("allclass.html", false);
 	ExtentTest test;
 
 	@BeforeMethod
