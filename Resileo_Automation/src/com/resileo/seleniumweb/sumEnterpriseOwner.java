@@ -12,8 +12,6 @@ import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 //Rename the Class Below
@@ -21,8 +19,6 @@ public class sumEnterpriseOwner extends ReusableMethods {
 	// public WebDriver browser;
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
 	String sumeditname;
 	String urTestName;
 	String EditTestName;

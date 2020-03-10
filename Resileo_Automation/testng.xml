@@ -4,12 +4,22 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.resileo.seleniumweb.appedoRegistration"/>
-	 <!--  <class name="com.resileo.seleniumweb.forgotPassword"/>
+	  <class name="com.resileo.seleniumweb.forgotPassword"/>
 	  <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
-	  <class name="com.resileo.seleniumweb.downloadAgents"/>  -->
+	  <class name="com.resileo.seleniumweb.downloadAgdents"/>
 	  <class name="com.resileo.seleniumweb.selectTheme"/>
-	<!--    <class name="com.resileo.seleniumweb.settingChangePassword"/>
-	  <class name="com.resileo.seleniumweb.settingUpdateProfile"/> -->
+      <class name="com.resileo.seleniumweb.settingChangePassword"/>
+	  <class name="com.resileo.seleniumweb.settingUpdateProfile"/>
+	  <class name="com.resileo.seleniumweb.manageEnterpriseMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.rumMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.methodRunnerDashboard"/>
+	  <class name="com.resileo.seleniumweb.rumEnterpriseMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.rumUserEnterpriseRunner"/>
+	  <class name="com.resileo.seleniumweb.sumEnterpriseOwner"/>
+	  <class name="com.resileo.seleniumweb.sumEnterpriseUser"/>
+	  <class name="com.resileo.seleniumweb.viewSUMGraph"/>
     </classes>
   </test> <!-- Test Env -->
 </suite> <!-- Appedo -->

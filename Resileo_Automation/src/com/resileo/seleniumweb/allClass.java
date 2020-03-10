@@ -4,6 +4,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+
+
+
 @RunWith(Suite.class)
 @SuiteClasses({
 
@@ -27,7 +30,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	rumUserEnterpriseRunner.class,
 	sumEnterpriseOwner.class,
 	sumEnterpriseUser.class,
-	viewSUMGraph.class,
+	viewSUMGraph.class,----------------11march
 	calendar.class,
 	functionAutorefresh.class,
 	addChartToExistingDashboard.class,

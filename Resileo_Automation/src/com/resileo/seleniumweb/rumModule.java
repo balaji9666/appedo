@@ -10,22 +10,18 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class rumModule extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
 	String rumName;
 	String rumDesc;
 	String EditName;
 	String editrumName;
 	String editrumDesc;
 	String DeleteTestName;
-	ExtentTest test;
 
 	@BeforeMethod
 	public void setUp() throws Exception {

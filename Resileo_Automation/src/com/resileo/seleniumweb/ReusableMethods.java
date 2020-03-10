@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class ReusableMethods extends ObjectRepository {
 	public WebDriver browser;
@@ -17,7 +18,10 @@ public class ReusableMethods extends ObjectRepository {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 	FileUtilities drawData = new FileUtilities();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
+	
+	//ExtentReport 
+	public static ExtentReports extent = new ExtentReports("allclass.html", true);
+	public static ExtentTest test;
 	
 	// For Application Login. Please change the "Change This" Part For your
 	// Application
