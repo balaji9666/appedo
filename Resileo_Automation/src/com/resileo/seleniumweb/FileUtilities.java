@@ -16,6 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class FileUtilities extends Utility{
 
 	// Loading the Data Sheet
+	@SuppressWarnings("resource")
 	public String getdata(String filename, String Sheetname,int ColumnNo,int rownum) throws Exception{
 		File file =    new File("res\\"+filename);
 		//cell.setCellType(Cell.CELL_TYPE_STRING)
@@ -28,6 +29,7 @@ public class FileUtilities extends Utility{
 	}
 
 	// Counting Rows for Looping 
+	@SuppressWarnings("resource")
 	public  int getrowcount (String filename, String Sheetname) throws Exception{
 		File file =    new File("res\\"+filename);
 		FileInputStream inputStream = new FileInputStream(file);
@@ -52,7 +54,7 @@ public class FileUtilities extends Utility{
 		FileWriter fw = null;
 		try {
 			File file = new File(filename);
-			// if file doesnt exists, then create it
+			// if file doesn't exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
 			}
@@ -80,7 +82,7 @@ public class FileUtilities extends Utility{
 		FileWriter fw = null;
 		try {
 			File file = new File(filename);
-			// if file doesnt exists, then create it
+			// if file doesn't exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
 			}

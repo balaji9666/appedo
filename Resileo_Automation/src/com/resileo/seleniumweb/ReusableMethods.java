@@ -269,7 +269,7 @@ public class ReusableMethods extends ObjectRepository {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(getObject(ObjectName)));
 	}
 
-	// Is element Presnet
+	// Is element Present
 	public boolean isElementPresent(By by) {
 		try {
 			browser.findElement(by);
