@@ -5,13 +5,10 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
-
 import java.awt.Robot;
 import java.util.List;
 

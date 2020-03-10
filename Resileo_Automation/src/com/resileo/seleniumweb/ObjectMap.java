@@ -1,6 +1,6 @@
 package com.resileo.seleniumweb;
 
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 
@@ -8,7 +8,7 @@ public class ObjectMap{
 	
 	
 public By getObject(String strElement) throws Exception {
-	//Logger log = Logger.getLogger("Resileo");
+	Logger log = Logger.getLogger("Resileo");
 
 		
 		// retrieve the specified object from the object list
@@ -19,7 +19,7 @@ public By getObject(String strElement) throws Exception {
 		String locatorValue = locator.split(":")[1];
 		
 		// for testing and debugging purposes
-		//log.debug("Performing Operation on'" + strElement + "' with attribute type '" + locatorType + "' and attribute value '" + locatorValue);
+		log.debug("Performing Operation on'" + strElement + "' with attribute type '" + locatorType + "' and attribute value '" + locatorValue);
 		
 		// return a instance of the By class based on the type of the locator
 		// this By can be used by the browser object in the actual test

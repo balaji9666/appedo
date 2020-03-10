@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.junit.*;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import com.relevantcodes.extentreports.ExtentReports;

@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

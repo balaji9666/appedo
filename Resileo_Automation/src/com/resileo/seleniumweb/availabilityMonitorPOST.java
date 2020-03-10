@@ -4,14 +4,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
-import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import java.awt.Robot;
-import java.util.List;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -259,7 +254,7 @@ public class availabilityMonitorPOST extends ReusableMethods {
 			String verifyMsg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 
 			//Thread.sleep(5000);
-			String add1=browser.findElement(getObject(appedo_avm_verifyadd)).getText();
+			//String add1=browser.findElement(getObject(appedo_avm_verifyadd)).getText();
 			//System.out.println("verify:"+add1);
 			if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()
 					.equalsIgnoreCase("Successfully Added Availability Test")) {

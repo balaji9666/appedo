@@ -3,8 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.junit.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import com.relevantcodes.extentreports.ExtentReports;

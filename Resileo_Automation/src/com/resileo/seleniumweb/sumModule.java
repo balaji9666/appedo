@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -16,7 +15,6 @@ import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.thoughtworks.selenium.webdriven.commands.GetText;
 
 public class sumModule extends ReusableMethods {
 	

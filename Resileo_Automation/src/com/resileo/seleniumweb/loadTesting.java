@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.junit.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
