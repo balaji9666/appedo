@@ -13,7 +13,7 @@
 	  <class name="com.resileo.seleniumweb.manageEnterpriseMethodRunner"/>
 	  <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
 	  <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
-	  <class name="com.resileo.seleniumweb.rumMethodRunner"/>
+	  <class name="com.resileo.seleniumweb.rumMethrodRunner"/>
 	  <class name="com.resileo.seleniumweb.methodRunnerDashboard"/>
 	  <class name="com.resileo.seleniumweb.rumEnterpriseMethodRunner"/>
 	  <class name="com.resileo.seleniumweb.rumUserEnterpriseRunner"/>

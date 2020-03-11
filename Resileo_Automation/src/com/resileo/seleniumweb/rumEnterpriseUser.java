@@ -78,7 +78,7 @@ public class rumEnterpriseUser extends ReusableMethods {
 	// View RUM Graph
 	public void ViewRumGraphAsUser() {
 		try {
-			test = extent.startTest("View RUM Graph", "Viewing RUM graph from enterprise owner login");
+			test = extent.startTest("RUM Enterprise User View Graph", "Viewing RUM graph from enterprise owner login");
 			
 			// Click on Graph icon
 			Thread.sleep(5000);
@@ -125,7 +125,7 @@ public class rumEnterpriseUser extends ReusableMethods {
 	// Edit RUM Module
 	public void EditRUMModuleAsUser() {
 		try {
-			test = extent.startTest("RUM Edit", "Edit RUM module");
+			test = extent.startTest("RUM Enterprise User Edit", "Edit RUM module");
 			
 			// Click on Edit icon
 			Thread.sleep(5000);
@@ -155,7 +155,7 @@ public class rumEnterpriseUser extends ReusableMethods {
 
 	public void DeleteRUMModuleAsUser() {
 		try {
-			test = extent.startTest("RUM Delete", "Delete RUM module");
+			test = extent.startTest("RUM Enterprise User Delete ", "Delete RUM module");
 
 			// Verify Rum Deletion
 			WaitforObject(appedo_rum_Delete);
