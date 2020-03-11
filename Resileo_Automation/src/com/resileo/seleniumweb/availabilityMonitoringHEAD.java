@@ -20,8 +20,6 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
 	String TestNameEdit;
 	String TestName;
 	String EditTest;

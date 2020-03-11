@@ -12,8 +12,6 @@ public class LaunchUrl extends ReusableMethods{
 	//public WebDriver browser;
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("reports.html", false);
-	ExtentTest test =extent.startTest("Test Name","Test Desc");
 
 
 	@BeforeMethod

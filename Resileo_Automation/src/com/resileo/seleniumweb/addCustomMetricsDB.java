@@ -13,8 +13,6 @@ public class addCustomMetricsDB extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
 
 	@BeforeMethod
 	public void setUp() throws Exception {

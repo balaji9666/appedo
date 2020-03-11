@@ -13,8 +13,7 @@ public class fileUpload extends ReusableMethods {
 	// public WebDriver browser;
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("fileUpload.html", false);
-	ExtentTest test;
+
 
 	@BeforeMethod
 	public void setUp() throws Exception {

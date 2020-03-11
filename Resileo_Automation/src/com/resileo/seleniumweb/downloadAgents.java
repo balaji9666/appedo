@@ -11,8 +11,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class downloadAgents extends ReusableMethods {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
+
 
 	@BeforeMethod
 	public void setUp() throws Exception {

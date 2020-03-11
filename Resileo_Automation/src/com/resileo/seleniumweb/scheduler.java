@@ -16,8 +16,6 @@ public class scheduler extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-	ExtentReports extent = new ExtentReports("allclass.html", false);
-	ExtentTest test;
 	String alphabet = "abcefghijk";
 	String Name = "test" + RandomStringUtils.random(4, alphabet);
 

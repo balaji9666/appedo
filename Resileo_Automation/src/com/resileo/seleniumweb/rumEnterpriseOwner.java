@@ -35,7 +35,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 	@Test
 	public void addRUModuleFromEnterprise() {
 		try {
-			test = extent.startTest("RUM Enterprise", "Creating RUM Enterprise");
+			test = extent.startTest("RUM Enterprise Owner", "Creating RUM Enterprise");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -160,7 +160,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 	// View RUM Graph
 	public void ViewRumGraph() {
 		try {
-			test = extent.startTest("View RUM Graph", "Viewing RUM graph from enterprise owner login");
+			test = extent.startTest("RUM Enterprise Owner View Graph", "Viewing RUM graph from enterprise owner login");
 
 			// Click on Graph icon
 			Thread.sleep(5000);
@@ -213,7 +213,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 	// Edit RUM Module
 	public void EditRUMModule() {
 		try {
-			test = extent.startTest("RUM Edit", "Edit RUM module");
+			test = extent.startTest("RUM Enterprise Owner Edit", "Edit RUM module");
 
 			// Click on edit icon created recently
 			Thread.sleep(5000);
@@ -270,7 +270,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 
 	public void DeleteRUMModule() {
 		try {
-			test = extent.startTest("RUM Delete", "Delete RUM module");
+			test = extent.startTest("RUM Enterprise Owner Delete", "Delete RUM module");
 
 			// click on delete icon we created recently
 			Thread.sleep(3000);
@@ -315,8 +315,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 
 	@AfterMethod
 	public void logoutRUMModule() throws Exception {
-		test = extent.startTest("Logout from RUM module", "Logout from RUM module");
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		logout();
 
 		// Verify Sign out
