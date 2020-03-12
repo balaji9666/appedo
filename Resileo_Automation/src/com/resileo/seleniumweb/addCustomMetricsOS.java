@@ -8,15 +8,14 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class addCustomMetricsOS extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-
+	
+	
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -49,7 +48,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			// Click on Custom Metrics
 			WaitforObject(appedo_systemMetrics_addcustom);
 			browser.findElement(getObject(appedo_systemMetrics_addcustom)).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			
 			// Click on category
 			WaitforObject(appedo_systemMetrics_createMetrics);
@@ -59,7 +58,8 @@ public class addCustomMetricsOS extends ReusableMethods {
 			//WaitforObject(appedo_systemMetrics_customSelect);
 			//browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
 			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_M);
+			robot.keyPress(KeyEvent.VK_C);
+			//robot.keyPress(KeyEvent.VK_E);
 			robot.keyPress(KeyEvent.VK_ENTER);
 
 			// Click on counter name
@@ -141,7 +141,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			//WaitforObject(appedo_systemMetrics_categoryOption);
 			//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
 			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_M);
+			robot.keyPress(KeyEvent.VK_C);
 			robot.keyPress(KeyEvent.VK_ENTER);
 			// Select a Category
 			WaitforObject(appedo_systemMetrics_menuOption);
@@ -172,11 +172,11 @@ public class addCustomMetricsOS extends ReusableMethods {
 			
 			// Verify added metrics in chart
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).getText();
-			if (expectedChart.contains("Not Available_Solaris")) 
+			if (expectedChart.contains("CPU")) 
 			{
-				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in DB");
+				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in OS");
 			} else {
-				test.log(LogStatus.FAIL, "Unable to view the graph of added metrics in DB");
+				test.log(LogStatus.FAIL, "Unable to view the graph of added metrics in OS");
 			}
 			browser.navigate().back();
 			extent.endTest(test);
@@ -201,9 +201,24 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_configure)).click();
 
 			// Click on the selected metrics
-			WaitforObject(appedo_systemMetrics_configureRemove);
-			browser.findElement(getObject(appedo_systemMetrics_configureRemove)).click();
 			
+			// Click on select Category
+						Thread.sleep(3000);
+						WaitforObject(appedo_systemMetrics_selectCategory);
+						browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
+						
+						// Click on a Category
+						//WaitforObject(appedo_systemMetrics_categoryOption);
+						//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
+						Robot robot = new Robot();
+						robot.keyPress(KeyEvent.VK_C);
+						robot.keyPress(KeyEvent.VK_ENTER);
+						// Select a Category
+						WaitforObject(appedo_systemMetrics_menuOption);
+						browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();
+		/*	WaitforObject(appedo_systemMetrics_configureRemove1);
+			browser.findElement(getObject(appedo_systemMetrics_configureRemove1)).click();
+			*/
 			// Click on update button
 			WaitforObject(appedo_systemMetrics_btnUpdate);
 			browser.findElement(getObject(appedo_systemMetrics_btnUpdate)).click();
@@ -223,7 +238,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			Thread.sleep(10000);
 			
 			// Scroll down
-			Robot robot = new Robot();
+			
 			robot.mouseWheel(200);
 			
 			// Verify added metrics in chart

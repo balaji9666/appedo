@@ -13,6 +13,8 @@ public class viewSUMGraph extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String sumName;
 
 	@BeforeMethod

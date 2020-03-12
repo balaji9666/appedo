@@ -11,8 +11,6 @@ import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class visualizerParameterization extends ReusableMethods {
@@ -456,7 +454,7 @@ public class visualizerParameterization extends ReusableMethods {
 					WaitforObject(appedo_db_viewQueries);
 					browser.findElement(getObject(appedo_db_viewQueries)).click();
 					//List<WebElement> table1 = browser.findElements(By.xpath("//table/tbody/tr"));
-				//	int totalrows1 = table1.size();
+					//int totalrows1 = table1.size();
 					for (int j = 0; j < totalrows; j++) {
 						QueryName1 = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (j + 1) + "] /td[3]"))
 								.getText().toString();

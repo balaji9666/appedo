@@ -8,14 +8,14 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class sumActivate extends ReusableMethods {
 
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String EditTestName;
 	String Status;
 

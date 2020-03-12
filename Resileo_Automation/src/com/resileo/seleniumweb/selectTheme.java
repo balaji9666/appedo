@@ -3,7 +3,7 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -12,6 +12,7 @@ public class selectTheme extends ReusableMethods {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 	
+
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -125,6 +126,7 @@ public class selectTheme extends ReusableMethods {
 		}
 	}
 
+
 	@AfterMethod
 	public void tearDown() throws Exception {
 		logout();
@@ -143,7 +145,7 @@ public class selectTheme extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			AssertJUnit.fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 }

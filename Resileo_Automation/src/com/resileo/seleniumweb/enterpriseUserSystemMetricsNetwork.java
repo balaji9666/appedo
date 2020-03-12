@@ -1,11 +1,9 @@
 package com.resileo.seleniumweb;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class enterpriseUserSystemMetricsNetwork extends ReusableMethods {
@@ -120,7 +118,7 @@ public class enterpriseUserSystemMetricsNetwork extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			Assert.fail(verificationErrorString);
+			AssertJUnit.fail(verificationErrorString);
 		}
 	}
 }

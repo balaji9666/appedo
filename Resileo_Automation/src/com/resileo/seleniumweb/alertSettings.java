@@ -17,6 +17,8 @@ public class alertSettings extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String EditTestName;
 	String DelTestName;
 	String Mail;
@@ -31,7 +33,7 @@ public class alertSettings extends ReusableMethods {
 	@Test
 	public void alertsettingCreate() {
 		try {
-			test = extent.startTest("Create Email Alert settings", "Creating Alert by email");
+			test = extent.startTest("Create Alert settings", "Creating Alert by email");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -138,7 +140,7 @@ public class alertSettings extends ReusableMethods {
 
 	public void EditAlertSetting() {
 		try {
-			test = extent.startTest("Edit Email Alert Setting", "Editing Alert for email");
+			test = extent.startTest("Edit Alert Setting", "Editing Alert for email");
 			Thread.sleep(1000);
 			
 			// Click on edit icon for the alert created recently
@@ -186,7 +188,7 @@ public class alertSettings extends ReusableMethods {
 
 	public void DeleteAlertSetting() {
 		try {
-			test = extent.startTest("Delete Email Alert Setting", "Deleting Alert for email");
+			test = extent.startTest("Delete Alert Setting", "Deleting Alert for email");
 			Thread.sleep(1000);
 
 			// click on delete icon for the alert created recently

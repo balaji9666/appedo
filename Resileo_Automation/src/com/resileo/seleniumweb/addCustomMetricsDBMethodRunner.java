@@ -11,7 +11,7 @@ public class addCustomMetricsDBMethodRunner extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginKalai();
+		loginA();
 	}
 
 	@Test

@@ -9,8 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class avmSlaPolicy extends ReusableMethods {

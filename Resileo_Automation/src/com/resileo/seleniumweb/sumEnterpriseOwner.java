@@ -19,6 +19,8 @@ public class sumEnterpriseOwner extends ReusableMethods {
 	// public WebDriver browser;
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String sumeditname;
 	String urTestName;
 	String EditTestName;

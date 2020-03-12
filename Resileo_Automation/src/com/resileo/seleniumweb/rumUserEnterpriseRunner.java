@@ -7,6 +7,7 @@ public class rumUserEnterpriseRunner extends ReusableMethods {
 	rumEnterpriseUser run = new rumEnterpriseUser();
 
 	@BeforeMethod
+
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNalini();

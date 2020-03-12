@@ -4,14 +4,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
-
 import com.relevantcodes.extentreports.LogStatus;
 
 public class calendar extends ReusableMethods {
 
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
-
+	
+	
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -74,9 +74,9 @@ public class calendar extends ReusableMethods {
 				test.log(LogStatus.FAIL, "Date Picker To date button is not displayed");
 			}
 
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			browser.findElement(getObject(appedo_datepickerFromDate)).click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 
 			// Date table
 			if (browser.findElement(getObject(appedo_fromDateFunction)).isDisplayed()) 
@@ -88,13 +88,13 @@ public class calendar extends ReusableMethods {
 
 			// Select today date
 			browser.findElement(getObject(appedo_selectTodaydate)).click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 
 			WaitforObject(appedo_selectCurrentTime);
 			browser.findElement(getObject(appedo_selectCurrentTime)).click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			WaitforObject(appedo_selectCurrentMin);
 			browser.findElement(getObject(appedo_selectCurrentMin)).click();
 			Thread.sleep(3000);
@@ -104,18 +104,19 @@ public class calendar extends ReusableMethods {
 			browser.findElement(getObject(appedo_datepickerToDate)).click();
 
 			// Select today date
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			browser.findElement(getObject(appedo_selectTodaydate)).click();
 
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			WaitforObject(appedo_selectCurrentTime);
 			browser.findElement(getObject(appedo_selectCurrentTime)).click();
 
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			WaitforObject(appedo_selectCurrentMin);
 			browser.findElement(getObject(appedo_selectCurrentMin)).click();
 
 			// Click on apply selection
+			Thread.sleep(3000);
 			WaitforObject(appedo_sum_viewGraph_btnapplySelection);
 			browser.findElement(getObject(appedo_sum_viewGraph_btnapplySelection)).click();
 			Thread.sleep(5000);

@@ -1,9 +1,9 @@
 package com.resileo.seleniumweb;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.List;
@@ -330,7 +330,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equalsIgnoreCase(verificationErrorString)) 
 		{
-			Assert.fail(verificationErrorString);
+			AssertJUnit.fail(verificationErrorString);
 		}
 	}
 }

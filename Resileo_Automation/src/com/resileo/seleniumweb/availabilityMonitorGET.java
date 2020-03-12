@@ -12,14 +12,14 @@ import java.awt.Robot;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class availabilityMonitorGET extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String TestNameEdit;
 	String TestName;
 	String EditTest;

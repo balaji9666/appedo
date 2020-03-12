@@ -12,14 +12,14 @@ import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class sumModule extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String sumeditname;
 	String urTestName;
 	String EditTestName;
@@ -30,7 +30,7 @@ public class sumModule extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginA();
 	}
 
 	@Test

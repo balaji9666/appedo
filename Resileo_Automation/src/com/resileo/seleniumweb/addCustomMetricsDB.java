@@ -4,9 +4,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.apache.commons.lang3.RandomStringUtils;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class addCustomMetricsDB extends ReusableMethods {
@@ -17,7 +18,7 @@ public class addCustomMetricsDB extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginKalai();
+		loginA();
 	}
 
 	@Test
@@ -50,8 +51,11 @@ public class addCustomMetricsDB extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_createMetrics)).click();
 
 			// Select Metrics from list HTTP Service
-			WaitforObject(appedo_systemMetrics_customSelectDB);
-			browser.findElement(getObject(appedo_systemMetrics_customSelectDB)).click();
+		//	WaitforObject(appedo_systemMetrics_customSelectDB);
+		//	browser.findElement(getObject(appedo_systemMetrics_customSelectDB)).click();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_C);
+			robot.keyPress(KeyEvent.VK_ENTER);
 
 			// Click on Counter name
 			WaitforObject(appedo_systemMetrics_counterName);
@@ -134,8 +138,12 @@ public class addCustomMetricsDB extends ReusableMethods {
 			Thread.sleep(2000);
 			
 			// Click on any Category
-			WaitforObject(appedo_configCustomListConnection);
-			browser.findElement(getObject(appedo_configCustomListConnection)).click();
+		//	WaitforObject(appedo_configCustomListConnection);
+			//browser.findElement(getObject(appedo_configCustomListConnection)).click();
+			
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_C);
+			robot.keyPress(KeyEvent.VK_ENTER);
 			
 			// Select a Category
 			WaitforObject(appedo_customMenu);
@@ -163,7 +171,7 @@ public class addCustomMetricsDB extends ReusableMethods {
 			// Verify added metrics in chart
 			WaitforObject(appedo_systemMetrics_db_addedChart);
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_db_addedChart)).getText();
-			if (expectedChart.contains("Connections:")) 
+			if (expectedChart.contains("Cache:")) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in DB");
 			} else {
@@ -190,10 +198,28 @@ public class addCustomMetricsDB extends ReusableMethods {
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_configure);
 			browser.findElement(getObject(appedo_systemMetrics_configure)).click();
+			Thread.sleep(3000);
+			
+			// Click on Select Category
+						WaitforObject(appedo_systemMetrics_selectCategory);
+						browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
+						Thread.sleep(2000);
+						
+						// Select a Category
+						WaitforObject(appedo_configCustomListConnection);
+					browser.findElement(getObject(appedo_configCustomListConnection)).click();
+			
+		//	Robot robot = new Robot();
+			//robot.keyPress(KeyEvent.VK_C);
+			//robot.keyPress(KeyEvent.VK_ENTER);
+			
+			// Select a Category
+			WaitforObject(appedo_customMenu);
+			browser.findElement(getObject(appedo_customMenu)).click();
 			
 			// Click on the selected metrics
-			WaitforObject(appedo_customRemoveConfig);
-			browser.findElement(getObject(appedo_customRemoveConfig)).click();
+		//	WaitforObject(appedo_customRemoveConfig);
+			//browser.findElement(getObject(appedo_customRemoveConfig)).click();
 			
 			// Click on update button
 			WaitforObject(appedo_systemMetrics_btnUpdate);

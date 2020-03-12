@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-
 import com.relevantcodes.extentreports.LogStatus;
 
 public class settingUpdateProfile extends ReusableMethods {

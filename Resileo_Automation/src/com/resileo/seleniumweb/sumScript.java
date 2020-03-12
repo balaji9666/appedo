@@ -12,14 +12,14 @@ import org.openqa.selenium.interactions.Actions;
 import java.awt.Robot;
 import java.util.List;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class sumScript extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String sumName;
 	String sumTransactionName;
 	String DeleteTestName;
@@ -163,16 +163,20 @@ public class sumScript extends ReusableMethods {
 			test.log(LogStatus.FAIL, "Test Failed", image);
 			extent.endTest(test);
 			extent.flush();
+			browser.navigate().refresh();
 		}
-	}
+		 
+		}
+	
 
 	public void editSUM() {
 		try {
 			test = extent.startTest("SUM Script Edition", "Editing SUM for Script");
 			Thread.sleep(2000);
-			
+
+             browser.navigate().refresh();
 			// Click on edit icon
-			Thread.sleep(4000);
+			Thread.sleep(8000);
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) {

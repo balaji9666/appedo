@@ -11,6 +11,8 @@ public class sumEnterpriseUser extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String sumeditname;
 	String urTestName;
 	String EditTestName;

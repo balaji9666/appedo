@@ -16,7 +16,7 @@ public class viewOADChartMethodRunner extends ReusableMethods {
 	public void doTest() throws Exception {
 		run.setBrowser(browser);
 		run.viewOsGraph();
-		run.viewAppGraph();
+        run.viewAppGraph();
 		run.viewDBGraph();
 		run.logoutFromApp();
 	}

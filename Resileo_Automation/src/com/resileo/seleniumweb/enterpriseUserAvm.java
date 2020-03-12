@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class enterpriseUserAvm extends ReusableMethods {

@@ -12,14 +12,14 @@ import org.openqa.selenium.interactions.Actions;
 import java.awt.Robot;
 import java.util.List;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class sumTransaction extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String EditName;
 	String sumName;
 	String DeleteTestName;

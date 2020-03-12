@@ -4,9 +4,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.apache.commons.lang3.RandomStringUtils;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class addCustomMetricsApp extends ReusableMethods {
@@ -14,11 +15,10 @@ public class addCustomMetricsApp extends ReusableMethods {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 
-
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginrt();
+		loginA();
 	}
 
 	@Test
@@ -52,8 +52,11 @@ public class addCustomMetricsApp extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_createMetrics)).click();
 
 			//Select Metrics from list HTTP Service
-			WaitforObject(appedo_customSelectApp);
-			browser.findElement(getObject(appedo_customSelectApp)).click();
+			/*WaitforObject(appedo_customSelectApp);
+			browser.findElement(getObject(appedo_customSelectApp)).click();*/
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_C);
+			robot.keyPress(KeyEvent.VK_ENTER);
 
 			// Click on counter name
 			WaitforObject(appedo_systemMetrics_counterName);
@@ -125,19 +128,23 @@ public class addCustomMetricsApp extends ReusableMethods {
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_configure);
 			browser.findElement(getObject(appedo_systemMetrics_configure)).click();
-
+			Thread.sleep(3000);
+			
 			// Click on select Category
 			WaitforObject(appedo_systemMetrics_selectCategory);
 			browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_C);
+			robot.keyPress(KeyEvent.VK_ENTER);
 
 			// Click on any Category
-			WaitforObject(appedo_customListHttp);
-			browser.findElement(getObject(appedo_customListHttp)).click();
+		//	WaitforObject(appedo_customListHttp);
+		//	browser.findElement(getObject(appedo_customListHttp)).click();
 
 			// Select a Category
 			Thread.sleep(2000);
-			WaitforObject(appedo_systemMetrics_customMenuHttp);
-			browser.findElement(getObject(appedo_systemMetrics_customMenuHttp)).click();
+			WaitforObject(appedo_systemMetrics_customMenuHttp1);
+			browser.findElement(getObject(appedo_systemMetrics_customMenuHttp1)).click();
 
 			// Click on update
 			WaitforObject(appedo_systemMetrics_btnUpdate);
@@ -160,7 +167,7 @@ public class addCustomMetricsApp extends ReusableMethods {
 			// Verify added metrics in chart
 			WaitforObject(appedo_systemMetrics_os_addedChart);
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).getText();
-			if (expectedChart.contains("application::")) 
+			if (expectedChart.contains("class loading system")) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in App");
 			} else {
@@ -187,10 +194,21 @@ public class addCustomMetricsApp extends ReusableMethods {
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_configure);
 			browser.findElement(getObject(appedo_systemMetrics_configure)).click();
+			Thread.sleep(3000);
+			
+			// Click on select Category
+			WaitforObject(appedo_systemMetrics_selectCategory);
+			browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_C);
+			robot.keyPress(KeyEvent.VK_ENTER);
 			
 			// Click on the selected metrics
-			WaitforObject(appedo_removeConfig);
-			browser.findElement(getObject(appedo_removeConfig)).click();
+						Thread.sleep(2000);
+						WaitforObject(appedo_systemMetrics_customMenuHttp1);
+						browser.findElement(getObject(appedo_systemMetrics_customMenuHttp1)).click();
+		/*	WaitforObject(appedo_removeConfig);
+			browser.findElement(getObject(appedo_removeConfig)).click();*/
 			
 			// Click on update button
 			WaitforObject(appedo_systemMetrics_btnUpdate);

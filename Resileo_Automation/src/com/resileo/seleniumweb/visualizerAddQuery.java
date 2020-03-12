@@ -6,14 +6,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.apache.commons.lang3.RandomStringUtils;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class visualizerAddQuery extends ReusableMethods {
 	
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String queryName;
 
 	@BeforeMethod

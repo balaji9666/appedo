@@ -11,14 +11,14 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class availabilityMonitorPUT extends ReusableMethods {
 
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
+	
+	
 	String TestNameEdit;
 	String TestName;
 	String EditTest;

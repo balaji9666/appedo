@@ -7,6 +7,7 @@ public class rumEnterpriseMethodRunner extends ReusableMethods {
 	rumEnterpriseOwner run = new rumEnterpriseOwner();
 
 	@BeforeMethod
+
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
 		loginNagas();
