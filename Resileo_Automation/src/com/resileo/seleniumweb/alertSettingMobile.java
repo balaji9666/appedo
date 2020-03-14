@@ -264,7 +264,7 @@ public class alertSettingMobile extends ReusableMethods {
 			Thread.sleep(3000);
 			browser.findElement(getObject(appedo_alertSms_verify)).click();
 			WaitforObject(appedo_alertSms_txtOtp);
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_alertSms_txtOtp)).sendKeys("0001");
 			browser.findElement(getObject(appedo_alertSms_verifyOtp)).click();
 			String getOtp=browser.findElement(getObject(appedo_verify_mailUpdate)).getText().toString();
