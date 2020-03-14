@@ -261,8 +261,10 @@ public class alertSettingMobile extends ReusableMethods {
 			}
 			
 			// Validate with invalid OTP
-			Thread.sleep(6000);
+			Thread.sleep(3000);
 			browser.findElement(getObject(appedo_alertSms_verify)).click();
+			WaitforObject(appedo_alertSms_txtOtp);
+			Thread.sleep(500);
 			browser.findElement(getObject(appedo_alertSms_txtOtp)).sendKeys("0001");
 			browser.findElement(getObject(appedo_alertSms_verifyOtp)).click();
 			String getOtp=browser.findElement(getObject(appedo_verify_mailUpdate)).getText().toString();
