@@ -56,6 +56,7 @@ public class createDashboardChart1 extends ReusableMethods {
 			
 			// Click on add to my chart
 			WaitforObject(appedo_addTo_myChart);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_addTo_myChart)).click();
 			Thread.sleep(1000);
 			

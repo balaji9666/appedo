@@ -27,7 +27,7 @@ public class alertSettingMobile extends ReusableMethods {
 	@Test
 	public void SettingsAlertsetting() {
 		try {
-			test = extent.startTest("Alert settings", "Alert settings");
+			test = extent.startTest("Alert settings - Create SMS Alert", "Alert settings for SMS");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -313,7 +313,7 @@ public class alertSettingMobile extends ReusableMethods {
 	// Edit Alert Settings
 	public void EditMobileAlertSetting() {
 		try {
-			test = extent.startTest("Alert Setting Edit", "Alert Setting");
+			test = extent.startTest("Alert settings - Edit SMS Alert", " Edit SMS Alert Setting");
 			Thread.sleep(5000);
 		
 			// Click on Edit
@@ -352,7 +352,7 @@ public class alertSettingMobile extends ReusableMethods {
 	// Delete Alert Settings
 	public void DeleteAlertMobileSetting() {
 		try {
-			test = extent.startTest("Alert Setting Delete", "Alert Setting");
+			test = extent.startTest("Alert settings - Delete SMS Alert", " Delete SMS Alert Setting");
 			
 			// click on delete icon we created recently
 			if(browser.findElement(getObject(appedo_alertSms_mobileNumber)).getText().equalsIgnoreCase(mobileNumber))
