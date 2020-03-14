@@ -231,7 +231,9 @@ public class alertSettingMobile extends ReusableMethods {
 			WaitforObject(appedo_alertSms_btnNext);
 			browser.findElement(getObject(appedo_alertSms_btnNext)).click();
 			
-			// Click on Resend
+			// Click on Resent
+			WaitforObject(appedo_alertSms_resend);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_alertSms_resend)).click();
 			String resend=browser.findElement(getObject(appedo_verify_mailUpdate)).getText().toString();
 			if(browser.findElement(getObject(appedo_verify_mailUpdate)).getText().contains(resend))
