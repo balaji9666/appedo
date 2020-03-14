@@ -47,6 +47,7 @@ public class alertSettingMobile extends ReusableMethods {
 			browser.findElement(getObject(appedo_link_alertSettings)).click();
 			Thread.sleep(1000);
 			WaitforObject(appedo_alert_maxTryDuration);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_alert_maxTryDuration)).clear();
 			browser.findElement(getObject(appedo_alert_triggerFrequency)).clear();
 			browser.findElement(getObject(appedo_alert_maxTrycount)).clear();
@@ -80,14 +81,18 @@ public class alertSettingMobile extends ReusableMethods {
 			}
 			
 			// Enter threshold values
+			WaitforObject(appedo_alert_maxTryDuration);
 			browser.findElement(getObject(appedo_alert_maxTryDuration)).sendKeys("1");
+			WaitforObject(appedo_alert_triggerFrequency);
 			browser.findElement(getObject(appedo_alert_triggerFrequency)).sendKeys("2");
+			WaitforObject(appedo_alert_maxTrycount);
 			browser.findElement(getObject(appedo_alert_maxTrycount)).sendKeys("1");
 
 			// Click on Save & Next
 			WaitforObject(appedo_btnSaveNext);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_btnSaveNext)).click();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 
 			// Click on Add alert email
 			WaitforObject(appedo_addAlert_email);
@@ -178,7 +183,7 @@ public class alertSettingMobile extends ReusableMethods {
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
-			Thread.sleep(20000);
+			Thread.sleep(5000);
 			
 			// Click on select table
 			WaitforObject(appedo_db_addQuery_selectTable);
@@ -209,11 +214,11 @@ public class alertSettingMobile extends ReusableMethods {
 			Thread.sleep(2000);
 			WaitforObject(appedo_db_addQuery_runQuery);
 			browser.findElement(getObject(appedo_db_addQuery_runQuery)).click();
-			Thread.sleep(8000);
+			Thread.sleep(4000);
 			
 			// Get OTP from table
 			otp = browser.findElement(getObject(appedo_alertSms_getOtp)).getText().toString();
-			
+			System.out.println("Obtained OTP : " +otp);
 			// Click on Toggle Menu
 			browser.findElement(getObject(appedo_toggleMenu)).click();
 			browser.findElement(getObject(appedo_toggleMenu)).click();
@@ -268,6 +273,7 @@ public class alertSettingMobile extends ReusableMethods {
 			browser.findElement(getObject(appedo_alertSms_txtOtp)).sendKeys("0001");
 			browser.findElement(getObject(appedo_alertSms_verifyOtp)).click();
 			String getOtp=browser.findElement(getObject(appedo_verify_mailUpdate)).getText().toString();
+			
 			if (browser.findElement(getObject(appedo_verify_mailUpdate)).getText().contains(getOtp)) 
 			{
 				test.log(LogStatus.PASS, "Validation for invalid OTP is successful ");
@@ -276,9 +282,14 @@ public class alertSettingMobile extends ReusableMethods {
 			}
 						
 			// Enter OTP
+			WaitforObject(appedo_alertSms_verify);
 			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_alertSms_verify)).click();
+			WaitforObject(appedo_alertSms_txtOtp);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_alertSms_txtOtp)).clear();
+			System.out.println("Following OTP will be submitted : " +otp);
+			WaitforObject(appedo_alertSms_txtOtp);
 			browser.findElement(getObject(appedo_alertSms_txtOtp)).sendKeys(otp);
 			browser.findElement(getObject(appedo_alertSms_verifyOtp)).click();
 			
