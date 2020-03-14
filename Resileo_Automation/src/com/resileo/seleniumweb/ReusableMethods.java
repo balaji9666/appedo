@@ -35,10 +35,11 @@ public class ReusableMethods extends ObjectRepository {
 					"lib/chromedriver.exe");
 			
 			//For Headless Operation
-			ChromeOptions options=new ChromeOptions();
+	     	ChromeOptions options=new ChromeOptions();
 			options.addArguments("--headless","window-size=1920,1080");
 			
-			browser = new ChromeDriver(options);
+			browser = new ChromeDriver(options);//For Headless Operation
+			//browser = new ChromeDriver();//For Normal Operation
 		} else {
 			
 			browser = new FirefoxDriver();

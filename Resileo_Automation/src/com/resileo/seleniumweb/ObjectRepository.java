@@ -153,10 +153,10 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_alertSms_selectAColumn="xpath://span[@class='mat-option-text']";
 	String appedo_alertSms_filterValueType="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/db-addedit-query[1]/mat-card[1]/mat-card-content[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/mat-form-field[3]/div[1]/div[1]/div[1]/input[1]";
 	String appedo_alertSms_addToFilter="id:addtofilter";
-	String appedo_alertSms_getOtp="xpath://table/tbody/tr[1]/td[8]";
+	String appedo_alertSms_getOtp="xpath://table/tbody/tr[1]/td[8]/span";
 	String appedo_alertSms_btnNext="id:btnnext";
 	String appedo_alertSms_verify="xpath://a[contains(text(),'Verify')]";
-	String appedo_alertSms_txtOtp="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/div[1]/table[1]/tbody[1]/tr[1]/td[6]/span[1]/input[1]";
+	String appedo_alertSms_txtOtp="xpath://div/table/tbody/tr[1]/td[6]/span[1]/input";
 	String appedo_alertSms_verifyOtp="xpath://mat-icon[@class='md-18 mat-icon notranslate mat-primary material-icons']";
 	String appedo_alertSms_verifyStatus="xpath://table/tbody/tr[1]/td[5]";
 	String appedo_alertSms_mobileNumber="xpath://table/tbody/tr[1]/td[4]";

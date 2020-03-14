@@ -125,6 +125,7 @@ public class settingUpdateProfile extends ReusableMethods {
 			if (browser.findElement(getObject(appedo_verify_updateProfile)).getText().equalsIgnoreCase("Profile updated successfully")) 
 			{
 				test.log(LogStatus.PASS, "Profile updated Successfully");
+			
 			} else {
 				test.log(LogStatus.FAIL, "Profile update failed");
 			}
@@ -139,6 +140,7 @@ public class settingUpdateProfile extends ReusableMethods {
 			extent.endTest(test);
 			extent.flush();
 		}
+
 	}
 
 	@AfterMethod
@@ -153,6 +155,6 @@ public class settingUpdateProfile extends ReusableMethods {
 		} else {
 			test.log(LogStatus.FAIL, "Logout failed");
 		}
-		browser.close();
+		browser.quit();
 	}
 }

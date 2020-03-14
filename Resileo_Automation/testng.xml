@@ -6,8 +6,20 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-            <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
-            <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
+      <class name="com.resileo.seleniumweb.appedoRegistration"/>
+      <class name="com.resileo.seleniumweb.forgotPassword"/>
+      <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
+      <class name="com.resileo.seleniumweb.downloadAgents"/>
+      <class name="com.resileo.seleniumweb.selectTheme"/>
+      <class name="com.resileo.seleniumweb.settingChangePassword"/>
+      <class name="com.resileo.seleniumweb.settingUpdateProfile"/>
+      <class name="com.resileo.seleniumweb.manageEnterpriseMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
+      <class name="com.resileo.seleniumweb.rumMethodRunner"/>
+      <class name="com.resileo.seleniumweb.methodRunnerDashboard"/>
+      <class name="com.resileo.seleniumweb.rumEnterpriseMethodRunner"/>
+      <class name="com.resileo.seleniumweb.rumUserEnterpriseRunner"/>
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->
