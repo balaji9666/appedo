@@ -18,6 +18,7 @@ public class alertSettingMethodRunner extends ReusableMethods {
 	public void doTest() throws Exception {
 		run.setBrowser(browser);
 		run.alertsettingCreate();
+		run.verifyemail();
 		run.EditAlertSetting();
 		run.DeleteAlertSetting();
 		run.Signout();

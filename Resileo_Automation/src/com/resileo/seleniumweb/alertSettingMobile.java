@@ -178,7 +178,7 @@ public class alertSettingMobile extends ReusableMethods {
 	
 	public void addQueryToDB() {
 		try {
-			test = extent.startTest("Verification of OTP", "Verifying OTP");
+			test = extent.startTest("OTP Verification", "Verifying OTP");
 			
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);

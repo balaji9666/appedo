@@ -5,7 +5,10 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -44,8 +47,8 @@ public class alertSettings extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-			String alphabet = "abc";
-			Mail = RandomStringUtils.random(8, alphabet) + "@getnada.com";
+			
+			Mail = "appedomail@zohomail.in";
 
 			// click on setting link
 			WaitforObject(appedo_link_Settings);
@@ -138,6 +141,58 @@ public class alertSettings extends ReusableMethods {
 		}
 	}
 
+	public void verifyemail() {
+		try {
+			test = extent.startTest("Email Verification", "Verification of added email");
+			Thread.sleep(8000);
+			 WebDriver browser1 = new ChromeDriver();
+			 browser1.manage().window().maximize();
+			 browser1.get("https://accounts.zoho.in/signin?servicename=VirtualOffice&signupurl=https://www.zoho.in/mail/zohomail-pricing.html&serviceurl=https://mail.zoho.in");
+			 browser1.findElement(getObject(gmail_userid)).click();
+			 browser1.findElement(getObject(gmail_userid)).sendKeys("appedomail@zohomail.in");
+			 browser1.findElement(getObject(gmail_nxtbtn)).click();
+			 WaitforObject(gmail_pass);
+			 Thread.sleep(1000);
+			 browser1.findElement(getObject(gmail_pass)).click();
+			 browser1.findElement(getObject(gmail_pass)).sendKeys("GbX6u4*Pv!gBbS9");
+			 browser1.findElement(getObject(gmail_Passnxtbtn)).click();
+			 WaitforObject(gmail_appedo);
+			 Thread.sleep(3000);
+				if (browser1.findElement(getObject(gmail_appedo)).getText().contains("automailer@appedo.com")) 
+				{
+					test.log(LogStatus.PASS, "Verification Mail Recived" );
+					 browser1.findElement(getObject(gmail_appedo)).click();
+					 WaitforObject(gmail_passverify);
+					 Thread.sleep(1000);
+					 browser1.findElement(getObject(gmail_passverify)).click();
+					 Thread.sleep(5000);
+					 browser1.quit();
+				} else {
+					test.log(LogStatus.FAIL, "Verification Mail Not Recived");
+				}
+				Thread.sleep(3000);
+				//String status=browser.findElement(getObject(appedo_alertSms_verifyStatus)).getText().toString();
+				if(browser.findElement(getObject(appedo_alertSms_verifyStatus)).getText().contains("Verified"))
+				{
+					test.log(LogStatus.PASS, "Email Status is Verified");
+				} else {
+					test.log(LogStatus.FAIL, "Email Status is not verified");
+				}
+				   
+			extent.endTest(test);
+			extent.flush();
+			
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, e.getMessage());
+			System.out.println(e.getMessage());
+			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+			String image = test.addScreenCapture(Snapshot1);
+			test.log(LogStatus.FAIL, "Test Failed", image);
+			extent.endTest(test);
+			extent.flush();
+		}
+	}
+	
 	public void EditAlertSetting() {
 		try {
 			test = extent.startTest("Alert settings - Edit Email Alert", "Editing Alert for email");

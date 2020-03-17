@@ -1,0 +1,840 @@
+17:06:29,219 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:29,222 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:29,222 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:29,222 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/window/current/maximize HTTP/1.1
+17:06:29,222 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:29,223 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/window/current/maximize HTTP/1.1
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 26
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:29,223 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:29,223 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/window/current/maximize HTTP/1.1[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 26[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:29,224 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"windowHandle":"current"}"
+17:06:33,345 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:33,345 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:109[\r][\n]"
+17:06:33,345 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:33,345 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:33,345 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"height":754,"width":1382,"x":-8,"y":-8}}"
+17:06:33,345 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:33,345 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:109
+17:06:33,345 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:33,345 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:33,346 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:33,346 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,347 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:33,347 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:33,348 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,348 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,348 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:33,349 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:33,349 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:33,349 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/timeouts HTTP/1.1
+17:06:33,349 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:33,349 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/timeouts HTTP/1.1
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 31
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:33,349 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:33,350 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/timeouts HTTP/1.1[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 31[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:33,350 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"type":"implicit","ms":120000}"
+17:06:33,351 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:33,351 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:33,351 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:33,351 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:33,351 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:33,351 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:33,351 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:33,351 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:33,352 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:33,352 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:33,352 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,352 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:06:33,355 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:33,355 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:33,355 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,355 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,355 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:33,357 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:33,357 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:33,358 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:33,358 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:33,358 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:33,358 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:33,358 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:33,359 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 68
+17:06:33,359 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:33,359 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:33,359 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:33,359 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:33,359 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1[\r][\n]"
+17:06:33,360 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:33,360 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 68[\r][\n]"
+17:06:33,360 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:33,360 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:33,361 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:33,361 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:33,361 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:33,361 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"using":"xpath","value":"//input[@placeholder='Enter your email']"}"
+17:06:33,373 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:33,373 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:102[\r][\n]"
+17:06:33,373 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:33,373 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:33,374 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"ELEMENT":"0.7402685281605683-1"}}"
+17:06:33,374 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:33,374 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:102
+17:06:33,374 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:33,374 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:33,375 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:33,375 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,378 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:33,378 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:33,379 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,379 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,379 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:33,381 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:33,381 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/clear HTTP/1.1
+17:06:33,381 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:33,381 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/clear HTTP/1.1
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 29
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:33,381 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/clear HTTP/1.1[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 29[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:33,381 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"id":"0.7402685281605683-1"}"
+17:06:33,415 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:33,415 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:33,415 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:33,415 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:33,415 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:33,415 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:33,415 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:33,415 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:33,415 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:33,416 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:33,416 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,416 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:06:33,417 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:33,417 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:33,417 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,417 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,417 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:33,419 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:33,419 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:33,419 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:33,419 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:33,419 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:33,419 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:33,419 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:33,420 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 68
+17:06:33,420 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:33,420 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:33,420 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:33,420 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1[\r][\n]"
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 68[\r][\n]"
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:33,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:33,421 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:33,421 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:33,421 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"using":"xpath","value":"//input[@placeholder='Enter your email']"}"
+17:06:33,428 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:33,429 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:102[\r][\n]"
+17:06:33,429 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:33,429 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:33,429 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"ELEMENT":"0.7402685281605683-1"}}"
+17:06:33,429 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:33,429 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:102
+17:06:33,429 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:33,429 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:33,429 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:33,430 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,899 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:33,900 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:33,900 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,900 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:33,900 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:33,901 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:33,901 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:33,901 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/value HTTP/1.1
+17:06:33,901 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:33,901 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:33,901 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/value HTTP/1.1
+17:06:33,901 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:33,901 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 68
+17:06:33,901 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:33,902 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:33,902 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:33,902 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-1/value HTTP/1.1[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 68[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:33,902 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:33,903 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"id":"0.7402685281605683-1","value":["alosious.resileo@gmail.com"]}"
+17:06:34,062 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,062 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:34,062 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,062 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,062 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:34,062 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,062 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:34,062 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,063 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,063 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,063 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,063 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:06:34,064 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,064 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,064 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,064 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,065 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,066 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,066 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,066 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,066 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,066 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,066 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,066 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,066 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 71
+17:06:34,066 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,067 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,067 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,067 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 71[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,067 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,068 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,068 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"using":"xpath","value":"//input[@placeholder='Enter your password']"}"
+17:06:34,078 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,078 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:102[\r][\n]"
+17:06:34,078 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,078 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,078 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"ELEMENT":"0.7402685281605683-3"}}"
+17:06:34,079 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,079 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:102
+17:06:34,079 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,079 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,079 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,079 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,080 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,080 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,080 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,080 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,080 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,082 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,082 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,082 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/clear HTTP/1.1
+17:06:34,082 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,082 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,082 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/clear HTTP/1.1
+17:06:34,082 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,082 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 29
+17:06:34,083 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,083 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,083 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,083 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,083 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/clear HTTP/1.1[\r][\n]"
+17:06:34,083 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,083 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 29[\r][\n]"
+17:06:34,083 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,084 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,084 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,084 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,084 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,084 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"id":"0.7402685281605683-3"}"
+17:06:34,113 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,113 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:34,113 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,113 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,113 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:34,113 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,114 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:34,114 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,114 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,114 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,114 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,114 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:06:34,115 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,115 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,115 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,115 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,115 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,117 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,117 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,117 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,117 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,117 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,117 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,117 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,118 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 71
+17:06:34,118 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,118 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,118 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,118 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,118 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1[\r][\n]"
+17:06:34,118 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,118 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 71[\r][\n]"
+17:06:34,118 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,119 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,119 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,119 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,119 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,119 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"using":"xpath","value":"//input[@placeholder='Enter your password']"}"
+17:06:34,126 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,126 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:102[\r][\n]"
+17:06:34,126 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,126 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,127 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"ELEMENT":"0.7402685281605683-3"}}"
+17:06:34,127 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,127 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:102
+17:06:34,127 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,127 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,127 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,127 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,170 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,175 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,175 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,175 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,175 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,178 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,178 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,178 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/value HTTP/1.1
+17:06:34,178 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,178 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,178 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/value HTTP/1.1
+17:06:34,178 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,178 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 53
+17:06:34,178 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,178 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,179 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,179 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-3/value HTTP/1.1[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 53[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,179 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"id":"0.7402685281605683-3","value":["Alosious@21"]}"
+17:06:34,270 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,270 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:34,270 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,270 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,270 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:34,271 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,271 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:34,271 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,271 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,271 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,271 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,272 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:06:34,272 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,272 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,272 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,273 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,273 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,275 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,275 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,275 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,275 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,275 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 33
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,276 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,276 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element HTTP/1.1[\r][\n]"
+17:06:34,276 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 33[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,277 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"using":"id","value":"btnlogin"}"
+17:06:34,287 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,287 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:102[\r][\n]"
+17:06:34,287 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,287 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,287 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":{"ELEMENT":"0.7402685281605683-4"}}"
+17:06:34,287 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,288 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:102
+17:06:34,288 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,288 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,288 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,288 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,289 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:34,289 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:34,289 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,289 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:34,289 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:34,291 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:34,294 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:34,294 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-4/click HTTP/1.1
+17:06:34,294 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:34,294 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-4/click HTTP/1.1
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Content-Length: 29
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:34,294 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "POST /session/f154e65f227a39f56dbfd03a46492c98/element/0.7402685281605683-4/click HTTP/1.1[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Content-Length: 29[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:34,295 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 >> "{"id":"0.7402685281605683-4"}"
+17:06:34,361 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:34,361 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:34,362 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:34,362 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:34,362 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:34,362 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:34,362 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:34,362 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:34,363 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:34,363 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:34,363 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:42,372 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:122 - CookieSpec selected: default
+17:06:42,372 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:76 - Auth cache not set in the context
+17:06:42,372 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:249 - Connection request: [route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:42,375 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:42,375 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:282 - Connection leased: [id: 0][route: {}->http://localhost:47192][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:42,375 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:207 - Stale connection check
+17:06:42,376 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+17:06:42,376 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:90 - http-outgoing-0: set socket timeout to 10800000
+17:06:42,376 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:255 - Executing request DELETE /session/f154e65f227a39f56dbfd03a46492c98 HTTP/1.1
+17:06:42,376 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:260 - Target auth state: UNCHALLENGED
+17:06:42,376 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:266 - Proxy auth state: UNCHALLENGED
+17:06:42,376 DEBUG org.apache.http.headers<strong>{1}</strong>:135 - http-outgoing-0 >> DELETE /session/f154e65f227a39f56dbfd03a46492c98 HTTP/1.1
+17:06:42,376 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Host: localhost:47192
+17:06:42,376 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:06:42,376 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)
+17:06:42,376 DEBUG org.apache.http.headers<strong>{1}</strong>:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:06:42,376 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "DELETE /session/f154e65f227a39f56dbfd03a46492c98 HTTP/1.1[\r][\n]"
+17:06:42,377 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Host: localhost:47192[\r][\n]"
+17:06:42,377 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:06:42,377 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_221)[\r][\n]"
+17:06:42,377 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:06:42,377 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 >> "[\r][\n]"
+17:06:42,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:06:42,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Length:72[\r][\n]"
+17:06:42,420 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+17:06:42,421 DEBUG org.apache.http.wire<strong>{1}</strong>:72 - http-outgoing-0 << "[\r][\n]"
+17:06:42,421 DEBUG org.apache.http.wire<strong>{1}</strong>:86 - http-outgoing-0 << "{"sessionId":"f154e65f227a39f56dbfd03a46492c98","status":0,"value":null}"
+17:06:42,421 DEBUG org.apache.http.headers<strong>{1}</strong>:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:06:42,421 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Length:72
+17:06:42,422 DEBUG org.apache.http.headers<strong>{1}</strong>:127 - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+17:06:42,422 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:284 - Connection can be kept alive indefinitely
+17:06:42,422 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:314 - Connection [id: 0][route: {}->http://localhost:47192] can be kept alive indefinitely
+17:06:42,422 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection released: [id: 0][route: {}->http://localhost:47192][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+17:06:42,424 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:401 - Closing connections idle longer than 0 SECONDS
+17:06:42,424 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:81 - http-outgoing-0: Close connection
+17:21:52,894 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:21:52,960 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:21:53,738 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:21:53,826 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:21:53,980 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:22:52,128 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:22:52,181 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:22:52,816 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:22:52,858 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:22:52,997 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:27:12,351 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:27:12,407 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:27:13,055 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:27:13,098 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:27:13,238 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:39:57,117 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:39:57,177 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:39:57,824 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:39:57,865 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:39:58,010 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:40:13,310 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:40:13,382 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:41:58,571 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:41:58,625 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+17:41:59,297 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:41:59,343 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+17:41:59,479 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+17:42:18,396 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:42:18,478 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:42:18,672 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://div[@class='ZFr60d CeoRYc']' with attribute type 'xpath' and attribute value '//div[@class='ZFr60d CeoRYc']
+17:44:47,420 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:44:47,507 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:44:47,699 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+17:44:55,989 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+17:44:55,990 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+17:44:55,991 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+17:44:55,991 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+17:44:55,992 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+17:51:15,110 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:51:15,209 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:51:15,404 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+17:51:15,660 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+17:55:03,008 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:55:03,098 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:55:03,276 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+17:55:03,420 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+17:57:51,778 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:57:51,875 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+17:57:52,097 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+17:57:53,337 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+17:57:53,426 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+17:57:53,514 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+17:58:01,652 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+17:58:01,653 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+17:58:01,654 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+17:58:01,655 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+17:58:01,656 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+18:02:28,175 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+18:02:28,264 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+18:02:28,445 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+18:02:29,692 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+18:02:29,766 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+18:02:29,856 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:02:38,002 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+18:02:38,002 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+18:02:38,003 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+18:02:38,004 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+18:02:38,004 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+18:04:20,144 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+18:04:20,273 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='identifierId']' with attribute type 'xpath' and attribute value '//input[@id='identifierId']
+18:04:20,514 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='RveJvd snByac']' with attribute type 'xpath' and attribute value '//span[@class='RveJvd snByac']
+18:04:21,847 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+18:04:21,969 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@name='password']' with attribute type 'xpath' and attribute value '//input[@name='password']
+18:04:22,067 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:04:30,229 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+18:04:30,230 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+18:04:30,231 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+18:04:30,232 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+18:04:30,232 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+18:23:58,255 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:24:43,423 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:24:43,558 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:24:43,738 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:24:44,809 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:24:44,869 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:24:44,981 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:24:53,060 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+18:24:53,060 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+18:24:53,061 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+18:24:53,062 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+18:24:53,062 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+18:35:47,825 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:35:47,923 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:35:48,136 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:35:49,205 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:35:49,280 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:35:49,464 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:35:50,584 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:39:45,672 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:39:45,753 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:39:45,930 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:39:46,997 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:39:47,084 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:39:47,193 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:39:50,259 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:39:51,388 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+18:39:54,893 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+18:39:54,894 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+18:39:54,895 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+18:39:54,895 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+18:39:54,896 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+18:48:42,309 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:48:42,391 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:48:42,572 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:48:43,646 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:48:43,705 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:48:43,857 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:48:46,945 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+18:50:54,663 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:50:54,750 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:50:54,935 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:50:56,007 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:50:56,064 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:50:56,194 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:50:59,251 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:50:59,448 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:51:00,551 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+18:51:05,704 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+18:56:47,762 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:56:47,854 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:56:48,018 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:56:49,092 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:56:49,165 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:56:49,288 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+18:56:52,353 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:56:52,389 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+18:56:53,495 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+18:56:58,654 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='clrblack']' with attribute type 'xpath' and attribute value '//span[@class='clrblack']
+18:59:56,803 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:59:56,883 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+18:59:57,046 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+18:59:58,123 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:59:58,195 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+18:59:58,303 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:00:01,367 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:00:01,420 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:00:02,680 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+19:00:07,827 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='clrblack']' with attribute type 'xpath' and attribute value '//span[@class='clrblack']
+19:02:07,060 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:02:07,148 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:02:07,325 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:02:08,398 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:02:08,472 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:02:08,605 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:02:11,661 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:02:11,823 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:02:12,953 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+19:02:15,090 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='clrblack']' with attribute type 'xpath' and attribute value '//span[@class='clrblack']
+19:09:13,721 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:09:13,809 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:09:13,985 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:09:15,058 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:09:15,133 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:09:15,265 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:09:18,321 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:09:18,486 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:09:19,595 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+19:09:21,859 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div' with attribute type 'xpath' and attribute value '//alert/div
+19:12:32,467 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:12:32,557 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:12:32,752 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:12:33,830 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:12:34,499 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:12:34,617 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:12:37,676 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:12:37,743 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:12:38,994 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+19:12:41,137 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div' with attribute type 'xpath' and attribute value '//alert/div
+19:16:27,153 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:16:27,242 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:16:27,432 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:16:28,507 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:16:28,612 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:16:28,733 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:16:31,801 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:16:31,940 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:16:33,135 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+19:16:38,590 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+19:16:38,591 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+19:16:38,592 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+19:16:38,596 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+19:16:38,596 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+19:19:05,113 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:19:05,198 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:19:05,388 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:19:06,474 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:19:06,548 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:19:06,666 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:19:09,737 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+19:26:58,796 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+19:26:58,932 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+19:27:00,180 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+19:27:00,231 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+19:27:00,391 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+19:27:00,482 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+19:27:04,198 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+19:27:04,223 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Settings')]
+19:27:04,321 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Alert Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Alert Settings')]
+19:28:01,899 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+19:28:01,965 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+19:28:03,428 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+19:28:03,480 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+19:28:03,634 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+19:28:03,720 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+19:28:06,560 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+19:28:06,602 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Settings')]
+19:28:06,692 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Alert Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Alert Settings')]
+19:28:11,032 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+19:28:11,109 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+19:28:11,163 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+19:28:11,243 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+19:28:11,298 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+19:28:11,371 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+19:28:11,427 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+19:28:11,487 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+19:28:11,517 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+19:28:11,536 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+19:28:11,554 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+19:28:11,613 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+19:28:11,672 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+19:28:11,730 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+19:28:21,829 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+19:28:23,915 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+19:28:23,972 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+19:28:24,103 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavefinish' with attribute type 'id' and attribute value 'btnsavefinish
+19:28:24,162 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+19:28:25,623 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+19:28:25,661 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+19:28:25,662 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+19:28:25,662 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+19:28:25,664 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+19:28:25,664 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+19:28:45,044 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:28:45,133 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+19:28:45,359 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+19:28:46,439 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:28:46,626 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+19:28:46,759 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+19:28:49,819 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+11:04:26,871 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+11:04:27,197 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+11:04:29,718 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+11:04:29,783 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+11:04:29,977 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+11:04:30,094 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+11:04:32,572 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+11:04:32,600 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Settings')]
+11:04:32,726 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Alert Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Alert Settings')]
+11:04:36,964 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:04:37,296 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:04:37,387 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:04:37,542 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:04:37,624 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:04:37,712 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:04:37,772 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:04:37,829 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:04:37,862 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:04:37,884 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:04:37,909 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:04:37,990 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:04:38,063 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:04:38,142 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+11:04:48,257 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+11:04:50,452 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+11:04:50,616 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+11:04:50,763 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavefinish' with attribute type 'id' and attribute value 'btnsavefinish
+11:04:50,849 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+11:04:52,054 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+11:04:52,235 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:04:52,238 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:04:52,241 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:04:52,242 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:04:52,243 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+11:05:12,187 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+11:05:12,276 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+11:05:12,453 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+11:05:13,541 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+11:11:02,518 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+11:11:02,584 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your email']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your email']
+11:11:03,913 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+11:11:03,963 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@placeholder='Enter your password']' with attribute type 'xpath' and attribute value '//input[@placeholder='Enter your password']
+11:11:04,161 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+11:11:04,239 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+11:11:06,584 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@class='mat-button ng-star-inserted']' with attribute type 'xpath' and attribute value '//button[@class='mat-button ng-star-inserted']
+11:11:06,607 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Settings')]
+11:11:06,706 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Alert Settings')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Alert Settings')]
+11:11:10,920 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:11:11,213 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:11:11,276 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:11:11,373 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:11:11,450 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:11:11,528 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:11:11,588 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:11:11,664 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:11:11,697 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:11:11,720 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]' with attribute type 'xpath' and attribute value '/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]
+11:11:11,740 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:tryCountDurationInMin' with attribute type 'id' and attribute value 'tryCountDurationInMin
+11:11:11,810 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:triggerAlertEveryInMin' with attribute type 'id' and attribute value 'triggerAlertEveryInMin
+11:11:11,872 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:maxTryCount' with attribute type 'id' and attribute value 'maxTryCount
+11:11:11,930 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+11:11:22,028 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavenext' with attribute type 'id' and attribute value 'btnsavenext
+11:11:24,288 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+11:11:24,447 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:email' with attribute type 'id' and attribute value 'email
+11:11:24,678 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavefinish' with attribute type 'id' and attribute value 'btnsavefinish
+11:11:24,861 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+11:11:26,519 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://alert/div/span' with attribute type 'xpath' and attribute value '//alert/div/span
+11:11:26,575 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:11:26,575 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:11:26,577 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:11:26,579 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:11:26,579 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+11:11:46,507 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+11:11:46,587 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='login_id']' with attribute type 'xpath' and attribute value '//input[@id='login_id']
+11:11:46,769 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'Next')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'Next')]
+11:11:47,839 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+11:11:47,921 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='password']' with attribute type 'xpath' and attribute value '//input[@id='password']
+11:11:48,051 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]' with attribute type 'xpath' and attribute value '//button[@id='nextbtn']//span[contains(text(),'Sign in')]
+11:11:51,115 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+11:11:51,217 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(text(),'automailer@appedo.com')]' with attribute type 'xpath' and attribute value '//span[contains(text(),'automailer@appedo.com')]
+11:11:52,360 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://a[contains(text(),'Verify my Email-id')]' with attribute type 'xpath' and attribute value '//a[contains(text(),'Verify my Email-id')]
+11:12:01,348 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://table/tbody/tr[1]/td[5]' with attribute type 'xpath' and attribute value '//table/tbody/tr[1]/td[5]
+11:12:10,657 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:12:10,657 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:12:10,658 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:12:10,658 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:12:10,659 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+11:12:12,462 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='email']' with attribute type 'xpath' and attribute value '//input[@id='email']
+11:12:12,745 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://input[@id='email']' with attribute type 'xpath' and attribute value '//input[@id='email']
+11:12:13,126 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnsavefinish' with attribute type 'id' and attribute value 'btnsavefinish
+11:12:15,257 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='clrblack']' with attribute type 'xpath' and attribute value '//span[@class='clrblack']
+11:12:15,288 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[@class='clrblack']' with attribute type 'xpath' and attribute value '//span[@class='clrblack']
+11:12:16,310 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:12:16,311 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:12:16,312 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:12:16,312 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:12:16,313 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+11:12:19,862 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(.,'Successfully removed the selected record')]' with attribute type 'xpath' and attribute value '//span[contains(.,'Successfully removed the selected record')]
+11:12:20,746 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'xpath://span[contains(.,'Successfully removed the selected record')]' with attribute type 'xpath' and attribute value '//span[contains(.,'Successfully removed the selected record')]
+11:12:20,780 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:12:20,781 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:12:20,781 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:12:20,782 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:12:20,782 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+11:12:25,864 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:signout' with attribute type 'id' and attribute value 'signout
+11:12:26,161 DEBUG Resileo<strong>{1}</strong>:22 - Performing Operation on'id:btnlogin' with attribute type 'id' and attribute value 'btnlogin
+11:12:27,439 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+11:12:27,441 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+11:12:27,441 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+11:12:27,441 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+11:12:27,441 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/balaj/git/appedo/Resileo_Automation/lib/extentreports-2.41.0.jar!/com/relevantcodes/extentreports/view/Extent.ftl"

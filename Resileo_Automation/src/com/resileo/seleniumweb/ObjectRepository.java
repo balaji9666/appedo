@@ -143,7 +143,13 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_alertSetting_validate__txtMaxTry = "xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]";
 	String appedo_alertSetting_validate__txtAlertTriggerFrequency = "xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]";
 	String appedo_alertSetting_validate__txtMaxTrycount = "xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-alert-config[1]/div[1]/div[1]/mat-card[1]/mat-card-content[1]/form[1]/mat-form-field[1]/div[1]/div[3]/div[1]/mat-error[1]";
-
+	String gmail_userid = "xpath://input[@id='login_id']";
+	String gmail_nxtbtn = "xpath://span[contains(text(),'Next')]";
+	String gmail_pass = "xpath://input[@id='password']";
+	String gmail_Passnxtbtn = "xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]";
+	String gmail_appedo = "xpath://span[contains(text(),'automailer@appedo.com')]";
+	String gmail_passverify = "xpath://a[contains(text(),'Verify my Email-id')]";
+	String gmail_verify_pass_popups = "xpath://alert/div";
 	// Alert Setting - Mobile
 	String appedo_txtMobile = "id:sms";
 	String appedo_alertSms = "xpath://div[contains(text(),'SMS')]";
