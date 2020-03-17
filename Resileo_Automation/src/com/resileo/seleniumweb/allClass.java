@@ -12,8 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 // Total no.of scripts -66
 	// Total Scripts - 64
-//1. Login
-//2. Logout
+    //1. Login
+    //2. Logout
 	/*appedoRegistration.class, 
 	forgotPassword.class,
 	appedoMenuMethodRunner.class,
