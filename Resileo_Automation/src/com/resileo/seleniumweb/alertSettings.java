@@ -144,7 +144,7 @@ public class alertSettings extends ReusableMethods {
 	public void verifyemail() {
 		try {
 			test = extent.startTest("Email Verification", "Verification of added email");
-			Thread.sleep(8000);
+			Thread.sleep(3000);
 			 WebDriver browser1 = new ChromeDriver();
 			 browser1.manage().window().maximize();
 			 browser1.get("https://accounts.zoho.in/signin?servicename=VirtualOffice&signupurl=https://www.zoho.in/mail/zohomail-pricing.html&serviceurl=https://mail.zoho.in");
@@ -152,7 +152,7 @@ public class alertSettings extends ReusableMethods {
 			 browser1.findElement(getObject(gmail_userid)).sendKeys("appedomail@zohomail.in");
 			 browser1.findElement(getObject(gmail_nxtbtn)).click();
 			 WaitforObject(gmail_pass);
-			 Thread.sleep(1000);
+			 Thread.sleep(3000);
 			 browser1.findElement(getObject(gmail_pass)).click();
 			 browser1.findElement(getObject(gmail_pass)).sendKeys("GbX6u4*Pv!gBbS9");
 			 browser1.findElement(getObject(gmail_Passnxtbtn)).click();
@@ -165,7 +165,7 @@ public class alertSettings extends ReusableMethods {
 					 WaitforObject(gmail_passverify);
 					 Thread.sleep(1000);
 					 browser1.findElement(getObject(gmail_passverify)).click();
-					 Thread.sleep(5000);
+					 Thread.sleep(6000);
 					 browser1.quit();
 				} else {
 					test.log(LogStatus.FAIL, "Verification Mail Not Recived");
