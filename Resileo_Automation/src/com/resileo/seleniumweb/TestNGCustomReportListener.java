@@ -1,14 +1,6 @@
 package com.resileo.seleniumweb;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import org.testng.IReporter;
@@ -17,10 +9,6 @@ import org.testng.ISuite;
 import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.collections.Lists;
-import org.testng.internal.Utils;
-import org.testng.log4testng.Logger;
 import org.testng.xml.XmlSuite;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -77,10 +65,10 @@ public class TestNGCustomReportListener implements IReporter{
 	        }
 	    }
 	  
-	    private Date getTime(long millis) {
-	        Calendar calendar = Calendar.getInstance();
-	        calendar.setTimeInMillis(millis);
-	        return calendar.getTime();        
-	    }
-    
+//	    private Date getTime(long millis) {
+	    //    Calendar calendar = Calendar.getInstance();
+	   //     calendar.setTimeInMillis(millis);
+	     //   return calendar.getTime();        
+	   // }
+   
 }
