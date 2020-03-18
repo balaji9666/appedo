@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Appedo Test Env">
+ <!--   <listeners>
+         <listener class-name="com.resileo.seleniumweb.TestNGCustomReportListener" />
+    </listeners> -->
+  <test thread-count="2" name="Appedo Test Env">
+    <classes>
+
+     <class name="com.resileo.seleniumweb.avmMethodRunnerHEAD"/>
+    </classes>
+  </test> 
+</suite> <!-- Appedo Test Env -->

@@ -35,7 +35,7 @@ public class sumTransaction extends ReusableMethods {
 	@Test
 	public void createSUM() {
 		try {
-			test = extent.startTest("SUM Transaction Creation", "Creating SUM for Transaction");
+			test = extent.startTest("Create SUM Transaction", "Creating SUM for Transaction");
 			FileUtilities drawData = new FileUtilities();
 			
 			// Verify login
@@ -180,7 +180,7 @@ public class sumTransaction extends ReusableMethods {
 
 	public void editSUM() {
 		try {
-			test = extent.startTest("SUM Transaction Edition", "Editing SUM for Transaction");
+			test = extent.startTest("Edit SUM Transaction", "Editing SUM for Transaction");
 
 			// Click on edit icon
 			Thread.sleep(4000);
@@ -212,6 +212,7 @@ public class sumTransaction extends ReusableMethods {
 					browser.findElement(getObject(appedo_sum_minBreachCount)).sendKeys(drawData.getdata("TestData.xlsx","SUM", 4, 4));
 					
 					// Click on save
+					Thread.sleep(1500);
 					browser.findElement(getObject(appedo_sum_transaction_btnsave)).click();
 
 					// Verify SUM
@@ -240,10 +241,10 @@ public class sumTransaction extends ReusableMethods {
 
 	public void deleteSUM() {
 		try {
-			test = extent.startTest("SUM Deletion", "Deleting SUM for URL");
+			test = extent.startTest("Delete SUM Transaction", "Deleting SUM for Transaction");
 					
 			//click on delete icon we created recently
-			Thread.sleep(2000);
+			Thread.sleep(3500);
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) 
@@ -264,6 +265,11 @@ public class sumTransaction extends ReusableMethods {
 					if (browser.findElement(getObject(appedo_db_verify)).getText().contains("Successfully deleted SUM Test")) 
 					{
 						test.log(LogStatus.PASS, "SUM Module : " + deleteSUM);
+
+						// Click Logout
+						WaitforObject(appedo_signout);
+						browser.findElement(getObject(appedo_signout)).click();
+						Thread.sleep(1000);
 					} else {
 						test.log(LogStatus.FAIL, "Failed to delete SUM module");
 					}
@@ -271,10 +277,6 @@ public class sumTransaction extends ReusableMethods {
 				}
 			}
 
-			// Click Logout
-			WaitforObject(appedo_signout);
-			browser.findElement(getObject(appedo_signout)).click();
-			Thread.sleep(1000);
 			
 			// Verify Sign out
 			WaitforObject(appedo_verifyLogout);

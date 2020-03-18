@@ -14,7 +14,7 @@ public class functionAutorefresh extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginN();
+		loginrt();
 	}
 
 	@Test
@@ -49,7 +49,7 @@ public class functionAutorefresh extends ReusableMethods {
 
 			WaitforObject(appedo_autoRef);
 			String ref = browser.findElement(getObject(appedo_autoRef)).getText().toString();
-			test.log(LogStatus.PASS, "Auto Refresh is Running : " + ref);
+			test.log(LogStatus.PASS, "Auto Refresh Now : " + ref);
 			browser.findElement(getObject(appedo_autoRef)).click();
 
 			Thread.sleep(2000);

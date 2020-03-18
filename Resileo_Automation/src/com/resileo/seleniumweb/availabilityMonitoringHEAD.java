@@ -233,7 +233,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");
+			test = extent.startTest("AVM HEAD - Edit", "Edit AVM module");
 
 			// Click on edit icon
 			Thread.sleep(3000);
@@ -328,7 +328,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			test = extent.startTest("AVM HEAD - Delete", "Delete AVM Test");
 
 			// click on delete icon we created recently
 			Thread.sleep(1000);

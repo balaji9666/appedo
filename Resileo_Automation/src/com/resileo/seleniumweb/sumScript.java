@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -34,7 +33,7 @@ public class sumScript extends ReusableMethods {
 	@Test
 	public void createSUM() {
 		try {
-			test = extent.startTest("SUM Script Creation", "Creating SUM for Script");
+			test = extent.startTest("Create SUM Script", "Creating SUM for Script");
 			FileUtilities drawData = new FileUtilities();
 			
 			// Verify login
@@ -171,25 +170,23 @@ public class sumScript extends ReusableMethods {
 
 	public void editSUM() {
 		try {
-			test = extent.startTest("SUM Script Edition", "Editing SUM for Script");
-			Thread.sleep(2000);
-
+			test = extent.startTest("Edit SUM Script", "Editing SUM for Script");
              browser.navigate().refresh();
 			// Click on edit icon
-			Thread.sleep(8000);
+			Thread.sleep(6000);
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) {
 				EditName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[4]")).getText().toString();
-				if (EditName.equalsIgnoreCase("TestSUM")) 
+				if (EditName.equalsIgnoreCase(sumName)) 
 				{
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
-					Thread.sleep(30000);
+					Thread.sleep(3000);
 					
 					// Edit details in fields
 					WaitforObject(appedo_sum_txtTestName);
 					browser.findElement(getObject(appedo_sum_txtTestName)).clear();
-					browser.findElement(getObject(appedo_sum_txtTestName)).sendKeys("Test_SUM");
+					browser.findElement(getObject(appedo_sum_txtTestName)).sendKeys(sumName);
 					
 					// Edit threshold values
 					WaitforObject(appedo_sum_warning);
@@ -232,7 +229,7 @@ public class sumScript extends ReusableMethods {
 
 	public void deleteSUM() {
 		try {
-			test = extent.startTest("SUM Script Deletion", "Deleting SUM for Script");
+			test = extent.startTest("Delete SUM Script", "Deleting SUM for Script");
 
 			// click on delete icon we created recently
 			Thread.sleep(3000);
@@ -258,14 +255,15 @@ public class sumScript extends ReusableMethods {
 					if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteSUM)) 
 					{
 						test.log(LogStatus.PASS, "SUM Module : " + deleteSUM);
+
+						// Click Logout
+						WaitforObject(appedo_signout);
+						Thread.sleep(2000);
+						browser.findElement(getObject(appedo_signout)).click();
 					} else {
 						test.log(LogStatus.FAIL, "Failed to delete SUM module");
 					}
 
-					// Click Logout
-					WaitforObject(appedo_signout);
-					Thread.sleep(2000);
-					browser.findElement(getObject(appedo_signout)).click();
 					
 					// Verify Sign out
 					WaitforObject(appedo_verifyLogout);
@@ -292,12 +290,6 @@ public class sumScript extends ReusableMethods {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		logout();
-		browser.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
+		browser.close();
 	}
 }

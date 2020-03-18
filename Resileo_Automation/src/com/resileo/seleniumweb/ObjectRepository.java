@@ -185,9 +185,9 @@ public class ObjectRepository extends ObjectMap {
 
 	// Adding chart to existing Dash board
 	String appedo_select_existing_dbchart_dropdown = "id:ddMcName";
-	String appedo_select_existing_dashboard = "xpath://span[contains(text(),'appedo2')]";
+	String appedo_select_existing_dashboard = "xpath://span[contains(text(),'automation')]";
 	String appedo_addTo_myChart1 = "xpath://div[@id='idx1']//span[@mattooltip='Add to MyChart']";
-	String appedo_select_chart_added_dashboard = "xpath://span[contains(text(),'appedo2')]";
+	String appedo_select_chart_added_dashboard = "xpath://span[contains(text(),'automation')]";
 	String appedo_validate_added = "xpath://span[contains(text(),'browser wise Report RUM')]";
 	String appedo_dropdown_myDashboard = "id:myDash";
 	String testDD = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option";
@@ -394,8 +394,8 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_avm_btnSaveChart = "xpath://button[@class='mat-raised-button mat-primary ng-star-inserted']";
 	String appedo_verifyChartAdded = "xpath://span[@class='clrblack']";
 	String appedo_myDashboardDropdown = "id:ddMcName";
-	String appedo_selectMyDashboard = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[3]/span[1]";
-	String appedo_selectMyDashboard1 = "xpath://span[contains(text(),'000')]";
+	//String appedo_selectMyDashboard = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[3]/span[1]";
+	String appedo_selectMyDashboard = "xpath://span[contains(text(),'000')]";
 	String appedo_dashboardDropdown = "id:myDash";
 	//String appedo_selectDashboard = "xpath://span[contains(text(),chartName)]";
 			//"xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/app-login-header[1]/mat-toolbar[1]/div[3]/mat-form-field[2]/div[1]/div[1]/div[1]";

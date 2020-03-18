@@ -83,6 +83,8 @@ public class addChartToExistingDashboard extends ReusableMethods {
 			browser.findElement(getObject(appedo_dropdown_myDashboard)).click();
 			
 			// Select chart name
+			WaitforObject(appedo_select_chart_added_dashboard);
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_select_chart_added_dashboard)).click();
 			Thread.sleep(7000);
 			

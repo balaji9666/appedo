@@ -37,7 +37,7 @@ public class sumModule extends ReusableMethods {
 	public void createSUM() {
 		try {
 			FileUtilities drawData = new FileUtilities();
-			test = extent.startTest("SUM Creation", "Creating SUM module with URL");
+			test = extent.startTest("Create SUM URL", "Creating SUM module with URL");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -172,10 +172,10 @@ public class sumModule extends ReusableMethods {
 
 	public void editSUM() {
 		try {
-			test = extent.startTest("SUM Edition", "Editing SUM for URL");
+			test = extent.startTest("Edit SUM URL", "Editing SUM for URL");
 			Thread.sleep(2000);
 			WaitforObject(appedo_sum_edit);
-			while (j < 5) {
+			while (j < 1) {
 				browser.navigate().refresh();
 				// Click on edit icon created recently
 				List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
@@ -186,7 +186,7 @@ public class sumModule extends ReusableMethods {
 					if (EditTestName.equalsIgnoreCase(sumName))
 					{
 						browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
-						Thread.sleep(7000);
+						Thread.sleep(4000);
 						if (browser.findElement(getObject(appedo_sum_btnSave)).isDisplayed()) {
 							Thread.sleep(3000);
 
@@ -224,10 +224,12 @@ public class sumModule extends ReusableMethods {
 
 							break;
 						} else {
+							WaitforObject(appedo_sum_btnCancel);
+							Thread.sleep(3000);
 							browser.findElement(getObject(appedo_sum_btnCancel)).click();
 						}
 					} else {
-						System.out.println("Failed to update SUM");
+						//System.out.println("Failed to update SUM");
 					}
 				}
 				extent.endTest(test);
@@ -247,7 +249,7 @@ public class sumModule extends ReusableMethods {
 
 	public void deleteSUM() {
 		try {
-			test = extent.startTest("SUM Deletion", "Deleting SUM for URL");
+			test = extent.startTest("Delete SUM URL", "Deleting SUM for URL");
 		
 			// click on delete icon we created recently
 			Thread.sleep(4000);
@@ -257,7 +259,7 @@ public class sumModule extends ReusableMethods {
 			{
 				DeleteTestName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[4]")).getText().toString();
 				Thread.sleep(2000);
-				if (DeleteTestName.equalsIgnoreCase(sumName))
+				if (DeleteTestName.equalsIgnoreCase("SUM_Edit_"))
 				{
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
 					
@@ -270,6 +272,10 @@ public class sumModule extends ReusableMethods {
 					if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteSUM)) 
 					{
 						test.log(LogStatus.PASS, "SUM Module : " + deleteSUM);
+						// Click Logout
+						WaitforObject(appedo_signout);
+						browser.findElement(getObject(appedo_signout)).click();
+						Thread.sleep(1000);
 					} else {
 						test.log(LogStatus.FAIL, "Failed to delete SUM module");
 					}
@@ -277,10 +283,7 @@ public class sumModule extends ReusableMethods {
 				}
 			}
 
-			// Click Logout
-			WaitforObject(appedo_signout);
-			browser.findElement(getObject(appedo_signout)).click();
-			Thread.sleep(1000);
+
 			
 			// Verify Sign out
 			WaitforObject(appedo_verifyLogout);
