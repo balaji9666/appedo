@@ -97,7 +97,7 @@ public class alertSettingNetwork extends ReusableMethods {
 	}
 	public void editNetworkalertSetting() {
 		try {
-
+			Thread.sleep(2000);//
 			test = extent.startTest("System Metrics Network - Edit Alert", "Edit Alert setting for Network Module");
 			String alphabet = "abcefghijk";
 			String alertName = "Edit Breach Text" + RandomStringUtils.random(4, alphabet);
