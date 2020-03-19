@@ -6,18 +6,7 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-      <class name="com.resileo.seleniumweb.alertSettingOSMethodRunner"/>
-      <class name="com.resileo.seleniumweb.alertSettingAppMethodRunner"/>
-      <class name="com.resileo.seleniumweb.alertSettingDBMethodRunner"/>
-      <class name="com.resileo.seleniumweb.alertSettingLogMethodRunner"/>
-      <class name="com.resileo.seleniumweb.alertSettingNetworkMethodRunner"/>
-    </classes>
-  </test> 
-</suite> <!-- Appedo Test Env -->
-
-<!-- 
-
-      <class name="com.resileo.seleniumweb.appedoRegistration"/>
+        <class name="com.resileo.seleniumweb.appedoRegistration"/>
       <class name="com.resileo.seleniumweb.forgotPassword"/>
       <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
       <class name="com.resileo.seleniumweb.downloadAgents"/>
@@ -61,7 +50,7 @@
       <class name="com.resileo.seleniumweb.addCustomMetricsDBMethodRunner"/>
       <class name="com.resileo.seleniumweb.addCustomMetricsAppMethodRunner"/>
       <class name="com.resileo.seleniumweb.systemMetricsCopyMetrics"/>
-      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>##
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsApp"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsDB"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsLog"/>
@@ -80,5 +69,12 @@
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownMethodRunner"/>
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
       <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
+    </classes>
+  </test> 
+</suite> <!-- Appedo Test Env -->
+
+<!-- 
+
+    
 
  -->
