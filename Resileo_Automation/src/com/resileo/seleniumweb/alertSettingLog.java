@@ -158,7 +158,7 @@ public class alertSettingLog extends ReusableMethods {
 			
 			// Verify Delete
 			//WaitforObject(appedo_systemMetrics_log_verifyDelete);
-			Thread.sleep(500);
+			Thread.sleep(50);
 			String Delete = browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText();
 			System.out.println("first one :"+Delete);
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains(Delete)) 
