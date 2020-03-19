@@ -778,7 +778,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_systemMetrics_log_btnCancel = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/div[1]/mat-icon[2]";
 	String appedo_systemMetrics_log_edit = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]";
 	String appedo_systemMetrics_log_delete = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]";
-	String appedo_systemMetrics_log_verifyDelete = "xpath://span[contains(.,'Deleted Successfully')]";
+	String appedo_systemMetrics_log_verifyDelete = "xpath://span[contains(.,'No Record Found for UID')]";
 
 	// Alert setting for Network
 	String appedo_systemMetrics_network = "xpath://table/tbody/tr[1]/td[8]";
