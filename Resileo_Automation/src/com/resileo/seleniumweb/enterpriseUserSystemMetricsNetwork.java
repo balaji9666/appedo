@@ -20,7 +20,7 @@ public class enterpriseUserSystemMetricsNetwork extends ReusableMethods {
 	@Test
 	public void EnterpriseUserModule() {
 		try {
-			test = extent.startTest("Enterprise as user-System Metrics Network", "Enterprise as user-System Metrics Network");
+			test = extent.startTest("System Metrics Enterprise - Network", "Enterprise as user-System Metrics Network");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -33,6 +33,7 @@ public class enterpriseUserSystemMetricsNetwork extends ReusableMethods {
 			}
 			
 			// Click on Select Enterprise
+			Thread.sleep(3000);
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 			

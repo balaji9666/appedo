@@ -24,7 +24,7 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 	@Test
 	public void EnterpriseUserModule() {
 		try {
-			test = extent.startTest("Enterprise as user - System Metrics - OS", "Enterprise as user - System Metrics - OS");
+			test = extent.startTest("System Metrics Enterprise - OS", "Enterprise as user - System Metrics - OS");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -107,14 +107,14 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 			}
 			
 			// Click on view graph
-			Thread.sleep(6000);
+			Thread.sleep(3000);
 			WaitforObject(appedo_enterprise_viewGraphs);
 			browser.findElement(getObject(appedo_enterprise_viewGraphs)).click();
-			Thread.sleep(10000);
+			Thread.sleep(4000);
 
 			// Verify View Graph
-			if (browser.findElement(getObject(appedo_enterprise_addToMyChart)).isDisplayed()) {
-				test.log(LogStatus.PASS, "Enterprise App graphs viewed successfully as user ");
+			if (browser.findElement(getObject(appedo_enterprise_verifyChart)).isDisplayed()) {
+				test.log(LogStatus.PASS, "Enterprise OS graphs viewed successfully as user ");
 			} else {
 				test.log(LogStatus.FAIL, "graphs viewed failed");
 			}

@@ -6,9 +6,11 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-      <class name="com.resileo.seleniumweb.sumMethodRunner"/>
-      <class name="com.resileo.seleniumweb.sumTransactionMethodRunner"/>
-      <class name="com.resileo.seleniumweb.sumScriptMethodRunner"/>
+  <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsApp"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsDB"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsLog"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsNetwork"/>
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->
@@ -59,7 +61,7 @@
       <class name="com.resileo.seleniumweb.addCustomMetricsDBMethodRunner"/>
       <class name="com.resileo.seleniumweb.addCustomMetricsAppMethodRunner"/>
       <class name="com.resileo.seleniumweb.systemMetricsCopyMetrics"/>
-      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>
+      <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>##
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsApp"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsDB"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsLog"/>

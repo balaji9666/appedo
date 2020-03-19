@@ -21,7 +21,7 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 	@Test
 	public void EnterpriseUserModule() {
 		try {
-			test = extent.startTest("Enterprise as user - System Metrics - App", "Enterprise as user - System Metrics - App");
+			test = extent.startTest("System Metrics Enterprise - App", "Enterprise as user - System Metrics - App");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -48,20 +48,25 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 
 			// Click on Edit
 			browser.findElement(getObject(appedo_enterprise_app_edit)).click();
-			Thread.sleep(3000);
+			
 			
 			// Verify Edit
+			WaitforObject(appedo_verifyAppEdit);
 			String verifyEdit = browser.findElement(getObject(appedo_verifyAppEdit)).getText();
-			if (browser.findElement(getObject(appedo_verifyAppEdit)).getText().equalsIgnoreCase("Sorry, Only owner can Edit Module Attributes")) 
+			
+			if (browser.findElement(getObject(appedo_verifyAppEdit)).getText().equalsIgnoreCase("Sorry, Only owner can Edit Module Attributes"))
+				
 			{
+				
 				test.log(LogStatus.PASS, "Enterprise Edit as user , " + verifyEdit);
+				Thread.sleep(2000);
 			} else {
 				test.log(LogStatus.FAIL, "Failed to Edit");
 			}
 
 			// Click on Configure
 			WaitforObject(appedo_systemMetrics_configure);
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 			browser.findElement(getObject(appedo_systemMetrics_configure)).click();
 			
 			// Verify Configure
@@ -74,12 +79,14 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 			}
 
 			// Click on  Custom Metrics 
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_enterpise_customMetrics);
 			browser.findElement(getObject(appedo_enterpise_customMetrics)).click();
 
 			// Verify Custom Metrics
+			WaitforObject(appedo_verifyAppEdit);
 			String verifycustomMetrics = browser.findElement(getObject(appedo_verifyAppEdit)).getText();
+			//System.out.println("CM :"+verifycustomMetrics);
 			if (browser.findElement(getObject(appedo_verifyAppEdit)).getText().equalsIgnoreCase("Sorry, Only owner can Edit Module Attributes")) 
 			{
 				test.log(LogStatus.PASS, "Enterprise custom Metrics as user :" + verifycustomMetrics);
@@ -88,7 +95,7 @@ public class enterpriseUserSystemMetricsApp extends ReusableMethods {
 			}
 
 			// Click on Delete 
-			Thread.sleep(6000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_enterpise_delete);
 			browser.findElement(getObject(appedo_enterpise_delete)).click();
 			

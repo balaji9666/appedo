@@ -22,7 +22,7 @@ public class enterpriseUserSystemMetricsLog extends ReusableMethods {
 	@Test
 	public void EnterpriseUserModule() {
 		try {
-			test = extent.startTest("Enterprise as user - System Metrics - Log", "Enterprise as user - System Metrics - Log");
+			test = extent.startTest("System Metrics Enterprise - Log", "Enterprise as user - System Metrics - Log");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -35,15 +35,14 @@ public class enterpriseUserSystemMetricsLog extends ReusableMethods {
 			}
 			
 			// Click on Select Enterprise
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 			
 			// Choose the enterprise name
-			Thread.sleep(2000);
 			WaitforObject(appedo_selectEnterprisename);
 			browser.findElement(getObject(appedo_selectEnterprisename)).click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 
 			// Click on Log
 			WaitforObject(appedo_enterpise_log);
@@ -98,6 +97,7 @@ public class enterpriseUserSystemMetricsLog extends ReusableMethods {
 			browser.findElement(getObject(appedo_enterprise_addToMyChart)).click();
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).click();
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).sendKeys(dashboardname);
+			Thread.sleep(1500);
 			browser.findElement(getObject(appedo_btnSave)).click();
 
 			// Verify added chart

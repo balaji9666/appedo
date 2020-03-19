@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
-import java.awt.Robot;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.LogStatus;
@@ -23,7 +22,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 	@Test
 	public void EnterpriseUserModule() {
 		try {
-			test = extent.startTest("Enterprise as user - System Metrics - DB", "Enterprise as user - System Metrics - DB");
+			test = extent.startTest("System Metrics Enterprise - DB", "Enterprise as user - System Metrics - DB");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -40,13 +39,13 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 						
 			// Choose the enterprise name
-			WaitforObject(appedo_selectEnterpriseDB);
-			browser.findElement(getObject(appedo_selectEnterpriseDB)).click();
+			WaitforObject(appedo_selectEnterprisename);
+			browser.findElement(getObject(appedo_selectEnterprisename)).click();
 			Thread.sleep(2000);
 			
 			// Scroll down
-			Robot robot = new Robot();
-			robot.mouseWheel(150);
+			//Robot robot = new Robot();
+			//robot.mouseWheel(150);
 			
 			// Click on DB
 			WaitforObject(appedo_enterprise_db);
@@ -79,7 +78,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 			}
 
 			// Click on Custom Metrics 
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_enterpise_customMetrics);
 			browser.findElement(getObject(appedo_enterpise_customMetrics)).click();
 
@@ -93,7 +92,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 			}
 
 			// Click on Delete
-			Thread.sleep(5000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_enterpise_delete);
 			browser.findElement(getObject(appedo_enterpise_delete)).click();
 			
@@ -116,7 +115,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 			// Verify Graph
 			if (browser.findElement(getObject(appedo_enterprise_addToMyChart)).isDisplayed()) 
 			{
-				test.log(LogStatus.PASS, "Enterprise App graphs viewed successfully as user ");
+				test.log(LogStatus.PASS, "Enterprise DB graphs viewed successfully as user ");
 			} else {
 				test.log(LogStatus.FAIL, "Graphs viewed failed");
 			}
