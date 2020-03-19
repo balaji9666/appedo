@@ -157,11 +157,11 @@ public class alertSettingLog extends ReusableMethods {
 			//Thread.sleep(2000);
 			
 			// Verify Delete
-			//WaitforObject(appedo_systemMetrics_log_verifyDelete);
-			Thread.sleep(50);
+			WaitforObject(appedo_systemMetrics_log_verifyDelete);
+			
 			String Delete = browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText();
 			System.out.println("first one :"+Delete);
-			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains(Delete)) 
+			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains("No Record Found for UID")) 
 			{
 				test.log(LogStatus.PASS, "Delete Alert setting Pattern Based for Log Module : " +Delete );
 				System.out.println("second one :"+Delete);
