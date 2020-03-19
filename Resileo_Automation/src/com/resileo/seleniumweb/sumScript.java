@@ -181,7 +181,10 @@ public class sumScript extends ReusableMethods {
 				if (EditName.equalsIgnoreCase(sumName)) 
 				{
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
-					Thread.sleep(3000);
+					Thread.sleep(2500);
+					browser.findElement(getObject(appedo_sum_btnCancel)).click();
+					Thread.sleep(2500);
+					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
 					
 					// Edit details in fields
 					WaitforObject(appedo_sum_txtTestName);
