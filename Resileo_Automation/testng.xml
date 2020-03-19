@@ -6,8 +6,11 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-    
-    <class name="com.resileo.seleniumweb.alertSettingNetworkMethodRunner"/> 
+      <class name="com.resileo.seleniumweb.alertSettingOSMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingAppMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingDBMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingLogMethodRunner"/>
+      <class name="com.resileo.seleniumweb.alertSettingNetworkMethodRunner"/>
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->
