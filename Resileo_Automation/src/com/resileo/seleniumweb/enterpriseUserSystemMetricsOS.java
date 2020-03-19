@@ -115,6 +115,7 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 			// Verify View Graph
 			if (browser.findElement(getObject(appedo_enterprise_verifyChart)).isDisplayed()) {
 				test.log(LogStatus.PASS, "Enterprise OS graphs viewed successfully as user ");
+				Thread.sleep(2000);
 			} else {
 				test.log(LogStatus.FAIL, "graphs viewed failed");
 			}
