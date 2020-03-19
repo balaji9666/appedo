@@ -97,8 +97,7 @@ public class addChartToExistingDashboard extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Newly added chart is not updated in existing dashboard");
 			}
-			Thread.sleep(6000);
-			
+			Thread.sleep(4500);		
 			// Click on Remove
 			WaitforObject(appedo_removeChart);
 			browser.findElement(getObject(appedo_removeChart)).click();
@@ -107,7 +106,7 @@ public class addChartToExistingDashboard extends ReusableMethods {
 			browser.switchTo().alert().accept();
 
 			// Verify Dash board Deletion
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 			// WaitforObject(appedo_dashboard_verifyDelete);
 			// String Msg3 =
 			// browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText();

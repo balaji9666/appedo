@@ -11,14 +11,14 @@ public class alertSettingMethodRunner extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginA();
+		loginTK();
 	}
 
 	@Test
 	public void doTest() throws Exception {
 		run.setBrowser(browser);
 		run.alertsettingCreate();
-		run.verifyemail();
+		//run.verifyemail();    //Need Modification
 		run.EditAlertSetting();
 		run.DeleteAlertSetting();
 		run.Signout();

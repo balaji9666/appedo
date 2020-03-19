@@ -38,7 +38,7 @@ public class ReusableMethods extends ObjectRepository {
 	     	ChromeOptions options=new ChromeOptions();
 			options.addArguments("--headless","window-size=1920,1080");
 			
-		browser = new ChromeDriver(options);//For Headless Operation
+			browser = new ChromeDriver(options);//For Headless Operation
 		//browser = new ChromeDriver();//For Normal Operation
 		} else {
 			
@@ -238,6 +238,21 @@ public class ReusableMethods extends ObjectRepository {
 		browser.findElement(getObject(appedo_login_btnlogin)).click();
 	}
 	
+	public void loginTK() throws Exception
+
+	{
+
+		browser.get("https://test.appedo.com");
+		browser.manage().window().maximize();
+		browser.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		browser.findElement(getObject(appedo_login_txtUsername)).clear();
+		browser.findElement(getObject(appedo_login_txtUsername))
+				.sendKeys(drawData.getdata("TestData.xlsx", "Login", 1, 10));
+		browser.findElement(getObject(appedo_login_txtPassword)).clear();
+		browser.findElement(getObject(appedo_login_txtPassword))
+				.sendKeys(drawData.getdata("TestData.xlsx", "Login", 2, 10));
+		browser.findElement(getObject(appedo_login_btnlogin)).click();
+	}
 	
 	public void launchURL() throws Exception
 

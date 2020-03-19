@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -30,7 +31,7 @@ public class alertSettings extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginA();
+		loginTK();
 	}
 
 	@Test
@@ -145,31 +146,36 @@ public class alertSettings extends ReusableMethods {
 		try {
 			test = extent.startTest("Email Verification", "Verification of added email");
 			Thread.sleep(3000);
+			ChromeOptions options1=new ChromeOptions();
+			options1.addArguments("--headless","window-size=1920,1080");
 			 WebDriver browser1 = new ChromeDriver();
 			 browser1.manage().window().maximize();
 			 browser1.get("https://accounts.zoho.in/signin?servicename=VirtualOffice&signupurl=https://www.zoho.in/mail/zohomail-pricing.html&serviceurl=https://mail.zoho.in");
 			 browser1.findElement(getObject(gmail_userid)).click();
 			 browser1.findElement(getObject(gmail_userid)).sendKeys("appedomail@zohomail.in");
 			 browser1.findElement(getObject(gmail_nxtbtn)).click();
-			 WaitforObject(gmail_pass);
-			 Thread.sleep(3000);
+			 Thread.sleep(2000);
 			 browser1.findElement(getObject(gmail_pass)).click();
 			 browser1.findElement(getObject(gmail_pass)).sendKeys("GbX6u4*Pv!gBbS9");
 			 browser1.findElement(getObject(gmail_Passnxtbtn)).click();
-			 WaitforObject(gmail_appedo);
-			 Thread.sleep(3000);
-				if (browser1.findElement(getObject(gmail_appedo)).getText().contains("automailer@appedo.com")) 
+			 Thread.sleep(6000);
+
+				if (browser1.findElement(getObject(gmail_appedo)).getText().contains("Appedo Auto-Mailer")) 
 				{
 					test.log(LogStatus.PASS, "Verification Mail Recived" );
 					 browser1.findElement(getObject(gmail_appedo)).click();
-					 WaitforObject(gmail_passverify);
-					 Thread.sleep(1000);
+					
+					 Thread.sleep(2000);
 					 browser1.findElement(getObject(gmail_passverify)).click();
-					 Thread.sleep(6000);
+					 Thread.sleep(8000);
 					 browser1.quit();
 				} else {
 					test.log(LogStatus.FAIL, "Verification Mail Not Recived");
 				}
+				browser.navigate().refresh();
+				Thread.sleep(3000);
+				WaitforObject(appedo_btnAlertNext);
+				browser.findElement(getObject(appedo_btnAlertNext)).click();
 				Thread.sleep(3000);
 				//String status=browser.findElement(getObject(appedo_alertSms_verifyStatus)).getText().toString();
 				if(browser.findElement(getObject(appedo_alertSms_verifyStatus)).getText().contains("Verified"))
@@ -196,7 +202,6 @@ public class alertSettings extends ReusableMethods {
 	public void EditAlertSetting() {
 		try {
 			test = extent.startTest("Alert settings - Edit Email Alert", "Editing Alert for email");
-			Thread.sleep(1000);
 			
 			// Click on edit icon for the alert created recently
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));

@@ -126,6 +126,7 @@ public class ObjectRepository extends ObjectMap {
 	// Alert setting - Mail
 	String appedo_link_alertSettings = "xpath://span[contains(text(),'Alert Settings')]";
 	String appedo_btnSaveNext = "id:btnsavenext";
+	String appedo_btnAlertNext = "id:btnnext";
 	String appedo_alert_maxTryDuration = "id:tryCountDurationInMin";
 	String appedo_alert_triggerFrequency = "id:triggerAlertEveryInMin";
 	String appedo_alert_maxTrycount = "id:maxTryCount";
@@ -147,7 +148,7 @@ public class ObjectRepository extends ObjectMap {
 	String gmail_nxtbtn = "xpath://span[contains(text(),'Next')]";
 	String gmail_pass = "xpath://input[@id='password']";
 	String gmail_Passnxtbtn = "xpath://button[@id='nextbtn']//span[contains(text(),'Sign in')]";
-	String gmail_appedo = "xpath://span[contains(text(),'automailer@appedo.com')]";
+	String gmail_appedo = "xpath://span[@class='zmLSender']";
 	String gmail_passverify = "xpath://a[contains(text(),'Verify my Email-id')]";
 	String gmail_verify_pass_popups = "xpath://alert/div";
 	// Alert Setting - Mobile
@@ -192,7 +193,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_dropdown_myDashboard = "id:myDash";
 	String testDD = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option";
 	String appedo_myDashboard_list = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]";
-	String appedo_removeChart="xpath://div[@id='idx1']//mat-icon[@class='clrred mat-icon notranslate material-icons mat-icon-no-color'][contains(text(),'highlight_off')]";
+	String appedo_removeChart="xpath://mat-icon[@class='clrred mat-icon notranslate material-icons mat-icon-no-color']";
 
 	// Resize chart
 	String appedo_selectChart = "xpath://span[contains(text(),'chart1')]";

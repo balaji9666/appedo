@@ -11,7 +11,7 @@ public class alertSettingMobileMethodRunner extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginA();
+		loginTK();
 	}
 
 	@Test

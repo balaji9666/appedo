@@ -21,7 +21,7 @@ public class alertSettingMobile extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginA();
+		loginTK();
 	}
 
 	@Test
@@ -205,7 +205,7 @@ public class alertSettingMobile extends ReusableMethods {
 			browser.findElement(getObject(appedo_alertSms_selectAColumn)).click();
 			
 			// Click on Filter value Type
-			browser.findElement(getObject(appedo_alertSms_filterValueType)).sendKeys("252");
+			browser.findElement(getObject(appedo_alertSms_filterValueType)).sendKeys("1016");
 			
 			// Add Filter
 			browser.findElement(getObject(appedo_alertSms_addToFilter)).click();
