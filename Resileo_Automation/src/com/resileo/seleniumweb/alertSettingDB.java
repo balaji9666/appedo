@@ -21,7 +21,7 @@ public class alertSettingDB extends ReusableMethods {
 	@Test
 	public void createAlertSettingDB() {
 		try {
-			test = extent.startTest("Creation of alert for DB", "Creating alert for DB");
+			test = extent.startTest("System Metrics DB - Create Alert", "Creating alert for DB");
 			
 			// Verify Login
 			WaitforObject(appedo_verifyLogin);
@@ -43,7 +43,7 @@ public class alertSettingDB extends ReusableMethods {
 			// Click chart icon
 			WaitforObject(appedo_systemMetrics_db_drawChart);
 			browser.findElement(getObject(appedo_systemMetrics_db_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			
 			// Click on set alert icon
 			WaitforObject(appedo_systemMetrics_os_setAlert);
@@ -116,7 +116,7 @@ public class alertSettingDB extends ReusableMethods {
 
 	public void editAlertSettingDB() {
 		try {
-			test = extent.startTest("Edition of alert for DB", "Editing alert for DB");
+			test = extent.startTest("System Metrics DB - Edit Alert", "Editing alert for DB");
 			
 			// Click on edit icon
 			browser.findElement(getObject(appedo_systemMetrics_os_edit)).click();
@@ -168,7 +168,7 @@ public class alertSettingDB extends ReusableMethods {
 
 	public void deleteAlertSettingDB() {
 		try {
-			test = extent.startTest("Deletion of alert for DB", "Deleting alert for DB");
+			test = extent.startTest("System Metrics DB - Delete Alert", "Deleting alert for DB");
 			
 			// Click on delete icon
 			WaitforObject(appedo_systemMetrics_os_delete);

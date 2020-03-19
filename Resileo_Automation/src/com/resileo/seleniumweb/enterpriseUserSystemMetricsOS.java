@@ -127,7 +127,6 @@ public class enterpriseUserSystemMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).click();
 			browser.findElement(getObject(appedo_enterprise_dashboardname)).sendKeys(dashboardname);
 			Thread.sleep(2000);
-			//browser.findElement(getObject(appedo_btnSave)).click();
 			
 			// Click on save
 			browser.findElement(getObject(appedo_btnSave)).click();

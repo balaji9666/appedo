@@ -18,14 +18,14 @@ public class alertSettingNetwork extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginrt();
+		
 	}
 
 	@Test
 	public void addNetworkalertSetting() {
 		try {
 
-			test = extent.startTest("Alert setting for Log Module", "Alert setting for Log Module");
+			test = extent.startTest("System Metrics Network - Create Alert", "Alert setting for Network Module");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -98,7 +98,7 @@ public class alertSettingNetwork extends ReusableMethods {
 	public void editNetworkalertSetting() {
 		try {
 
-			test = extent.startTest("Edit Alert setting for Network Module", "Edit Alert setting for Network Module");
+			test = extent.startTest("System Metrics Network - Edit Alert", "Edit Alert setting for Network Module");
 			String alphabet = "abcefghijk";
 			String alertName = "Edit Breach Text" + RandomStringUtils.random(4, alphabet);
 			Thread.sleep(4000);
@@ -146,7 +146,7 @@ public class alertSettingNetwork extends ReusableMethods {
 	
 	public void deleteNetworkalertSetting() {
 		try {
-			test = extent.startTest("Delete Alert setting for Network Module", "Delete Alert setting for Network Module");
+			test = extent.startTest("System Metrics Network - Delete Alert", "Delete Alert setting for Network Module");
 			
 			// Click on delete
 			WaitforObject(appedo_systemMetrics_log_delete);

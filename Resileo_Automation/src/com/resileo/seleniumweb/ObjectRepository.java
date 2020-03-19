@@ -736,7 +736,7 @@ public class ObjectRepository extends ObjectMap {
 	
 	
 	// Alert setting for OS
-	String appedo_systemMetrics_os_setAlert = "id:openalert0";
+	String appedo_systemMetrics_os_setAlert = "xpath://*[@id='idx0']/div/span[2]/span[3]/mat-icon";
 	String appedo_systemMetrics_os_createPolicy = "xpath://span[contains(text(),'Create Policy')]";
 	String appedo_systemMetrics_os_txtPolicyName = "id:policy_name";
 	String appedo_systemMetrics_os_txtPolicyDesc = "id:policy_description";

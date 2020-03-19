@@ -21,7 +21,7 @@ public class alertSettingApp extends ReusableMethods {
 	@Test
 	public void createAlertSettingApp() {
 		try {
-			test = extent.startTest("Creation of alert for App", "Creating alert for App");
+			test = extent.startTest("System Metrics App - Create Alert", "Creating alert for App");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -40,7 +40,7 @@ public class alertSettingApp extends ReusableMethods {
 			// Click chart icon
 			WaitforObject(appedo_systemMetrics_app_drawChart);
 			browser.findElement(getObject(appedo_systemMetrics_app_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			
 			// Click on set alert icon
 			WaitforObject(appedo_systemMetrics_os_setAlert);
@@ -113,7 +113,7 @@ public class alertSettingApp extends ReusableMethods {
 
 	public void editAlertSettingApp() {
 		try {
-			test = extent.startTest("Edition of alert for App", "Editing alert for App");
+			test = extent.startTest("System Metrics App - Edit Alert", "Editing alert for App");
 			
 			// Click on edit icon
 			browser.findElement(getObject(appedo_systemMetrics_os_edit)).click();
@@ -165,7 +165,7 @@ public class alertSettingApp extends ReusableMethods {
 
 	public void deleteAlertSettingApp() {
 		try {
-			test = extent.startTest("Deletion of alert for App", "Deleting alert for App");
+			test = extent.startTest("System Metrics App - Delete Alert", "Deleting alert for App");
 			
 			// Click on delete icon
 			WaitforObject(appedo_systemMetrics_os_delete);

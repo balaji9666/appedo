@@ -24,7 +24,7 @@ public class alertSettingLog extends ReusableMethods {
 	@Test
 	public void addlogalertSetting() {
 		try {
-			test = extent.startTest("Alert setting for Log Module", "Alert setting for Log Module");
+			test = extent.startTest("System Metrics Log - Create Alert", "Alert setting for Log Module");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -98,7 +98,7 @@ public class alertSettingLog extends ReusableMethods {
 	
 	public void editlogalertSetting() {
 		try {
-			test = extent.startTest("Edit Alert setting for Log Module", "Edit Alert setting for Log Module");
+			test = extent.startTest("System Metrics Log - Edit Alert", "Edit Alert setting for Log Module");
 			String alphabet = "abcefghijk";
 			String alertName = "Edit Breach Text" + RandomStringUtils.random(4, alphabet);
 			
@@ -146,7 +146,7 @@ public class alertSettingLog extends ReusableMethods {
 	
 	public void deletelogalertSetting() {
 		try {
-			test = extent.startTest("Delete Alert setting for Log Module", "Delete Alert setting for Log Module");
+			test = extent.startTest("System Metrics Log - Delete Alert", "Delete Alert setting for Log Module");
 			
 			// Click on Delete
 			WaitforObject(appedo_systemMetrics_log_delete);
@@ -154,7 +154,7 @@ public class alertSettingLog extends ReusableMethods {
 			
 			// Confirm Alert
 			browser.switchTo().alert().accept();
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			
 			// Verify Delete
 			WaitforObject(appedo_systemMetrics_log_verifyDelete);
