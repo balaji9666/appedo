@@ -75,7 +75,7 @@ public class alertSettingNetwork extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_log_btnSave)).click();
 			
 			// Verify alert
-			WaitforObject(appedo_systemMetrics_log_verify);
+			//WaitforObject(appedo_systemMetrics_log_verify);
 			String Msg = browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText();
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText().contains(Msg)) 
 			{
