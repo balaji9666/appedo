@@ -171,7 +171,7 @@ public class sumScript extends ReusableMethods {
 	public void editSUM() {
 		try {
 			test = extent.startTest("Edit SUM Script", "Editing SUM for Script");
-             browser.navigate().refresh();
+             //browser.navigate().refresh();
 			// Click on edit icon
 			Thread.sleep(6000);
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
