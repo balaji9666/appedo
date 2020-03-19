@@ -186,10 +186,7 @@ public class sumModule extends ReusableMethods {
 					if (EditTestName.equalsIgnoreCase(sumName))
 					{
 						browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
-						Thread.sleep(3000);
-						browser.findElement(getObject(appedo_sum_btnCancel)).click();
-						Thread.sleep(4000);
-						browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
+						Thread.sleep(5000);
 						if (browser.findElement(getObject(appedo_sum_btnSave)).isDisplayed()) {
 							Thread.sleep(3000);
 

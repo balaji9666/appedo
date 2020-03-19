@@ -6,8 +6,6 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
- <class name="com.resileo.seleniumweb.addChartToExistingDashboard"/>
-      <class name="com.resileo.seleniumweb.resizeCharts"/>
       <class name="com.resileo.seleniumweb.sumMethodRunner"/>
       <class name="com.resileo.seleniumweb.sumTransactionMethodRunner"/>
       <class name="com.resileo.seleniumweb.sumScriptMethodRunner"/>
