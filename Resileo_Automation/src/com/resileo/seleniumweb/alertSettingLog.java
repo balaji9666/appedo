@@ -154,11 +154,11 @@ public class alertSettingLog extends ReusableMethods {
 			
 			// Confirm Alert
 			browser.switchTo().alert().accept();
-			//Thread.sleep(2000);
+			
 			
 			// Verify Delete
-			WaitforObject(appedo_systemMetrics_log_verifyDelete);
-			
+			//WaitforObject(appedo_systemMetrics_log_verifyDelete);
+			Thread.sleep(1500);
 			String Delete = browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText();
 			System.out.println("first one :"+Delete);
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains("No Record Found for UID")) 
