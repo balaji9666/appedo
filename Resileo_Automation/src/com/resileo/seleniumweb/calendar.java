@@ -44,8 +44,8 @@ public class calendar extends ReusableMethods {
 
 			// Select dash board Appedo2
 			Thread.sleep(2000);
-			WaitforObject(appedo_selectMyDashboard1);
-			browser.findElement(getObject(appedo_selectMyDashboard1)).click();
+			WaitforObject(appedo_selectMyDashboard);
+			browser.findElement(getObject(appedo_selectMyDashboard)).click();
 			test.log(LogStatus.PASS, "Dashboard Charts Viewed Successfully");
 			Thread.sleep(5000);
 

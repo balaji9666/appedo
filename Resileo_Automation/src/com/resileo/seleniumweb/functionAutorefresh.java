@@ -29,7 +29,7 @@ public class functionAutorefresh extends ReusableMethods {
 			{
 				test.log(LogStatus.PASS, "Login Successful" + " " + UserName);
 			} else {
-				test.log(LogStatus.FAIL, "Login failed");
+				test.log(LogStatus.FAIL, "Login failed. Please Retry");
 			}
 			Thread.sleep(2000);
 			WaitforObject(appedo_dashboardMenu);
