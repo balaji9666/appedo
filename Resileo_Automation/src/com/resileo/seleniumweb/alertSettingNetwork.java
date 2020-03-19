@@ -156,7 +156,7 @@ public class alertSettingNetwork extends ReusableMethods {
 			browser.switchTo().alert().accept();
 			
 			// Verify delete alert
-			//WaitforObject(appedo_systemMetrics_log_verifyDelete);
+			WaitforObject(appedo_systemMetrics_log_verifyDelete);
 			String Delete = browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText();
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains(Delete)) 
 			{
