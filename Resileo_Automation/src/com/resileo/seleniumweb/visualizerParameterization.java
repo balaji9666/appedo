@@ -482,7 +482,7 @@ public class visualizerParameterization extends ReusableMethods {
 							browser.findElement(getObject(appedo_myDashboardDropdown)).click();
 
 							// Select My dash board Appedo2
-							Thread.sleep(1000);
+							Thread.sleep(2000);
 							WaitforObject(appedo_selectMyDashboard);
 							browser.findElement(getObject(appedo_selectMyDashboard)).click();
 							
@@ -546,7 +546,7 @@ public class visualizerParameterization extends ReusableMethods {
 							
 							// Select chart name
 							browser.findElement(getObject(appedo_select_chart_added_dashboard)).click();
-							Thread.sleep(7000);
+							Thread.sleep(3000);
 							
 							// Verify added chart is displayed
 							String getdashboardname = browser.findElement(getObject(appedo_db_verifyAddedChart)).getText();
