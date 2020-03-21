@@ -188,7 +188,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_select_existing_dbchart_dropdown = "id:ddMcName";
 	String appedo_select_existing_dashboard = "xpath://span[contains(text(),'automation')]";
 	String appedo_addTo_myChart1 = "xpath://div[@id='idx1']//span[@mattooltip='Add to MyChart']";
-	String appedo_select_chart_added_dashboard = "xpath://span[contains(text(),'automation')]";
+	String appedo_select_chart_added_dashboard = "xpath://span[contains(text(),'000')]";
 	String appedo_validate_added = "xpath://span[contains(text(),'browser wise Report RUM')]";
 	String appedo_dropdown_myDashboard = "id:myDash";
 	String testDD = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option";
