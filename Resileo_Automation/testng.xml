@@ -6,7 +6,14 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-        <class name="com.resileo.seleniumweb.appedoRegistration"/>
+ <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
+    </classes>
+  </test> 
+</suite> <!-- Appedo Test Env -->
+
+<!-- 
+
+           <class name="com.resileo.seleniumweb.appedoRegistration"/>
       <class name="com.resileo.seleniumweb.forgotPassword"/>
       <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
       <class name="com.resileo.seleniumweb.downloadAgents"/>
@@ -68,13 +75,6 @@
       <class name="com.resileo.seleniumweb.schedulerMethodRunner"/>
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownMethodRunner"/>
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
-      <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
-    </classes>
-  </test> 
-</suite> <!-- Appedo Test Env -->
-
-<!-- 
-
-    
+      <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/> 
 
  -->
