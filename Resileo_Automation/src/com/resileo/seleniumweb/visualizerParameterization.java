@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -30,105 +29,51 @@ public class visualizerParameterization extends ReusableMethods {
 	}
 
 	@Test
-	public void createDB() {
-		try {
-			test = extent.startTest("DB connector Creation", "Creating DB connector");
-
-			// Verify login
-			WaitforObject(appedo_verifyLogin);
-			String UserName = browser.findElement(getObject(appedo_verifyLogin)).getText();
-			WaitforObject(appedo_verifyLogin);
-			if (browser.findElement(getObject(appedo_verifyLogin)).getText().contains(UserName)) {
-				test.log(LogStatus.PASS, "Login Successful" + " " + UserName);
-			} else {
-				test.log(LogStatus.FAIL, "Login failed");
+			public void createDB() {
+				try {
+					test = extent.startTest("Visualizer - Parameterization", "Visualizer - Parameterization Feature");
+				
+					// Click on visualizer
+					WaitforObject(appedo_link_Visualizer);
+					browser.findElement(getObject(appedo_link_Visualizer)).click();
+					
+					// Click on add db icon
+					WaitforObject(appedo_addDB);
+					browser.findElement(getObject(appedo_addDB)).click();
+								
+					// Enter values in all fields
+					browser.findElement(getObject(appedo_db_txtEngineName)).click();
+					browser.findElement(getObject(appedo_db_txtSelectEngineName)).click();
+					browser.findElement(getObject(appedo_db_txtHost)).sendKeys("35.160.246.188");
+					browser.findElement(getObject(appedo_db_txtDBuser)).sendKeys("postgres");
+					browser.findElement(getObject(appedo_db_txtDatabase)).sendKeys("ss_profiler");
+					browser.findElement(getObject(appedo_db_portNumber)).sendKeys("5432");
+					browser.findElement(getObject(appedo_db_txtDBpassword)).sendKeys("n0#ntry@^pp#d0");
+					
+					// Save DB connector
+					browser.findElement(getObject(appedo_db_btnSave)).click();
+					
+					// Verify DB connector
+					WaitforObject(appedo_db_verify);
+					String createDB = browser.findElement(getObject(appedo_db_verify)).getText();
+					if (browser.findElement(getObject(appedo_db_verify)).getText().contains(createDB)) 
+					{
+						test.log(LogStatus.PASS, "Database Connector Created Successfully");
+					} else {
+						test.log(LogStatus.FAIL, "Failed to create DB");
+					}
+					extent.endTest(test);
+					extent.flush();
+				} catch (Exception e) {
+					test.log(LogStatus.FAIL, e.getMessage());
+					System.out.println(e.getMessage());
+					String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+					String image = test.addScreenCapture(Snapshot1);
+					test.log(LogStatus.FAIL, "Test Failed", image);
+					extent.endTest(test);
+					extent.flush();
+				}
 			}
-
-			// Click on visualizer
-			WaitforObject(appedo_link_Visualizer);
-			browser.findElement(getObject(appedo_link_Visualizer)).click();
-
-			// Click on add db icon
-			WaitforObject(appedo_addDB);
-			browser.findElement(getObject(appedo_addDB)).click();
-
-			// validation of all fields
-			browser.findElement(getObject(appedo_db_txtHost)).click();
-			if (browser.findElement(getObject(appedo_db_validateEngineName)).isDisplayed()) {
-				test.log(LogStatus.PASS, "Engine name validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "Engine name validation is failed ");
-			}
-			browser.findElement(getObject(appedo_db_txtDBuser)).click();
-			WaitforObject(appedo_db_validateHost);
-			if (browser.findElement(getObject(appedo_db_validateHost)).getText()
-					.equalsIgnoreCase("You must enter a value")) {
-				test.log(LogStatus.PASS, "Host validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "Host validation is failed");
-			}
-			browser.findElement(getObject(appedo_db_txtDatabase)).click();
-			WaitforObject(appedo_db_validatetxtDBUser);
-			if (browser.findElement(getObject(appedo_db_validatetxtDBUser)).getText()
-					.equalsIgnoreCase("You must enter a value")) {
-				test.log(LogStatus.PASS, "DB User validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "DB User validation is failed");
-			}
-			browser.findElement(getObject(appedo_db_portNumber)).click();
-			WaitforObject(appedo_db_validatetxtDatabase);
-			if (browser.findElement(getObject(appedo_db_validatetxtDatabase)).getText()
-					.equalsIgnoreCase("You must enter a value")) {
-				test.log(LogStatus.PASS, "Database validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "Database validation is failed");
-			}
-			browser.findElement(getObject(appedo_db_txtDBpassword)).click();
-			WaitforObject(appedo_db_validatePort);
-			if (browser.findElement(getObject(appedo_db_validatePort)).getText()
-					.equalsIgnoreCase("You must enter a value")) {
-				test.log(LogStatus.PASS, "Port validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "Port validation is failed");
-			}
-			browser.findElement(getObject(appedo_db_txtEngineName)).click();
-			WaitforObject(appedo_db_validatetxtDBPassword);
-			if (browser.findElement(getObject(appedo_db_validatetxtDBPassword)).getText()
-					.equalsIgnoreCase("You must enter a value")) {
-				test.log(LogStatus.PASS, "DB Password validation is successful");
-			} else {
-				test.log(LogStatus.FAIL, "DB Password validation is failed");
-			}
-
-			// Enter values in all fields
-			browser.findElement(getObject(appedo_db_txtSelectEngineName)).click();
-			browser.findElement(getObject(appedo_db_txtHost)).sendKeys("35.160.246.188");
-			browser.findElement(getObject(appedo_db_txtDBuser)).sendKeys("postgres");
-			browser.findElement(getObject(appedo_db_txtDatabase)).sendKeys("ss_profiler");
-			browser.findElement(getObject(appedo_db_portNumber)).sendKeys("5432");
-			browser.findElement(getObject(appedo_db_txtDBpassword)).sendKeys("n0#ntry@^pp#d0");
-
-			// Save DB connector
-			browser.findElement(getObject(appedo_db_btnSave)).click();
-
-			// Verify DB connector
-			WaitforObject(appedo_db_verify);
-			String createDB = browser.findElement(getObject(appedo_db_verify)).getText();
-			if (browser.findElement(getObject(appedo_db_verify)).getText().contains(createDB)) {
-				test.log(LogStatus.PASS, "Database Connector Created Successfully");
-			} else {
-				test.log(LogStatus.FAIL, "Failed to create DB");
-			}
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL, e.getMessage());
-			System.out.println(e.getMessage());
-			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
-			String image = test.addScreenCapture(Snapshot1);
-			test.log(LogStatus.FAIL, "Test Failed", image);
-			extent.endTest(test);
-			extent.flush();
-		}
-	}
 
 	public void addParentQuery() {
 		try {
@@ -611,17 +556,55 @@ public class visualizerParameterization extends ReusableMethods {
 				}
 			}
 							
-			// Click Logout
-			WaitforObject(appedo_signout);
-			browser.findElement(getObject(appedo_signout)).click();
 
-			// Verify Sign out
-			WaitforObject(appedo_verifyLogout);
-			if (browser.findElement(getObject(appedo_verifyLogout)).isDisplayed()) 
+			extent.endTest(test);
+			extent.flush();
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, e.getMessage());
+			System.out.println(e.getMessage());
+			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+			String image = test.addScreenCapture(Snapshot1);
+			test.log(LogStatus.FAIL, "Test Failed", image);
+			extent.endTest(test);
+			extent.flush();
+		}
+	}
+	
+	public void deleteDB() {
+		try {
+			
+			// Click on visualizer
+			WaitforObject(appedo_link_Visualizer);
+			browser.findElement(getObject(appedo_link_Visualizer)).click();
+			
+			// Click on delete icon
+			WaitforObject(appedo_deleteDB);
+			browser.findElement(getObject(appedo_deleteDB)).click();
+			
+			// Accept alert 
+			browser.switchTo().alert().accept();
+			
+			// Verify DB connector
+			WaitforObject(appedo_db_verify);
+			Thread.sleep(2000);
+			String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
+			if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteDB)) 
 			{
-				test.log(LogStatus.PASS, "Logout Successful");
+				test.log(LogStatus.PASS, "Database Connector deleted Successfully");
+				// Click Logout
+				WaitforObject(appedo_signout);
+				browser.findElement(getObject(appedo_signout)).click();
+
+				// Verify Sign out
+				WaitforObject(appedo_verifyLogout);
+				if (browser.findElement(getObject(appedo_verifyLogout)).isDisplayed()) 
+				{
+					test.log(LogStatus.PASS, "Logout Successful");
+				} else {
+					test.log(LogStatus.FAIL, "Logout failed");
+				}
 			} else {
-				test.log(LogStatus.FAIL, "Logout failed");
+				test.log(LogStatus.FAIL, "Failed to delete Database Connector");
 			}
 			extent.endTest(test);
 			extent.flush();
@@ -639,10 +622,6 @@ public class visualizerParameterization extends ReusableMethods {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			Assert.fail(verificationErrorString);
-		}
 	}
 
 }
