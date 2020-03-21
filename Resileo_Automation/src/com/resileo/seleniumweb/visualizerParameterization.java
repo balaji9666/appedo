@@ -570,54 +570,6 @@ public class visualizerParameterization extends ReusableMethods {
 		}
 	}
 	
-	public void deleteDB() {
-		try {
-			
-			// Click on visualizer
-			WaitforObject(appedo_link_Visualizer);
-			browser.findElement(getObject(appedo_link_Visualizer)).click();
-			
-			// Click on delete icon
-			WaitforObject(appedo_deleteDB);
-			browser.findElement(getObject(appedo_deleteDB)).click();
-			
-			// Accept alert 
-			browser.switchTo().alert().accept();
-			
-			// Verify DB connector
-			WaitforObject(appedo_db_verify);
-			Thread.sleep(2000);
-			String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
-			if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteDB)) 
-			{
-				test.log(LogStatus.PASS, "Database Connector deleted Successfully");
-				// Click Logout
-				WaitforObject(appedo_signout);
-				browser.findElement(getObject(appedo_signout)).click();
-
-				// Verify Sign out
-				WaitforObject(appedo_verifyLogout);
-				if (browser.findElement(getObject(appedo_verifyLogout)).isDisplayed()) 
-				{
-					test.log(LogStatus.PASS, "Logout Successful");
-				} else {
-					test.log(LogStatus.FAIL, "Logout failed");
-				}
-			} else {
-				test.log(LogStatus.FAIL, "Failed to delete Database Connector");
-			}
-			extent.endTest(test);
-			extent.flush();
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL, e.getMessage());
-			System.out.println(e.getMessage());
-			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
-			String image = test.addScreenCapture(Snapshot1);
-			test.log(LogStatus.FAIL, "Test Failed", image);
-			extent.endTest(test);
-			extent.flush();
-		}
-	}
 
 	@AfterMethod
 	public void tearDown() throws Exception {
