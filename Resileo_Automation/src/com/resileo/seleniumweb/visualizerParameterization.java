@@ -482,7 +482,7 @@ public class visualizerParameterization extends ReusableMethods {
 							browser.findElement(getObject(appedo_myDashboardDropdown)).click();
 
 							// Select My dash board Appedo2
-							Thread.sleep(2000);
+							Thread.sleep(3000);
 							WaitforObject(appedo_selectMyDashboard);
 							browser.findElement(getObject(appedo_selectMyDashboard)).click();
 							
