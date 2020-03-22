@@ -6,7 +6,13 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
- <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
+<class name="com.resileo.seleniumweb.visualizerMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerAddQueryMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerViewQueriesMethodRunner"/>
+      <class name="com.resileo.seleniumweb.schedulerMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerNormalDrilldownMethodRunner"/>
+      <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
+      <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->
