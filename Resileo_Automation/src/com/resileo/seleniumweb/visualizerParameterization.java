@@ -573,7 +573,7 @@ public class visualizerParameterization extends ReusableMethods {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		browser.close();
+	
 	}
 
 }
