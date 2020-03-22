@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMethods {
@@ -20,7 +19,7 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 	@Test
 	public void viewDashboardCharts() {
 		try {
-			test = extent.startTest("View Dashboard Charts ", "View dashboard charts added");
+			test = extent.startTest("Visualizer - View DrillDown Chart", "View dashboard charts added");
 			Thread.sleep(1000);
 			WaitforObject(appedo_dashboardMenu);
 			browser.findElement(getObject(appedo_dashboardMenu)).click();
@@ -64,7 +63,7 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 			// Click on visualizer
 			WaitforObject(appedo_link_Visualizer);
 			browser.findElement(getObject(appedo_link_Visualizer)).click();
-			test = extent.startTest("DB connector Deletion", "Deleting DB connector");
+			//test = extent.startTest("DB connector Deletion", "Deleting DB connector");
 
 			// Click on delete icon
 			WaitforObject(appedo_deleteDB);
@@ -112,12 +111,7 @@ public class visualizerNormalDrilldownViewchartsinDashboard extends ReusableMeth
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		logout();
 		browser.close();
-		browser.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			Assert.fail(verificationErrorString);
-		}
+
 	}
 }

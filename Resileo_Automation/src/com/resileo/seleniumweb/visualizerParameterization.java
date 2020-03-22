@@ -77,7 +77,7 @@ public class visualizerParameterization extends ReusableMethods {
 
 	public void addParentQuery() {
 		try {
-			test = extent.startTest("Addition of Parent query to DB", "Adding parent query to DB");
+			//test = extent.startTest("Addition of Parent query to DB", "Adding parent query to DB");
 
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
@@ -253,7 +253,7 @@ public class visualizerParameterization extends ReusableMethods {
 
 	public void addChildQuery() {
 		try {
-			test = extent.startTest("Addition of Child query to DB", "Adding child query to DB");
+			//test = extent.startTest("Addition of Child query to DB", "Adding child query to DB");
 
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
@@ -370,7 +370,7 @@ public class visualizerParameterization extends ReusableMethods {
 
 	public void mapChartid() {
 		try {
-			test = extent.startTest("Map ID of Child Query to Parent Query", "Mapping ID of child query to Parent Query");
+			//test = extent.startTest("Map ID of Child Query to Parent Query", "Mapping ID of child query to Parent Query");
 
 			// Click on view queries
 			Thread.sleep(2000);
@@ -380,9 +380,7 @@ public class visualizerParameterization extends ReusableMethods {
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) {
-				QueryName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[3]")).getText()
-						.toString();
-				if (QueryName.equalsIgnoreCase(childQuery)) {
+
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
 					Thread.sleep(12000);
 
@@ -401,9 +399,7 @@ public class visualizerParameterization extends ReusableMethods {
 					//List<WebElement> table1 = browser.findElements(By.xpath("//table/tbody/tr"));
 					//int totalrows1 = table1.size();
 					for (int j = 0; j < totalrows; j++) {
-						QueryName1 = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (j + 1) + "] /td[3]"))
-								.getText().toString();
-						if (QueryName1.equalsIgnoreCase(parentQuery)) {
+						
 							browser.findElement(By.xpath("//table/tbody/tr[" + (j + 1) + "]/td[1]")).click();
 							Thread.sleep(15000);
 							
@@ -439,12 +435,13 @@ public class visualizerParameterization extends ReusableMethods {
 							String saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 							if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText()
 									.equalsIgnoreCase(saveQuery)) {
-								test.log(LogStatus.PASS, "Successfully Added");
+								test.log(LogStatus.PASS, "Child Query Successfully Added");
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
 
 							// Click on save icon
+							Thread.sleep(3000);
 							WaitforObject(appedo_db_addQuery_saveQuery);
 							browser.findElement(getObject(appedo_db_addQuery_saveQuery)).click();
 
@@ -466,7 +463,7 @@ public class visualizerParameterization extends ReusableMethods {
 							saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 							if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText()
 									.equalsIgnoreCase(saveQuery)) {
-								test.log(LogStatus.PASS, "Successfully saved parent query");
+								test.log(LogStatus.PASS, "Mapping ID of child query to Parent Query Successfully saved");
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
@@ -474,7 +471,7 @@ public class visualizerParameterization extends ReusableMethods {
 							// Click close icon
 							WaitforObject(appedo_db_addQuery_close);
 							browser.findElement(getObject(appedo_db_addQuery_close)).click();
-							test = extent.startTest("View added chart in Dash Board", "Viewing added chart in Dash Board");
+							//test = extent.startTest("View added chart in Dash Board", "Viewing added chart in Dash Board");
 							
 							// Click on toggle menu
 							WaitforObject(appedo_toggleMenu);
@@ -498,12 +495,12 @@ public class visualizerParameterization extends ReusableMethods {
 							Thread.sleep(2000);
 							if (getdashboardname.contains("custom")) 
 							{
-								test.log(LogStatus.PASS, "Added chart is updated in existing dashboard");
+								test.log(LogStatus.PASS, "DashBoard : Added chart is updated in existing dashboard");
 							} else {
 								test.log(LogStatus.FAIL, "Added chart is not updated in existing dashboard");
 							}
 							Thread.sleep(2000);
-							test = extent.startTest("Remove chart from Dash Board", "Removing chart from Dash Board");
+							//test = extent.startTest("Remove chart from DashBoard", "Removing chart from Dash Board");
 							
 							// Click on Remove
 							WaitforObject(appedo_db_removeChart);
@@ -519,7 +516,7 @@ public class visualizerParameterization extends ReusableMethods {
 							if (browser.findElement(getObject(appedo_systemMetrics_verifyGraphsNetwork)).isDisplayed()) 
 							//if(browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText().contains(Msg3)) 
 							{
-								test.log(LogStatus.PASS, "Dashboard Deletion :  Successfully deleted");
+								test.log(LogStatus.PASS, "Removing chart from DashBoard :  Successfully deleted");
 							} else {
 								test.log(LogStatus.FAIL, "Dashboard Deletion failed");
 							}
@@ -553,8 +550,8 @@ public class visualizerParameterization extends ReusableMethods {
 							}
 						}
 					}
-				}
-			}
+				
+			
 							
 
 			extent.endTest(test);

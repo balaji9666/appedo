@@ -20,7 +20,6 @@ public class visualizerParameterizationMethodRunner extends ReusableMethods {
 		run.addParentQuery();
 		run.addChildQuery();
 		run.mapChartid();
-		//run.deleteDB();
 	}
 
 	@AfterMethod

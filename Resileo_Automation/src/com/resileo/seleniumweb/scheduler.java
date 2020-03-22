@@ -166,7 +166,7 @@ public class scheduler extends ReusableMethods {
 
 	public void statusOfAttachment() {
 		try {
-			test = extent.startTest("Scheduler Attachment", "Visualizer - Current status of the attachment");
+			test = extent.startTest("Scheduler Report with Attachment", "Visualizer - Current status of the attachment");
 			
 			// Click on scheduler icon
 			Thread.sleep(2000);
@@ -217,7 +217,7 @@ public class scheduler extends ReusableMethods {
 
 	public void statusOfScheduler() {
 		try {
-			test = extent.startTest("Scheduler Status", "Scheduler Status - Current status of the scheduler");
+			test = extent.startTest("Visualizer - Scheduler Status", "Scheduler Status - Current status of the scheduler");
 			// Click on scheduler icon
 			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_db_scheduler)).click();
@@ -270,7 +270,7 @@ public class scheduler extends ReusableMethods {
 
 	public void configureEmail() {
 		try {
-			test = extent.startTest("Email Configuration", "Scheduler - Configuring email for the scheduler");
+			test = extent.startTest("Scheduler Email Configuration", "Scheduler - Configuring email for the scheduler");
 			
 			// Click on map email icon
 			Thread.sleep(2000);
@@ -280,10 +280,12 @@ public class scheduler extends ReusableMethods {
 			browser.findElement(getObject(appedo_db_scheduler_addEmail)).click();
 			
 			// Enter mail ID
+			Thread.sleep(1500);
+			browser.findElement(getObject(appedo_db_scheduler_txtEmail)).click();
 			browser.findElement(getObject(appedo_db_scheduler_txtEmail)).sendKeys(Name + "@gmail.com");
 			
 			// Click on Save Changes
-			Thread.sleep(5000);
+			Thread.sleep(4000);
 			browser.findElement(getObject(appedo_db_btnSave)).click();
 
 			// Verify scheduler
@@ -310,12 +312,13 @@ public class scheduler extends ReusableMethods {
 
 	public void deleteConfiguredEmail() {
 		try {
-			test = extent.startTest("Delete Email Configuration", "Scheduler - Deleting the configured email for the scheduler");
+			test = extent.startTest("Scheduler Delete Configured Email", "Scheduler - Deleting the configured email for the scheduler");
 			// Click on scheduler icon
 			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_db_scheduler_mapEmail)).click();
 			
 			// Click on remove icon
+			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_db_scheduler_removeEmail)).click();
 			
 			// Click on Save Changes

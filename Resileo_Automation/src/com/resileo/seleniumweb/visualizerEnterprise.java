@@ -53,6 +53,7 @@ public class visualizerEnterprise extends ReusableMethods {
 			browser.findElement(getObject(appedo_db_viewQuery_addEnterprise)).click();
 			
 			// Select enterprise name
+			Thread.sleep(2000);
 			WaitforObject(appedo_db_viewQuery_EnterpriseName);
 			browser.findElement(getObject(appedo_db_viewQuery_EnterpriseName)).click();
 			

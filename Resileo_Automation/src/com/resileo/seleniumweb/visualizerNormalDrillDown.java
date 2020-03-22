@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -35,7 +34,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 	@Test
 	public void createDB() {
 		try {
-			test = extent.startTest("DB connector Creation", "Creating DB connector");
+			test = extent.startTest("Visualizer - Create DrillDown Chart", "visualizer - Create DrillDown Chart");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -92,12 +91,12 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 
 	public void addParentQueryToDB() {
 		try {
-			test = extent.startTest("Add parent query to DB", "Adding parent query to DB");
+			//test = extent.startTest("Add parent query to DB", "Adding parent query to DB");
 
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 
 			// Click on select table
 			WaitforObject(appedo_db_addQuery_selectTable);
@@ -106,7 +105,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 			// Select from table
 			WaitforObject(appedo_db_addQuery_selectFromTable);
 			browser.findElement(getObject(appedo_db_addQuery_selectFromTable)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 
 			// click on FilterBy
 			WaitforObject(appedo_db_addQuery_filterBy);
@@ -187,9 +186,9 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 			String saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 			if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText().equalsIgnoreCase(saveQuery)) 
 			{
-				test.log(LogStatus.PASS, "Successfully saved the query");
+				test.log(LogStatus.PASS, "Successfully saved the Parent query to DB");
 			} else {
-				test.log(LogStatus.FAIL, "Failed to save Query");
+				test.log(LogStatus.FAIL, "Failed to save the Parent Query");
 			}
 
 			// Click close icon
@@ -210,13 +209,13 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 
 	public void addChildQueryToDB() {
 		try {
-			test = extent.startTest("Add child query to DB", "Adding child query to DB");
+			//test = extent.startTest("Add child query to DB", "Adding child query to DB");
 
 			// Click on add query
 			Thread.sleep(3000);
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 
 			// Click on select table
 			WaitforObject(appedo_db_addQuery_selectTable);
@@ -225,7 +224,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 			// Select from table
 			WaitforObject(appedo_db_addQuery_selectFromTable);
 			browser.findElement(getObject(appedo_db_addQuery_selectFromTable)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 
 			// click on FilterBy
 			WaitforObject(appedo_db_addQuery_filterBy);
@@ -306,9 +305,9 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 			String saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 			if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText().equalsIgnoreCase(saveQuery)) 
 			{
-				test.log(LogStatus.PASS, "Successfully saved the query");
+				test.log(LogStatus.PASS, "Successfully saved the Child Query to DB");
 			} else {
-				test.log(LogStatus.FAIL, "Failed to save Query");
+				test.log(LogStatus.FAIL, "Failed to save the Child Query");
 			}
 
 			// Click close icon
@@ -329,7 +328,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 
 	public void mapQueryToDB() {
 		try {
-			test = extent.startTest("Getting child query id", "Getting child query id");
+			//test = extent.startTest("Getting child query id", "Getting child query id");
 			
 			// Click on view queries
 			Thread.sleep(2000);
@@ -372,7 +371,7 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 
 	public void maptoParentQueryToDB() {
 		try {
-			test = extent.startTest("Mapping child query id ", "Mapping child query id into Parent");
+			//test = extent.startTest("Mapping child query id ", "Mapping child query id into Parent");
 			
 			// Click on View Queries
 			WaitforObject(appedo_db_viewQueries);
@@ -478,10 +477,5 @@ public class visualizerNormalDrillDown extends ReusableMethods {
 		extent.endTest(test);
 		extent.flush();
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

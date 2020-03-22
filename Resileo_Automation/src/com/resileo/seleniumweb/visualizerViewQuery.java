@@ -20,7 +20,7 @@ public class visualizerViewQuery extends ReusableMethods {
 	@Test
 	public void viewQueriesEdit() {
 		try {
-			test = extent.startTest("Visualizer view Queries Edit", "Edit Visualizer view Queries");
+			test = extent.startTest("Visualizer - Edit View Queries", "Edit Visualizer view Queries");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -209,7 +209,7 @@ public class visualizerViewQuery extends ReusableMethods {
 
 	public void viewQueriesDelete() {
 		try {
-			test = extent.startTest("Visualizer view Queries Delete", "Visualizer view Queries Delete");
+			test = extent.startTest("Visualizer - Delete View Queries", "Visualizer view Queries Delete");
 			
 			// Click on view queries
 			WaitforObject(appedo_db_viewQueries);

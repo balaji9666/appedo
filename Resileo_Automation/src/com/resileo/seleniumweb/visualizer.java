@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class visualizer extends ReusableMethods {
@@ -22,7 +21,7 @@ public class visualizer extends ReusableMethods {
 	@Test
 	public void createDB() {
 		try {
-			test = extent.startTest("DB connector Creation", "Creating DB connector");
+			test = extent.startTest("Visualizer - Add Database", "Creating DB connector");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -136,7 +135,7 @@ public class visualizer extends ReusableMethods {
 
 	public void dbEnterprise() {
 		try {
-			test = extent.startTest("Map Enterprise to DB", "Mapping enterprise to DB");
+			test = extent.startTest("Visualizer - Map Enterprise", "Mapping enterprise to Visualizer DB");
 			
 			// Click map enterprise
 			WaitforObject(appedo_db_mapEnterprise);
@@ -169,7 +168,7 @@ public class visualizer extends ReusableMethods {
 				test.log(LogStatus.FAIL, "Failed to add enterprise");
 			}
 			Thread.sleep(1000);
-			test = extent.startTest("Unmap Enterprise from DB", "Unmapping enterprise from DB");
+			test = extent.startTest("Visualizer - Remove Enterprise", "Unmapping enterprise from DB");
 			
 			// Click on map enterprise
 			WaitforObject(appedo_db_mapEnterprise);
@@ -209,7 +208,7 @@ public class visualizer extends ReusableMethods {
 
 	public void editDB() {
 		try {
-			test = extent.startTest("DB connector Edition", "Editing DB connector");
+			test = extent.startTest("Visualizer - Edit DB Connector", "Editing DB connector");
 			
 			// Click on edit icon
 			WaitforObject(appedo_editDB);
@@ -259,7 +258,7 @@ public class visualizer extends ReusableMethods {
 
 	public void deleteDB() {
 		try {
-			test = extent.startTest("DB connector Deletion", "Deleting DB connector");
+			test = extent.startTest("Visualizer - Delete DB Connector", "Deleting DB connector");
 			
 			// Click on delete icon
 			WaitforObject(appedo_deleteDB);
@@ -307,11 +306,7 @@ public class visualizer extends ReusableMethods {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
+
 	}
 
 }
