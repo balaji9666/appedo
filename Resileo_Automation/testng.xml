@@ -47,8 +47,6 @@
       <class name="com.resileo.seleniumweb.viewOADChartMethodRunner"/>
       <class name="com.resileo.seleniumweb.configureMetricsMethodRunner"/>
       <class name="com.resileo.seleniumweb.addCustomMetricsOSMethodRunner"/>
-      <class name="com.resileo.seleniumweb.addCustomMetricsDBMethodRunner"/>
-      <class name="com.resileo.seleniumweb.addCustomMetricsAppMethodRunner"/>
       <class name="com.resileo.seleniumweb.systemMetricsCopyMetrics"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsOS"/>
       <class name="com.resileo.seleniumweb.enterpriseUserSystemMetricsApp"/>
