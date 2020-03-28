@@ -25,7 +25,7 @@ public class editDeleteOAD extends ReusableMethods {
 	@Test
 	public void EditUpdateOSCard() {
 		try {
-			test = extent.startTest("Edit and Update OS card", "Editing and updating the operating system details");
+			test = extent.startTest("System Metrics - Edit OS Card", "Editing and updating the operating system details");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -82,7 +82,7 @@ public class editDeleteOAD extends ReusableMethods {
 
 	public void DeleteOScard() {
 		try {
-			test = extent.startTest("Delete OS card", "Deleting the operating system details");
+			test = extent.startTest("System Metrics - Delete OS Card", "Deleting the operating system details");
 						
 			// OS Delete Icon
 			WaitforObject(appedo_oad_del);
@@ -115,7 +115,7 @@ public class editDeleteOAD extends ReusableMethods {
 
 	public void EditUpdateAppcard() {
 		try {
-			test = extent.startTest("Edit and Update Application card", "Editing and updating the application details");
+			test = extent.startTest("System Metrics - Edit APP Card", "Editing and updating the application details");
 			browser.navigate().back();
 			
 			// Click on app link
@@ -163,7 +163,7 @@ public class editDeleteOAD extends ReusableMethods {
 	public void DeleteAppCard() {
 		try {
 			
-			test = extent.startTest("Delete application card", "Deleting the application details");
+			test = extent.startTest("System Metrics - Delete APP Card", "Deleting the application details");
 			
 			// Click on Delete Icon
 			WaitforObject(appedo_oad_del);
@@ -197,7 +197,7 @@ public class editDeleteOAD extends ReusableMethods {
 
 	public void EditDbCard() {
 		try {
-			test = extent.startTest("Edit and Update Database card", "Editing and updating the database details");
+			test = extent.startTest("System Metrics - Edit DB Card", "Editing and updating the database details");
 			browser.navigate().back();
 			
 			// Click on app link
@@ -243,7 +243,7 @@ public class editDeleteOAD extends ReusableMethods {
 
 	public void DeleteDbCard() {
 		try {
-			test = extent.startTest("Delete Database card", "Deleting the database details");
+			test = extent.startTest("System Metrics - Delete DB Card", "Deleting the database details");
 			Thread.sleep(10000);
 			
 			// Click on delete icon

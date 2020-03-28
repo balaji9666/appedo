@@ -33,7 +33,7 @@ public class viewOADGraph extends ReusableMethods {
 		try {
 			//String alphabet = "abcefghijk";
 			//String OSChartName = "test" + RandomStringUtils.random(4, alphabet);
-			test = extent.startTest("View OS Graphs", "Viewing operating system graphs");
+			test = extent.startTest("System Metrics OS - Draw Chart", "Viewing operating system graphs");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -108,7 +108,7 @@ public class viewOADGraph extends ReusableMethods {
 		try {
 			//String alphabet = "abcefghijk";
 			//String appChartName = "test" + RandomStringUtils.random(4, alphabet);
-			test = extent.startTest("View Application Graphs", "Viewing application graphs");
+			test = extent.startTest("System Metrics APP - Draw Chart", "Viewing application graphs");
 			
 			// Click on Menu icon
 			WaitforObject(appedo_menu);
@@ -181,7 +181,7 @@ public class viewOADGraph extends ReusableMethods {
 		try {
 			//String alphabet = "abcefghijk";
 			//String DbChartName = "test" + RandomStringUtils.random(4, alphabet);
-			test = extent.startTest("View DB Graphs", "Viewing Database graphs");
+			test = extent.startTest("System Metrics DB - Draw Chart", "Viewing Database graphs");
 			Thread.sleep(5000);	
 			// Click on Menu icon
 			WaitforObject(appedo_menu);

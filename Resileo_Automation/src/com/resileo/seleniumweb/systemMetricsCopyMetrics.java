@@ -22,7 +22,7 @@ public class systemMetricsCopyMetrics extends ReusableMethods {
 	@Test
 	public void testHomePageNavigation() {
 		try {
-			test = extent.startTest("systemMetrics - copyMetrics", "Copying metrics between apache tomcat");
+			test = extent.startTest("System Metrics - Copy Metrics", "Copying metrics between apache tomcat");
 
 			WaitforObject(appedo_btnsystem_metricsMenu);
 			browser.findElement(getObject(appedo_btnsystem_metricsMenu)).click();

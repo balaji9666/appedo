@@ -189,6 +189,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_select_existing_dashboard = "xpath://span[contains(text(),'automation')]";
 	String appedo_addTo_myChart1 = "xpath://div[@id='idx1']//span[@mattooltip='Add to MyChart']";
 	String appedo_select_chart_added_dashboard = "xpath://span[contains(text(),'000')]";
+	String appedo_select_chart_added_dashboardex = "xpath://span[contains(text(),'automation')]";
 	String appedo_validate_added = "xpath://span[contains(text(),'browser wise Report RUM')]";
 	String appedo_dropdown_myDashboard = "id:myDash";
 	String testDD = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option";
@@ -591,33 +592,34 @@ public class ObjectRepository extends ObjectMap {
 	// View Graph - OS
 	String appedo_link_systemMetrics = "xpath://span[contains(text(),'System Metrics')]";
 	String OAD_sysAdmin_sysName = "xpath://td[contains(text(),'Amazon Linux 2')]";
-	String appedo_view_os_Graph1 = "xpath://span[contains(text(),'43694')]";
-	String appedo_view_os_Graph2 = "xpath://span[contains(text(),'43695')]";
-	String appedo_view_os_Graph3 = "xpath://span[contains(text(),'43693')]";
-	String appedo_view_os_Graph4 = "xpath://span[contains(text(),'43692')]";
-	String appedo_view_os_Graph5 = "xpath://span[contains(text(),'43696')]";
+	String appedo_view_os_Graph1 = "xpath://span[contains(text(),'CPU% of Processes')]";
+	String appedo_view_os_Graph2 = "xpath://span[contains(text(),'Hardware CPU')]";
+	String appedo_view_os_Graph3 = "xpath://span[contains(text(),'Idle CPU% SERVER')]";
+	String appedo_view_os_Graph4 = "xpath://span[contains(text(),'Nice CPU% SERVER')]";
+	String appedo_view_os_Graph5 = "xpath://span[contains(text(),'Software CPU% SERVER')]";
+	String appedo_view_os_Graph6 = "xpath://span[contains(text(),'nov1')]";
 	
 	// View Graph - Application
 	String appedo_app = "xpath://tbody//tr[1]//td[5]";
-	String appedo_app_graph = "xpath://table/tbody/tr[2]/td[10]";
+	String appedo_app_graph = "xpath://table/tbody/tr[1]/td[10]";
 	String appedo_app_dashboard_chart_name = "xpath://input[@placeholder='Dashboard Name']";
 	String appedo_app_dashboard_chart_save = "xpath://span[contains(text(),'Save')]";
-	String appedo_view_app_Graph1 = "xpath://span[contains(text(),'43900')]";
-	String appedo_view_app_Graph2 = "xpath://span[contains(text(),'43902')]";
-	String appedo_view_app_Graph3 = "xpath://span[contains(text(),'43901')]";
-	String appedo_view_app_Graph4 = "xpath://span[contains(text(),'43899')]";
-	String appedo_view_app_Graph5 = "xpath://span[contains(text(),'43898')]";
+	String appedo_view_app_Graph1 = "xpath://span[contains(text(),'BusyWorkers')]";
+	String appedo_view_app_Graph2 = "xpath://span[contains(text(),'BytesPerReq')]";
+	String appedo_view_app_Graph3 = "xpath://span[contains(text(),'BytesPerSec')]";
+	String appedo_view_app_Graph4 = "xpath://span[contains(text(),'CPULoad')]";
+	String appedo_view_app_Graph5 = "xpath://span[contains(text(),'Total Accesses')]";
 	
 	// View Graph - DB
 	String appedo_Db = "xpath://tbody//tr[1]//td[6]";
 	String appedo_Db_graph = "xpath://table/tbody/tr[1]/td[10]";
 	String appedo_Db_dashboard_chart_name = "xpath://input[@placeholder='Dashboard Name']";
 	String appedo_Db_dashboard_chart_save = "xpath://span[contains(text(),'Save')]";
-	String appedo_view_Db_Graph1 = "xpath://span[contains(text(),'43824')]";
-	String appedo_view_Db_Graph2 = "xpath://span[contains(text(),'43822')]";
-	String appedo_view_Db_Graph3 = "xpath://span[contains(text(),'43823')]";
-	String appedo_view_Db_Graph4 = "xpath://span[contains(text(),'43821')]";
-	String appedo_view_Db_Graph5 = "xpath://span[contains(text(),'43831')]";
+	String appedo_view_Db_Graph1 = "xpath://span[contains(text(),'Open_tables')]";
+	String appedo_view_Db_Graph2 = "xpath://span[contains(text(),'Queries')]";
+	String appedo_view_Db_Graph3 = "xpath://span[contains(text(),'Threads_running')]";
+	String appedo_view_Db_Graph4 = "xpath://span[contains(text(),'Max_used_connections')]";
+	String appedo_view_Db_Graph5 = "xpath://span[contains(text(),'Innodb_rows_inserted')]";
 
 	// OAD - Edit Delete
 	String appedo_oad_edit = "xpath://mat-icon[contains(text(),'edit')]";
@@ -641,35 +643,35 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_systemMetrics_os = "xpath://tbody//tr[1]//td[4]";
 	String appedo_systemMetrics_os_configure = "xpath://table/tbody/tr[1]/td[6]";
 	String appedo_systemMetrics_os_selectCategory = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/configure-setting-dialog[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]/span[1]";
-	String appedo_systemMetrics_os_category = "xpath://span[contains(text(),'bitlocker')]";
-	String appedo_systemMetrics_os_category_selectCheckbox = "xpath://span[contains(text(),'Max Read Split Size')]";
+	String appedo_systemMetrics_os_category = "xpath://span[@class='mat-option-text'][contains(text(),'disk')]";
+	String appedo_systemMetrics_os_category_selectCheckbox = "xpath://span[contains(text(),'Total Available in KB')]";
 	String appedo_systemMetrics_os_btnUpdate = "xpath://span[contains(text(),'Update')]";
 	String appedo_verify_configureMetrics = "xpath://span[@class='clrblack']";
 	String appedo_systemMetrics_os_drawChart = "xpath://mat-icon[contains(text(),'show_chart')]";
-	String appedo_systemMetrics_os_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container.mat-drawer-transition:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.ng-star-inserted.dbwrapper85:nth-child(40) div.ng-star-inserted > span.font_14.mgnleft5";
-	String appedo_systemMetrics_removeCategory = "xpath://span[contains(text(),'bitlocker.Max Read Split Size')]";
+	String appedo_systemMetrics_os_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.dbwrapper85.ng-star-inserted:nth-child(52) div.ng-star-inserted > span.font_14.mgnleft5";	
+	String appedo_systemMetrics_removeCategory = "xpath://span[contains(text(),'disk.Total Available in KB')]";
 	
 	// Configure Metrics - APP
 	String appedo_systemMetrics_app = "xpath://table/tbody/tr[1]/td[5]";
 	String appedo_systemMetrics_app_configure = "xpath://mat-icon[@class='pointer mat-icon notranslate mat-warn material-icons ng-star-inserted'][contains(text(),'settings')]";
 	String appedo_systemMetrics_app_selectCategory = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/configure-setting-dialog[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]/span[1]";
-	String appedo_systemMetrics_app_category = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[4]/span[1]";
-	String appedo_systemMetrics_app_category_selectCheckbox = "xpath://span[contains(text(),'Application Restarts')]";
+	String appedo_systemMetrics_app_category = "xpath://span[@class='mat-option-text'][contains(text(),'apache counters')]";
+	String appedo_systemMetrics_app_category_selectCheckbox = "xpath://span[contains(text(),'BusyWorkers')]";
 	String appedo_systemMetrics_app_btnUpdate = "xpath://span[contains(text(),'Update')]";
 	String appedo_systemMetrics_app_drawChart = "xpath://mat-icon[contains(text(),'show_chart')]";
 	String appedo_systemMetrics_app_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.dbwrapper85.ng-star-inserted:nth-child(43) div.ng-star-inserted > span.font_14.mgnleft5";
-	String appedo_systemMetrics_app_removeCategory = "xpath://span[contains(text(),'asp.net.Application Restarts')]";
+	String appedo_systemMetrics_app_removeCategory = "xpath://span[contains(text(),'apache counters.BusyWorkers')]";
 	
 	// Configure Metrics - DB
 	String appedo_systemMetrics_db = "xpath://table/tbody/tr[1]/td[6]";
-	String appedo_systemMetrics_db_configure = "xpath://table/tbody/tr[1]/td[6]";
+	String appedo_systemMetrics_db_configure = "xpath://table/tbody/tr[2]/td[6]";
 	String appedo_systemMetrics_db_selectCategory = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/configure-setting-dialog[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]/span[1]";
-	String appedo_systemMetrics_db_category = "xpath://span[@class='mat-option-text'][contains(text(),'connections')]";
-	String appedo_systemMetrics_db_selectCheckbox = "xpath://span[contains(text(),'Active Connections')]";
+	String appedo_systemMetrics_db_category = "xpath://span[@class='mat-option-text'][contains(text(),'table')]";
+	String appedo_systemMetrics_db_selectCheckbox = "xpath://span[contains(text(),'deadlocks')]";
 	String appedo_systemMetrics_db_btnUpdate = "xpath://span[contains(text(),'Update')]";
-	String appedo_systemMetrics_db_drawChart = "xpath://table/tbody/tr[1]/td[10]";
-	String appedo_systemMetrics_db_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container.mat-drawer-transition:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.ng-star-inserted.dbwrapper85:nth-child(40) div.ng-star-inserted > span.font_14.mgnleft5:nth-child(1)";
-	String appedo_systemMetrics_db_removeCategory = "xpath://span[contains(text(),'connections.Active Connections')]";
+	String appedo_systemMetrics_db_drawChart = "xpath://table/tbody/tr[2]/td[10]";
+	String appedo_systemMetrics_db_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.dbwrapper85.ng-star-inserted:nth-child(46) div.ng-star-inserted > span.font_14.mgnleft5";
+	String appedo_systemMetrics_db_removeCategory = "xpath://span[contains(text(),'table.deadlocks')]";
 
 	// View OAD Graph - OS
 	String appedo_os = "xpath://tbody//tr[1]//td[4]";

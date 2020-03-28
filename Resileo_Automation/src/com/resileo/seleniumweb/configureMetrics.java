@@ -10,8 +10,7 @@ public class configureMetrics extends ReusableMethods {
 	public boolean acceptNextAlert = true;
 	public StringBuffer verificationErrors = new StringBuffer();
 	
-	
-
+	  
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
@@ -21,7 +20,7 @@ public class configureMetrics extends ReusableMethods {
 	@Test
 	public void addConfigureMetricsToOS() {
 		try {
-			test = extent.startTest("Addition of Metrics to OS", "Adding metrics to OS");
+			test = extent.startTest("System Metrics OS - Configure Metrics", "Adding metrics to OS");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -48,10 +47,12 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_os_selectCategory)).click();
 			
 			// Click on any category
+			Thread.sleep(1500);
 			WaitforObject(appedo_systemMetrics_os_category);
 			browser.findElement(getObject(appedo_systemMetrics_os_category)).click();
 			
 			// Select a category
+			Thread.sleep(1500);
 			WaitforObject(appedo_systemMetrics_os_category_selectCheckbox);
 			browser.findElement(getObject(appedo_systemMetrics_os_category_selectCheckbox)).click();
 			
@@ -63,7 +64,7 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "New Metrics Added successfully :: INFO -"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
@@ -71,10 +72,10 @@ public class configureMetrics extends ReusableMethods {
 			// Verify added metrics in chart
 			Thread.sleep(3000);
 			browser.findElement(getObject(appedo_systemMetrics_os_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_systemMetrics_os_addedChart);
-			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).getText();
-			if (expectedChart.contains("Read")) 
+			String expectedChartos = browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).getText();
+			if (expectedChartos.contains("Total Available in KB"))
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in OS");
 			} else {
@@ -97,7 +98,7 @@ public class configureMetrics extends ReusableMethods {
 
 	public void removeConfigureMetricsFromOS() {
 		try {
-			test = extent.startTest("Removal of Configure Metrics from OS", "Removing configure metrics from OS");
+			//test = extent.startTest("Removal of Configure Metrics from OS", "Removing configure metrics from OS");
 			
 			// Click on configure
 			browser.findElement(getObject(appedo_systemMetrics_os_configure)).click();
@@ -114,20 +115,21 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "Added Metrics Removed successfully :: INFO -"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
 			
 			// Verify added metrics in chart
 			browser.findElement(getObject(appedo_systemMetrics_os_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_systemMetrics_os_addedChart);
-			if (browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).isDisplayed()) 
+				if (browser.findElement(getObject(appedo_systemMetrics_os_addedChart)).isDisplayed()) 
 			{
-				test.log(LogStatus.PASS, "Removed metrics graph is not displayed in OS");
+				
+				test.log(LogStatus.PASS, "Removed metrics graph is not displayed in OS Graph");
 			} else {
-				test.log(LogStatus.FAIL, "Removed metrics graph is displayed in OS");
+				test.log(LogStatus.FAIL, "Removed metrics graph is displayed in OS Graph");
 			}
 			browser.navigate().back();
 			browser.navigate().back();
@@ -147,7 +149,7 @@ public class configureMetrics extends ReusableMethods {
 
 	public void addConfigureMetricsToApp() {
 		try {
-			test = extent.startTest("Addition of Configure Metrics to App", "Adding configure metrics to App");
+			test = extent.startTest("System Metrics APP - Configure Metrics", "Adding configure metrics to App");
 			
 			// Click on App
 			WaitforObject(appedo_systemMetrics_app);
@@ -175,17 +177,17 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "New Metrics Added :: INFO -"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
 			
 			// Verify added metrics in chart
 			browser.findElement(getObject(appedo_systemMetrics_app_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			WaitforObject(appedo_systemMetrics_app_addedChart);
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_app_addedChart)).getText();
-			if (expectedChart.contains("Application")) 
+			if (expectedChart.contains("Busy Workers")) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in App");
 			} else {
@@ -208,7 +210,7 @@ public class configureMetrics extends ReusableMethods {
 
 	public void removeConfigureMetricsFromApp() {
 		try {
-			test = extent.startTest("Removal of Configure Metrics from App", "Removing configure metrics from App");
+			//test = extent.startTest("Removal of Configure Metrics from App", "Removing configure metrics from App");
 			
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_app_configure);
@@ -226,14 +228,14 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "Added Metrics Removed :: INFO - "+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
 			
 			// Verify added metrics in chart
 			browser.findElement(getObject(appedo_systemMetrics_app_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(7000);
 			WaitforObject(appedo_systemMetrics_app_addedChart);
 			if (browser.findElement(getObject(appedo_systemMetrics_app_addedChart)).isDisplayed()) 
 			{
@@ -259,7 +261,7 @@ public class configureMetrics extends ReusableMethods {
 
 	public void addConfigureMetricsToDB() {
 		try {
-			test = extent.startTest("Addition of Metrics to DB", "Adding metrics to DB");
+			test = extent.startTest("System Metrics DB - Configure Metrics", "Adding metrics to DB");
 			Thread.sleep(3000);
 			
 			// Click on DB
@@ -291,7 +293,7 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "New Metrics Added :: INFO -"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
@@ -302,7 +304,7 @@ public class configureMetrics extends ReusableMethods {
 			WaitforObject(appedo_systemMetrics_db_addedChart);
 			Thread.sleep(4000);
 			String expectedChart = browser.findElement(getObject(appedo_systemMetrics_db_addedChart)).getText();
-			if (expectedChart.contains("Active")) 
+			if (expectedChart.contains("deadlocks")) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed the graph of added metrics in DB");
 			} else {
@@ -325,7 +327,7 @@ public class configureMetrics extends ReusableMethods {
 
 	public void removeConfigureMetricsFromDB() {
 		try {
-			test = extent.startTest("Removal of Configure Metrics from DB", "Removing configure metrics from DB");
+			//test = extent.startTest("Removal of Configure Metrics from DB", "Removing configure metrics from DB");
 			
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_db_configure);
@@ -343,15 +345,15 @@ public class configureMetrics extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS, "Added Metrics Removed :: INFO -"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
 			
 			// Verify added metrics in chart
 			browser.findElement(getObject(appedo_systemMetrics_db_addedChart)).click();
-			Thread.sleep(10000);
-			WaitforObject(appedo_systemMetrics_os_addedChart);
+			Thread.sleep(7000);
+			WaitforObject(appedo_systemMetrics_db_addedChart);
 			if (browser.findElement(getObject(appedo_systemMetrics_db_addedChart)).isDisplayed()) 
 			{
 				test.log(LogStatus.PASS, "Removed metrics graph is not displayed in DB");

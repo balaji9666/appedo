@@ -26,7 +26,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 	@Test
 	public void addcustomMetricsOS() {
 		try {
-			test = extent.startTest("Add custom Metrics For OS", "Add custom Metrics");
+			test = extent.startTest("System Metrics - Add Custom Metrics", "Add custom Metrics");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -126,7 +126,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 	public void addConfigureMetricsOSFromCustom() {
 		try {
 
-			test = extent.startTest("Add configure Metrics For OS From Custom Metrics", "Add custom Metrics");
+			//test = extent.startTest("Add configure Metrics For OS From Custom Metrics", "Add custom Metrics");
 
 			// Click on configure metrics
 			WaitforObject(appedo_systemMetrics_configure);
@@ -156,7 +156,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS, updateMetrics);
+				test.log(LogStatus.PASS,"Add configure Metrics For OS From Custom Metrics"+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
@@ -164,7 +164,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			// Click on chart icon
 			WaitforObject(appedo_systemMetrics_os_drawChart);
 			browser.findElement(getObject(appedo_systemMetrics_os_drawChart)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 			
 			// Scroll down
 			Robot robot1 = new Robot();
@@ -194,7 +194,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 
 	public void removeConfigureMetricsOSFromCustom() {
 		try {
-			test = extent.startTest("Removal of Configure Metrics from OS", "Removing configure metrics from OS");
+			test = extent.startTest("System Metrics - Remove Custom Metrics", "Removing configure metrics from OS");
 			
 			// Click on configure
 			WaitforObject(appedo_systemMetrics_configure);
