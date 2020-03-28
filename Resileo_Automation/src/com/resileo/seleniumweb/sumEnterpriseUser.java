@@ -42,10 +42,12 @@ public class sumEnterpriseUser extends ReusableMethods {
 			}
 
 			// Choose the enterprise name
+			Thread.sleep(1000);
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 			
 			// Select an enterprise
+			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_selectEnterpriseRum)).click();
 			
 			// Click on end user monitor

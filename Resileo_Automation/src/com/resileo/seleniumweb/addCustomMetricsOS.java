@@ -53,7 +53,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			// Click on category
 			WaitforObject(appedo_systemMetrics_createMetrics);
 			browser.findElement(getObject(appedo_systemMetrics_createMetrics)).click();
-
+			Thread.sleep(2000);
 			// Select a category
 			//WaitforObject(appedo_systemMetrics_customSelect);
 			//browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
