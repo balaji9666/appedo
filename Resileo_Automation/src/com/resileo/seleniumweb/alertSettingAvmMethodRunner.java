@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 
 public class alertSettingAvmMethodRunner extends ReusableMethods {
 	alertSettingAvm run = new alertSettingAvm();
@@ -27,10 +26,5 @@ public class alertSettingAvmMethodRunner extends ReusableMethods {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

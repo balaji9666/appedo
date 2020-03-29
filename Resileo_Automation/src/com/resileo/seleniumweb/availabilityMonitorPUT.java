@@ -33,8 +33,7 @@ public class availabilityMonitorPUT extends ReusableMethods {
 	@Test
 	public void createAVM() {
 		try {
-			test = extent.startTest("Availability Monitoring-PUT",
-					"Availability Monitoring Module Test-Req Method :PUT ");
+			test = extent.startTest("Availability Monitoring PUT - Add","Availability Monitoring Module Test-Req Method :PUT ");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -255,7 +254,7 @@ public class availabilityMonitorPUT extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");
+			test = extent.startTest("Availability Monitoring PUT - Edit", "Edit AVM module");
 			// Click on Edit icon
 			Thread.sleep(2000);
 			WaitforObject(appedo_rum_Edit);
@@ -351,7 +350,7 @@ public class availabilityMonitorPUT extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			test = extent.startTest("Availability Monitoring PUT - Delete", "Delete AVM Test");
 
 			Thread.sleep(1000);
 			WaitforObject(appedo_rum_Delete);
@@ -373,6 +372,7 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_verifyadd);
 					String msg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 					if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()

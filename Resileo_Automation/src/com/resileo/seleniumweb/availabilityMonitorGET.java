@@ -34,7 +34,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 	@Test
 	public void createAVM() {
 		try {
-			test = extent.startTest("Availability Monitoring - GET", "Availability Monitoring Module Test - GET");
+			test = extent.startTest("Availability Monitoring GET - Add", "Availability Monitoring Module Test - GET");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -228,7 +228,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");
+			test = extent.startTest("Availability Monitoring GET - Edit", "Edit AVM module");
 						
 			// Click on edit icon
 			Thread.sleep(2000);
@@ -317,7 +317,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			test = extent.startTest("Availability Monitoring GET - Delete", "Delete AVM Test");
 
 			// click on delete icon we created recently
 			Thread.sleep(1000);
@@ -335,6 +335,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_verifyadd);
 					String msg1=browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 					if(browser.findElement(getObject(appedo_avm_verifyadd)).getText().equalsIgnoreCase("AVM Card Deleted Successfully"))

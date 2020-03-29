@@ -34,7 +34,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 	@Test
 	public void createAVM() {
 		try {
-			test = extent.startTest("Availability Monitoring - HEAD", "Availability Monitoring Module Test-Req Method : HEAD ");
+			test = extent.startTest("Availability Monitoring HEAD - Add", "Availability Monitoring Module Test-Req Method : HEAD ");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -233,7 +233,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM HEAD - Edit", "Edit AVM module");
+			test = extent.startTest("Availability Monitoring HEAD - Edit", "Edit AVM module");
 
 			// Click on edit icon
 			Thread.sleep(3000);
@@ -328,7 +328,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM HEAD - Delete", "Delete AVM Test");
+			test = extent.startTest("Availability Monitoring HEAD - Delete", "Delete AVM Test");
 
 			// click on delete icon we created recently
 			Thread.sleep(1000);
@@ -347,6 +347,7 @@ public class availabilityMonitoringHEAD extends ReusableMethods {
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_verifyadd);
 					String msg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 					if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()

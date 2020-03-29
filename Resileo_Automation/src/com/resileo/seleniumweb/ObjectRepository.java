@@ -420,7 +420,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_avm_alert_delete = "xpath://table/tbody/tr[4]/td[1]";
 	
 	// AVM Details
-	String appedo_avm_details="xpath://table/tbody/tr[4]/td[10]";
+	String appedo_avm_details="xpath://table/tbody/tr[1]/td[10]";
 	String appedo_avm_details_totalRows="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[1]";
 	String appedo_avm_details_displayedRows="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[2]";
 	String appedo_avm_details_filteredRows="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[3]";
@@ -780,7 +780,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_systemMetrics_log_btnCancel = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/div[1]/mat-icon[2]";
 	String appedo_systemMetrics_log_edit = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]";
 	String appedo_systemMetrics_log_delete = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]";
-	String appedo_systemMetrics_log_verifyDelete = "xpath://span[contains(.,'No Record Found for UID')]";
+	String appedo_systemMetrics_log_verifyDelete = "xpath://span[@class='clrblack']";
 
 	// Alert setting for Network
 	String appedo_systemMetrics_network = "xpath://table/tbody/tr[1]/td[8]";

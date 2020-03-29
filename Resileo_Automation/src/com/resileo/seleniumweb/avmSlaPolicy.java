@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
@@ -26,7 +25,7 @@ public class avmSlaPolicy extends ReusableMethods {
 	@Test
 	public void avmPolicy() {
 		try {
-			test = extent.startTest("AVM SLA Policy", "AVM SLA-Policy Validation");
+			test = extent.startTest("Availability Monitoring - SLA Policy", "AVM SLA-Policy Validation");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -58,13 +57,14 @@ public class avmSlaPolicy extends ReusableMethods {
 			browser.findElement(getObject(appedo_addAvm)).click();
 
 			// Text Fields Test Name
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_txtTestName);
 			browser.findElement(getObject(appedo_avm_txtTestName)).click();
 			browser.findElement(getObject(appedo_avm_txtTestName)).sendKeys(TestName);
 
 			// Text Fields Test URL valid
 			String URL1 = "https://www.facebook.com/";
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_txtTestUrl);
 			browser.findElement(getObject(appedo_avm_txtTestUrl)).clear();
 			browser.findElement(getObject(appedo_avm_txtTestUrl)).sendKeys(URL1);
@@ -75,18 +75,22 @@ public class avmSlaPolicy extends ReusableMethods {
 			browser.findElement(getObject(appedo_avm_linkSchedule)).click();
 
 			// click on Country Drop down
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_country);
 			browser.findElement(getObject(appedo_avm_country)).click();
 
 			// Select Country as United Status in Drop down
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_selectCountry);
 			browser.findElement(getObject(appedo_avm_selectCountry)).click();
 
 			// click on city Drop down
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_city);
 			browser.findElement(getObject(appedo_avm_city)).click();
 
 			// Select city as Oregon in Drop down
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_selectCity);
 			browser.findElement(getObject(appedo_avm_selectCity)).click();
 
@@ -95,10 +99,12 @@ public class avmSlaPolicy extends ReusableMethods {
 			action.sendKeys(Keys.ESCAPE).build().perform();
 
 			// click on Save Button
+			Thread.sleep(3000);
 			WaitforObject(appedo_avm_btnsave);
 			browser.findElement(getObject(appedo_avm_btnsave)).click();
 
 			// Verify AVM Test added
+			Thread.sleep(1000);
 			WaitforObject(appedo_avm_verifyadd);
 			String verifyMsg = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 			if (browser.findElement(getObject(appedo_avm_verifyadd)).getText().equalsIgnoreCase("Successfully Added Availability Test")) 
@@ -128,7 +134,7 @@ public class avmSlaPolicy extends ReusableMethods {
 			Thread.sleep(3000);
 			WaitforObject(appedo_avmValuebasedAlert);
 			browser.findElement(getObject(appedo_avmValuebasedAlert)).click();
-
+			Thread.sleep(3000);
 			// value based alert policy name
 			browser.findElement(getObject(appedo_avm_alert1polnameVal)).click();
 			String alert4 = browser.findElement(getObject(appedo_avm_alert1polnameVal)).getText().toString();
@@ -186,10 +192,5 @@ public class avmSlaPolicy extends ReusableMethods {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		browser.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

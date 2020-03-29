@@ -26,7 +26,7 @@ public class enterpriseUserAvm extends ReusableMethods {
 	@Test
 	public void userEnterprise() {
 		try {
-			test = extent.startTest("AVM Enterprise as User", "Enterprise - Creating AVM module");
+			test = extent.startTest("AVM Enterprise - User", "Enterprise - Creating AVM module");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -37,7 +37,7 @@ public class enterpriseUserAvm extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-
+			Thread.sleep(2000);
 			// Choose the enterprise name
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();

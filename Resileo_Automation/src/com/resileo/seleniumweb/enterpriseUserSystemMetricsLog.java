@@ -35,7 +35,7 @@ public class enterpriseUserSystemMetricsLog extends ReusableMethods {
 			}
 			
 			// Click on Select Enterprise
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 			

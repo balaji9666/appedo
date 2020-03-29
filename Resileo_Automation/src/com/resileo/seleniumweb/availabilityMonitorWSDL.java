@@ -34,7 +34,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 	@Test
 	public void createAVM() {
 		try {
-			test = extent.startTest("Availability Monitoring - WSDL", "Availability Monitoring Module Test-Req Method : WSDL ");
+			test = extent.startTest("Availability Monitoring WSDL - Add", "Availability Monitoring Module Test-Req Method : WSDL ");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -276,7 +276,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");			
+			test = extent.startTest("Availability Monitoring WSDL - Edit", "Edit AVM module");			
 
 			// Click on edit icon
 			Thread.sleep(5000);
@@ -371,7 +371,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			test = extent.startTest("Availability Monitoring WSDL - Delete", "Delete AVM Test");
 			Thread.sleep(5000);
 
 			// click on delete icon we created recently
@@ -391,6 +391,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_verifyadd);
 
 					if (browser.findElement(getObject(appedo_avm_verifyadd)).isDisplayed()) {

@@ -2,7 +2,6 @@ package com.resileo.seleniumweb;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -33,8 +32,8 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 	@Test
 	public void createAVM() {
 		try {
-			test = extent.startTest("Availability Monitoring - GET", "Availability Monitoring Module Test - GET");
-
+			test = extent.startTest("AVM Enterprise - Add ", "Availability Monitoring Enterprise ");
+			Thread.sleep(1000);
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
 			String UserName = browser.findElement(getObject(appedo_verifyLogin)).getText();
@@ -44,29 +43,30 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-
-			// Click on Select Enterprise
-			WaitforObject(appedo_enterprisedropdown);
-			browser.findElement(getObject(appedo_enterprisedropdown)).click();
-
-			// Choose the enterprise name
-			browser.findElement(getObject(appedo_selectEnterprisename)).click();
-			Thread.sleep(3000);
 			
 			// Create Random Characters
 			String alphabet = "abcdefghijkl";
 			TestName = "AVM Test" + RandomStringUtils.random(4, alphabet);
 
 			// click on External Monitor Link 
-			Thread.sleep(6000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_link_EndUserMonitors);
 			browser.findElement(getObject(appedo_link_EndUserMonitors)).click();
 
 			// click on AVM Link 
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_link_avm);
 			browser.findElement(getObject(appedo_link_avm)).click();
+			
+			Thread.sleep(2000);
+			// Click on Select Enterprise
+			WaitforObject(appedo_enterprisedropdown);
+			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 
+			// Choose the enterprise name
+			browser.findElement(getObject(appedo_selectEnterprisename)).click();
+			Thread.sleep(5000);
+			
 			// click on Add AVM Button
 			Thread.sleep(2000);
 			WaitforObject(appedo_addAvm);
@@ -235,7 +235,7 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 	// Edit AVM Module
 	public void EditAVMModule() {
 		try {
-			test = extent.startTest("AVM Edit", "Edit AVM module");
+			test = extent.startTest("AVM Enterprise - Edit", "Edit AVM module");
 						
 			// Click on edit icon
 			Thread.sleep(2000);
@@ -324,7 +324,7 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 
 	public void DeleteAVMModule() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			test = extent.startTest("AVM Enterprise - Delete", "Delete AVM Test");
 
 			// click on delete icon we created recently
 			Thread.sleep(4000);
@@ -381,9 +381,6 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 			test.log(LogStatus.FAIL, "Logout failed");
 		}
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			AssertJUnit.fail(verificationErrorString);
-		}
+
 	}
 }

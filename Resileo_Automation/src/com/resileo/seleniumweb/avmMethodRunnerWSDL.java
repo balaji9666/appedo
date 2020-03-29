@@ -1,6 +1,7 @@
 package com.resileo.seleniumweb;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class avmMethodRunnerWSDL extends ReusableMethods {
@@ -18,6 +19,13 @@ public class avmMethodRunnerWSDL extends ReusableMethods {
 		run.createAVM();
 		run.EditAVMModule();
 		run.DeleteAVMModule();
-		run.logoutAVMModule();
+		//run.logoutAVMModule();
+	}
+	
+	@AfterMethod
+	public void tearDown() throws Exception {
+		Thread.sleep(2000);
+		logout();
+		browser.quit();
 	}
 }

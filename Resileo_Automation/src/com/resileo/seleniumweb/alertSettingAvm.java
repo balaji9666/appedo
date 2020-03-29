@@ -3,12 +3,10 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import java.awt.Robot;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -79,20 +77,6 @@ public class alertSettingAvm extends ReusableMethods {
 			WaitforObject(appedo_avm_txtTestUrl);
 			browser.findElement(getObject(appedo_avm_txtTestUrl)).clear();
 			browser.findElement(getObject(appedo_avm_txtTestUrl)).sendKeys(URL1);
-
-			// click on Test Request Button
-			WaitforObject(appedo_avm_btnTestReq);
-			browser.findElement(getObject(appedo_avm_btnTestReq)).click();
-
-			// Scroll down Headers and Response Body
-			Thread.sleep(2000);
-			browser.findElement(getObject(appedo_avm_headers)).click();
-			Thread.sleep(1000);
-			browser.findElement(getObject(appedo_avm_responseBody)).click();
-			Thread.sleep(1000);
-			Robot robot = new Robot();
-			robot.mouseWheel(150);
-			Thread.sleep(2000);
 			
 			// click on Schedule Link
 			Thread.sleep(4000);
@@ -159,7 +143,7 @@ public class alertSettingAvm extends ReusableMethods {
 
 	public void addAlert() {
 		try {
-			test = extent.startTest("AVM Alert Setting", "Setting alert for AVM");
+			//test = extent.startTest("AVM Alert Setting", "Setting alert for AVM");
 			String alphabet = "abcefghijk";
 			String alertName = "Breach Text" + RandomStringUtils.random(4, alphabet);
 
@@ -207,9 +191,9 @@ public class alertSettingAvm extends ReusableMethods {
 			String add = browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText().toString();
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText().contains(add)) 
 			{
-				test.log(LogStatus.PASS, "Alert setting Pattern Based for Log Module : " + add);
+				test.log(LogStatus.PASS, "Added Pattern Based Alert Policy : " + add);
 			} else {
-				test.log(LogStatus.FAIL, "Alert setting added failed");
+				test.log(LogStatus.FAIL, "Add Pattern Based Alert Policy failed");
 			}
 			extent.endTest(test);
 			extent.flush();
@@ -226,7 +210,7 @@ public class alertSettingAvm extends ReusableMethods {
 
 	public void editalert() {
 		try {
-			test = extent.startTest("Edit Alert for AVM", "Editing Alert for AVM");
+			//test = extent.startTest("Edit Alert for AVM", "Editing Alert for AVM");
 			String alphabet = "abcefghijk";
 			String alertName = "Edit Breach Text" + RandomStringUtils.random(4, alphabet);
 
@@ -254,7 +238,7 @@ public class alertSettingAvm extends ReusableMethods {
 			String edit = browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText();
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verify)).getText().contains(edit)) 
 			{
-				test.log(LogStatus.PASS, "Edit Alert setting Pattern Based for Log Module : " + edit);
+				test.log(LogStatus.PASS, "Edit Added Pattern Based Alert Policy : " + edit);
 			} else {
 				test.log(LogStatus.FAIL, "Edit Alert setting added failed");
 			}
@@ -274,7 +258,7 @@ public class alertSettingAvm extends ReusableMethods {
 
 	public void deletealert() {
 		try {
-			test = extent.startTest("Delete Alert for AVM", "Deleting Alert for AVM");
+			//test = extent.startTest("Delete Alert for AVM", "Deleting Alert for AVM");
 
 			// Click on delete
 			Thread.sleep(8000);
@@ -283,14 +267,14 @@ public class alertSettingAvm extends ReusableMethods {
 
 			// Confirm Alert
 			browser.switchTo().alert().accept();
-			Thread.sleep(2000);
+			Thread.sleep(1500);
 
 			// Verify Delete
 			WaitforObject(appedo_systemMetrics_log_verifyDelete);
 			String Delete = browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText();
 			if (browser.findElement(getObject(appedo_systemMetrics_log_verifyDelete)).getText().contains(Delete)) 
 			{
-				test.log(LogStatus.PASS, "Delete Alert setting Pattern Based for Log Module : " + Delete);
+				test.log(LogStatus.PASS, "Delete the Added Pattern Based Alert Policy : " + Delete);
 			} else {
 				test.log(LogStatus.FAIL, "Delete Alert setting added failed");
 			}
@@ -314,7 +298,7 @@ public class alertSettingAvm extends ReusableMethods {
 
 	public void deleteAvm() {
 		try {
-			test = extent.startTest("AVM Delete", "Delete AVM Test");
+			//test = extent.startTest("AVM Delete", "Delete AVM Test");
 
 			// click on delete icon we created recently
 			Thread.sleep(1000);
@@ -331,6 +315,7 @@ public class alertSettingAvm extends ReusableMethods {
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_verifyadd);
 					String msg1 = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 					if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()
@@ -368,9 +353,5 @@ public class alertSettingAvm extends ReusableMethods {
 			test.log(LogStatus.FAIL, "Logout failed");
 		}
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

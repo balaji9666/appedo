@@ -23,7 +23,7 @@ public class avmLocation extends ReusableMethods {
 	@Test
 	public void AVMLocation() {
 		try {
-			test = extent.startTest("AVM Location", "Availability Location");
+			test = extent.startTest("Availability Monitoring Location", "Availability Location");
 			
 			// Verify login
 			WaitforObject(appedo_verifyLogin);

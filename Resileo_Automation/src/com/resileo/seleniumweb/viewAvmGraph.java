@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.LogStatus;
@@ -19,13 +18,13 @@ public class viewAvmGraph extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginD();
+		loginrt();
 	}
 
 	@Test
 		public void testHomePageNavigation() {
 		try {
-			test = extent.startTest("AVM - View Graphs", "Availability Monitoring View Graphs");
+			test = extent.startTest("Availability Monitoring - View Graphs", "Availability Monitoring View Graphs");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -39,7 +38,7 @@ public class viewAvmGraph extends ReusableMethods {
 			
 			// Create Random Characters
 			String alphabet = "abcdefghijkl";
-			chartName = "AVM" + RandomStringUtils.random(4, alphabet);
+			chartName = "avm" + RandomStringUtils.random(4, alphabet);
 
 			// click on Link External Monitor
 			Thread.sleep(3000);
@@ -100,22 +99,22 @@ public class viewAvmGraph extends ReusableMethods {
 
 			// Add chart to Existing dash board
 			// click on add to my chart in AVM
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_avm_addTochart);
 			browser.findElement(getObject(appedo_avm_addTochart)).click();
 
 			// Click on My dash board drop down
-			Thread.sleep(5000);
+			Thread.sleep(4000);
 			WaitforObject(appedo_myDashboardDropdown);
 			browser.findElement(getObject(appedo_myDashboardDropdown)).click();
 
 			// Select My dash board Appedo2
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			WaitforObject(appedo_selectMyDashboard);
 			browser.findElement(getObject(appedo_selectMyDashboard)).click();
 
 			// click on save button
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			WaitforObject(appedo_avm_btnSaveChart);
 			browser.findElement(getObject(appedo_avm_btnSaveChart)).click();
 
@@ -138,12 +137,14 @@ public class viewAvmGraph extends ReusableMethods {
 			// Select dash board Appedo2
 			Thread.sleep(2000);
 			//WaitforObject(appedo_selectMyDashboard);
-			//browser.findElement(By.xpath("//span[contains(text(),chartName)]");
-				//	getObject(appedo_selectMyDashboard)).click();
-			browser.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option[1]/span[1]")).click();
+			//browser.findElement(By.xpath("//span[contains(text(),"+chartName+")]")).click();
+					//getObject(appedo_selectMyDashboard)).click();
+			//browser.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/mat-option[1]/span[1]")).click();
+			WaitforObject(appedo_selectMyDashboard);
+			browser.findElement(getObject(appedo_selectMyDashboard)).click();
 
 			// click on Remove chart icon
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 			WaitforObject(appedo_removeChartclick);
 			browser.findElement(getObject(appedo_removeChartclick)).click();
 			
@@ -155,11 +156,32 @@ public class viewAvmGraph extends ReusableMethods {
 			String verifyMsg2 = browser.findElement(getObject(appedo_verifyChartAdded)).getText().toString();
 			if (browser.findElement(getObject(appedo_verifyChartAdded)).getText().equalsIgnoreCase("Successfully removed")) 
 			{
-				test.log(LogStatus.PASS, "Dashboard Charts : " + verifyMsg2);
+				test.log(LogStatus.PASS, "Dashboard Charts removed from Existing Dashboard: " + verifyMsg2);
 			} else {
 				test.log(LogStatus.FAIL, "Failed to remove chart");
 			}
+			//DELETE DASHBOARD CHART NEWLY ADDED
+			Thread.sleep(3000);
+			WaitforObject(appedo_dashboardDropdown);
+			browser.findElement(getObject(appedo_dashboardDropdown)).click();
 			Thread.sleep(2000);
+			browser.findElement(By.xpath("//span[contains(text(),'"+chartName+"')]")).click();
+			// click on Remove chart icon
+						Thread.sleep(5000);
+						WaitforObject(appedo_removeChartclick);
+						browser.findElement(getObject(appedo_removeChartclick)).click();
+						// Confirm Alert
+						browser.switchTo().alert().accept();
+
+						// Verify chart removed
+						WaitforObject(appedo_verifyChartAdded);
+						String verifyMsg3 = browser.findElement(getObject(appedo_verifyChartAdded)).getText().toString();
+						if (browser.findElement(getObject(appedo_verifyChartAdded)).getText().equalsIgnoreCase("Successfully removed")) 
+						{
+							test.log(LogStatus.PASS, "Dashboard Charts removed from New Dashboard: " + verifyMsg3);
+						} else {
+							test.log(LogStatus.FAIL, "Failed to remove chart");
+						}
 			extent.endTest(test);
 			extent.flush();
 		} catch (Exception e) {
@@ -187,10 +209,5 @@ public class viewAvmGraph extends ReusableMethods {
 		}
 		browser.close();
 		browser.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) 
-		{
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

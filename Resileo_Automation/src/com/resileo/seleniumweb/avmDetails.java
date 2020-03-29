@@ -3,7 +3,6 @@ package com.resileo.seleniumweb;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.Assert;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class avmDetails extends ReusableMethods {
@@ -20,7 +19,7 @@ public class avmDetails extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginD();
+		loginrt();
 	}
 
 	@Test
@@ -89,7 +88,7 @@ public class avmDetails extends ReusableMethods {
 
 	@AfterMethod
 	public void logoutAVMModule() throws Exception {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		logout();
 		
 		// Verify Sign out
@@ -101,9 +100,5 @@ public class avmDetails extends ReusableMethods {
 			test.log(LogStatus.FAIL, "Logout failed");
 		}
 		browser.close();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equalsIgnoreCase(verificationErrorString)) {
-			Assert.fail(verificationErrorString);
-		}
 	}
 }

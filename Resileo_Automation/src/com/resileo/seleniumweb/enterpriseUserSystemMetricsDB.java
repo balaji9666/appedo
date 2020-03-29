@@ -33,7 +33,7 @@ public class enterpriseUserSystemMetricsDB extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-			
+			Thread.sleep(2000);
 			// Click on Select Enterprise
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
