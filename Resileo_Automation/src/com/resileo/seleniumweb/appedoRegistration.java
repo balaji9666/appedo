@@ -23,7 +23,7 @@ public class appedoRegistration extends ReusableMethods {
 	@Test
 	public void UserRegistration() {
 		try {
-			test = extent.startTest("Register for Appedo Login, Registering new users with valid credentials");
+			test = extent.startTest("New User Register", "Registering new users with valid credentials");
 
 			// Click on Register Link
 		browser.findElement(getObject(appedo_reg_link)).click();

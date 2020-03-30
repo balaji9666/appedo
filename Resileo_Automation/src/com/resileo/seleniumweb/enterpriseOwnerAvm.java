@@ -186,19 +186,23 @@ public class enterpriseOwnerAvm extends ReusableMethods {
 			browser.findElement(getObject(appedo_avm_txtMinBreachCnt)).click();
 
 			// click on Country Drop down
+			Thread.sleep(1500);
 			WaitforObject(appedo_avm_country);
 			browser.findElement(getObject(appedo_avm_country)).click();
 
 			// Select a Country 
+			Thread.sleep(1500);
 			WaitforObject(appedo_avm_selectCountry);
 			browser.findElement(getObject(appedo_avm_selectCountry)).click();
 			test.log(LogStatus.PASS, "country : United States is Selected");
 
 			// click on city Drop down
+			Thread.sleep(1500);
 			WaitforObject(appedo_avm_city);
 			browser.findElement(getObject(appedo_avm_city)).click();
 
 			// Select a city
+			Thread.sleep(1500);
 			WaitforObject(appedo_avm_selectCity);
 			browser.findElement(getObject(appedo_avm_selectCity)).click();
 			test.log(LogStatus.PASS, "City : Oregon-Boardman is selected");

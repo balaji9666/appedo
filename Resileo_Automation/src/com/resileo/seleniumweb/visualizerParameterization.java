@@ -439,7 +439,8 @@ public class visualizerParameterization extends ReusableMethods {
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
-
+							
+							
 							// Click on save icon
 							Thread.sleep(3000);
 							WaitforObject(appedo_db_addQuery_saveQuery);

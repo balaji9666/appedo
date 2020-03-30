@@ -496,7 +496,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_db_addQuery_close = "id:goback";
 	String appedo_db_verify_saveQuery = "xpath://span[@class='clrblack']";
 	String appedo_db_verifyAddedChart="cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container.mat-drawer-transition:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.dbwrapper85.ng-star-inserted:nth-child(41) div.ng-star-inserted > span.font_14.mgnleft5:nth-child(1)";
-	String appedo_db_removeChart="xpath://span[@id='removeme1']//mat-icon[@class='clrred mat-icon notranslate material-icons mat-icon-no-color'][contains(text(),'highlight_off')]";
+	String appedo_db_removeChart="xpath://mat-icon[@class='clrred mat-icon notranslate material-icons mat-icon-no-color']";
 	
 	// View Query
 	String appedo_db_viewQueries = "id:grdqry0";

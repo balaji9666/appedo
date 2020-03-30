@@ -297,10 +297,12 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_linkSchedule)).click();
 
 					// click on Country Drop down
+					Thread.sleep(1500);
 					WaitforObject(appedo_avm_country);
 					browser.findElement(getObject(appedo_avm_country)).click();
 
 					// Select Country as United Status in Drop down
+					Thread.sleep(1000);
 					WaitforObject(appedo_avm_selectCountry);
 					browser.findElement(getObject(appedo_avm_selectCountry)).click();
 					test.log(LogStatus.PASS, "country : United Status is Selected");

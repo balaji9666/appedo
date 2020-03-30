@@ -46,14 +46,15 @@ public class selectTheme extends ReusableMethods {
 
 			// Verify changed theme
 			if (browser.findElement(getObject(verify_theme)).getCssValue("color").equalsIgnoreCase("rgba(161, 136, 127, 1)")) 
-			{
+			{   
+				Thread.sleep(2000);
 				String dBrown = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
 				String image1 = test.addScreenCapture(dBrown);
 				test.log(LogStatus.PASS, "Theme color changed to Dark Brown successfully" + image1);
 			} else {
 				test.log(LogStatus.FAIL, "Failed to change theme");
 			}
-
+			
 			// Click on select theme
 			browser.navigate().refresh();
 			WaitforObject(appedo_selectTheme);
@@ -67,6 +68,7 @@ public class selectTheme extends ReusableMethods {
 			// Verify changed theme
 			if (browser.findElement(getObject(verify_theme)).getCssValue("color").equalsIgnoreCase("rgba(93, 64, 55, 1)")) 
 			{
+				Thread.sleep(2000);
 				String lBrown = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
 				String image2 = test.addScreenCapture(lBrown);
 				test.log(LogStatus.PASS, "Theme color changed to Light Brown successfully" + image2);
@@ -87,13 +89,14 @@ public class selectTheme extends ReusableMethods {
 			// Verify changed theme
 			if (browser.findElement(getObject(verify_theme)).getCssValue("color").equalsIgnoreCase("rgba(33, 150, 243, 1)")) 
 			{
+				Thread.sleep(2000);
 				String dIndigo = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
 				String image3 = test.addScreenCapture(dIndigo);
 				test.log(LogStatus.PASS, "Theme color changed to Dark Indigo successfully" + image3);
 			} else {
 				test.log(LogStatus.FAIL, "Failed to change theme");
 			}
-
+			
 			// Click on select theme
 			browser.navigate().refresh();
 			WaitforObject(appedo_selectTheme);
@@ -107,6 +110,7 @@ public class selectTheme extends ReusableMethods {
 			// Verify changed theme
 			if (browser.findElement(getObject(verify_theme)).getCssValue("color").equalsIgnoreCase("rgba(48, 63, 159, 1)")) 
 			{
+				Thread.sleep(2000);
 				String lIndigo = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
 				String image4 = test.addScreenCapture(lIndigo);
 				test.log(LogStatus.PASS, "Theme color changed to Light Indigo successfully" + image4);
