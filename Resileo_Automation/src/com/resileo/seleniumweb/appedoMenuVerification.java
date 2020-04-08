@@ -16,13 +16,13 @@ public class appedoMenuVerification extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginrt();
+		//loginrt();
 	}
 
 	@Test
 	public void appedoSettingMenu() {
 		try {
-			test = extent.startTest("Appedo - Settings Menu", "Verifying the Settings Menu");
+			test = extent.startTest("Menu - Settings", "Verifying the Settings Menu");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -62,7 +62,7 @@ public class appedoMenuVerification extends ReusableMethods {
 	public void appedoDashboardMenu() {
 		try {
 		
-			test = extent.startTest("Appedo - DashBoard Menu", "Verifying the DashBoard Menu");
+			test = extent.startTest("Menu - DashBoard", "Verifying the DashBoard Menu");
 			browser.navigate().refresh();
 			Thread.sleep(3000);
 
@@ -102,7 +102,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoSystemMetricsMenu() {
 		try {
-			test = extent.startTest("Appedo - System Metrics Menu", "Verifying System Metrics Menu");
+			test = extent.startTest("Menu - System Metrics", "Verifying System Metrics Menu");
 
 			// Click on system metrics menu
 			WaitforObject(appedo_systemMetricsMenu);
@@ -133,7 +133,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoEndUserMonitorsMenu() {
 		try {
-			test = extent.startTest("Appedo - End User Monitors Menu", "Verifying the End User Monitor Menu");
+			test = extent.startTest("Menu - End User Monitors", "Verifying the End User Monitor Menu");
 			WaitforObject(appedo_endUserMonitorsMenu);
 
 			// Click on end user monitors menu
@@ -163,7 +163,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoVisualizerMenu() {
 		try {
-			test = extent.startTest("appedo - Visualizer Menu", "Verifying Visualizer Menu");
+			test = extent.startTest("Menu - Visualizer", "Verifying Visualizer Menu");
 			WaitforObject(appedo_visualizerMenu);
 			Thread.sleep(1000);
 
@@ -195,7 +195,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoLoadTestMenu() {
 		try {
-			test = extent.startTest("appedo - Load Test Menu", "Verifying the Load Test Menu");
+			test = extent.startTest("Menu - Load Test", "Verifying the Load Test Menu");
 			
 			// Click on load testing menu
 			WaitforObject(appedo_loadTestMenu);
@@ -225,7 +225,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoThemeMenu() {
 		try {
-			test = extent.startTest("appedo - Theme Menu", "Checking for Appedo select Theme ");
+			test = extent.startTest("Select theme", "Checking for Appedo select Theme ");
 
 			// Click on select theme
 			Thread.sleep(2000);
@@ -255,7 +255,7 @@ public class appedoMenuVerification extends ReusableMethods {
 
 	public void appedoToggleMenu() {
 		try {
-			test = extent.startTest("appedo - Toggle Menu", "Toggle menu - Server/System information page is displayed");
+			test = extent.startTest("Toggle Menu", "Toggle menu - Server/System information page is displayed");
 			browser.navigate().refresh();
 
 			// Click on toggle menu

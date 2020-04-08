@@ -23,7 +23,7 @@ public class loadTesting extends ReusableMethods {
 	@Test
 	public void testHomePageNavigation() {
 		try {
-			test = extent.startTest("Load Test", "Load Testing Using Jmeter");
+			test = extent.startTest("Load Testing", "Load Testing Using Jmeter");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -71,7 +71,7 @@ public class loadTesting extends ReusableMethods {
 			Thread.sleep(3000);
 			WaitforObject(appedo_btnViewReport);
 			browser.findElement(getObject(appedo_btnViewReport)).click();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 
 			// Moving child window to parent window
 			String parent = browser.getWindowHandle();
@@ -113,7 +113,7 @@ public class loadTesting extends ReusableMethods {
 			browser.findElement(getObject(appedo_load_btnUpdate)).click();
 
 			// verify scenarios updated
-			Thread.sleep(7000);
+			//Thread.sleep(7000);
 			if (browser.findElement(getObject(appedo_ConfigVerify)).isDisplayed())
 
 			{
@@ -134,9 +134,9 @@ public class loadTesting extends ReusableMethods {
 			// click on update button
 			WaitforObject(appedo_load_btnUpdate);
 			browser.findElement(getObject(appedo_load_btnUpdate)).click();
-
+			WaitforObject(appedo_ConfigVerify);
 			// verify scenarios updated
-			Thread.sleep(7000);
+			//Thread.sleep(7000);
 			if (browser.findElement(getObject(appedo_ConfigVerify)).isDisplayed())
 
 			{
@@ -155,7 +155,7 @@ public class loadTesting extends ReusableMethods {
 			// click on button update
 			WaitforObject(appedo_load_btnUpdate);
 			browser.findElement(getObject(appedo_load_btnUpdate)).click();
-			Thread.sleep(8000);
+			//Thread.sleep(8000);
 
 			// verify scenarios updated
 			if (browser.findElement(getObject(appedo_ConfigVerify)).isDisplayed())

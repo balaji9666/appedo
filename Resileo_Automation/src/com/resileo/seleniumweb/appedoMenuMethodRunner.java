@@ -11,7 +11,7 @@ public class appedoMenuMethodRunner extends ReusableMethods {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
-		loginrt();
+		loginTK();
 	}
 
 	@Test

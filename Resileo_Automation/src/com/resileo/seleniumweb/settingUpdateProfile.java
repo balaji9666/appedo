@@ -53,7 +53,7 @@ public class settingUpdateProfile extends ReusableMethods {
 			Thread.sleep(1000);
 			browser.findElement(getObject(appedo_updateProfile_mobile)).clear();
 			browser.findElement(getObject(appedo_updateProfile_mobile)).sendKeys("+919894643622");
-			Thread.sleep(2000);
+			Thread.sleep(2500);
 
 			// Click on update profile
 			browser.findElement(getObject(appedo_updateProfile_btnUpdate)).click();

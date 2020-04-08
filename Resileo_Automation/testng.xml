@@ -16,17 +16,17 @@
       <class name="com.resileo.seleniumweb.manageEnterpriseMethodRunner"/>
       <class name="com.resileo.seleniumweb.alertSettingMethodRunner"/>
       <class name="com.resileo.seleniumweb.alertSettingMobileMethodRunner"/>
-      <class name="com.resileo.seleniumweb.rumMethodRunner"/>
       <class name="com.resileo.seleniumweb.methodRunnerDashboard"/>
+      <class name="com.resileo.seleniumweb.calendar"/>
+      <class name="com.resileo.seleniumweb.functionAutorefresh"/>
+      <class name="com.resileo.seleniumweb.addChartToExistingDashboard"/>
+      <class name="com.resileo.seleniumweb.resizeCharts"/>
+      <class name="com.resileo.seleniumweb.rumMethodRunner"/>
       <class name="com.resileo.seleniumweb.rumEnterpriseMethodRunner"/>
       <class name="com.resileo.seleniumweb.rumUserEnterpriseRunner"/>
       <class name="com.resileo.seleniumweb.sumEnterpriseOwner"/>
       <class name="com.resileo.seleniumweb.sumEnterpriseUser"/>
       <class name="com.resileo.seleniumweb.viewSUMGraph"/>
-      <class name="com.resileo.seleniumweb.calendar"/>
-      <class name="com.resileo.seleniumweb.functionAutorefresh"/>
-      <class name="com.resileo.seleniumweb.addChartToExistingDashboard"/>
-      <class name="com.resileo.seleniumweb.resizeCharts"/>
       <class name="com.resileo.seleniumweb.sumMethodRunner"/>
       <class name="com.resileo.seleniumweb.sumTransactionMethodRunner"/>
       <class name="com.resileo.seleniumweb.sumScriptMethodRunner"/>
@@ -66,6 +66,7 @@
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownMethodRunner"/>
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
       <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
+      <class name="com.resileo.seleniumweb.loadTesting"/>
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->

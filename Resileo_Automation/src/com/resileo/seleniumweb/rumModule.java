@@ -33,7 +33,7 @@ public class rumModule extends ReusableMethods {
 	public void addRUModule() {
 		try {
 			FileUtilities drawData = new FileUtilities();
-			test = extent.startTest("RUM Creation", "Creating RUM module");
+			test = extent.startTest("RUM - Add", "Creating RUM module");
 
 			// Verify login
 			WaitforObject(appedo_verifyLogin);
@@ -151,7 +151,7 @@ public class rumModule extends ReusableMethods {
 	// Edit RUM Module
 	public void EditRUMModule() {
 		try {
-			test = extent.startTest("RUM Edit", "Edit RUM module");
+			test = extent.startTest("RUM - Edit", "Edit RUM module");
 			
 			// Click on edit icon created recently
 			Thread.sleep(5000);
@@ -206,7 +206,7 @@ public class rumModule extends ReusableMethods {
 
 	public void DeleteRUMModule() {
 		try {
-			test = extent.startTest("RUM Delete", "Delete RUM module");
+			test = extent.startTest("RUM - Delete", "Delete RUM module");
 
 			// click on delete icon we created recently
 			Thread.sleep(3000);

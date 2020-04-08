@@ -8,7 +8,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_login_txtUsername = "xpath://input[@placeholder='Enter your email']";
 	String appedo_login_txtPassword = "xpath://input[@placeholder='Enter your password']";
 	String appedo_login_btnlogin = "id:btnlogin";
-	String appedo_verifyLogin = "xpath://button[@class='mat-button ng-star-inserted']";
+	String appedo_verifyLogin = "xpath://html/body/app-root/div/app-sidenav/app-login-header/mat-toolbar/div[2]/button[1]";
 
 	// ******** Appedo Logout ***********
 	String appedo_signout = "id:signout";
@@ -819,7 +819,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_ReportNameDropdown="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/load-test-reports[1]/mat-card[1]/div[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[2]";
 	String appedo_ReportNameSel="xpath://span[@class='mat-option-text'][contains(text(),'BVT dec2')]";
 	String appedo_ReportName="xpath://td[@class='mat-cell cdk-column-Report-Name mat-column-Report-Name ng-star-inserted']";
-	String appedo_iconConfig="xpath://table/tbody/tr[1]/td[2]";
+	String appedo_iconConfig="xpath://table/tbody/tr[2]/td[2]";
 	String appedo_txtThread="id:threads";
 	String appedo_txtRampup="id:rampTimeFormat";
 	String appedo_txtDuration="id:durationTimeFormat";
