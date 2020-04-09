@@ -22,9 +22,9 @@ public class appedoSystemMetricsStatus extends ReusableMethods {
 	// Rename Test Method Below
 	public void testHomePageNavigation() {
 		try {
-			test = extent.startTest("Appedo SystemMetrics", "Status of the system metrics modules");
+			test = extent.startTest("System Metrics - Server/System Status", "Status of the system metrics modules");
 			WaitforObject(appedo_verifyLogin);
-			String LoginUserName = browser.findElement(By.xpath("//button[@class='mat-button ng-star-inserted']"))
+			String LoginUserName = browser.findElement(By.xpath("//html/body/app-root/div/app-sidenav/app-login-header/mat-toolbar/div[2]/button[1]"))
 					.getText();
 
 			if (browser.findElement(getObject(appedo_verifyLogin)).getText().contains(LoginUserName)) {

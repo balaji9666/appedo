@@ -216,7 +216,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_rum_critical = "id:critical";
 	String appedo_minBreachCount = "id:minbreachcount";
 	String appedo_rum_btnSave = "xpath://span[contains(text(),'Save')]";
-	String appedo_rum_scriptDownload = "xpath://button[@class='mat-raised-button']";
+	String appedo_rum_scriptDownload = "xpath://html/body/div[1]/div[2]/div/mat-dialog-container/rum-addedit-dialog/div[3]/button[2]";
 	String appedo_validation_txtName = "xpath://mat-error[@class='mat-error ng-star-inserted']";
 	String appedo_validation_txtDesc = "xpath://mat-error[@class='mat-error ng-star-inserted']";
 	String appedo_validation_txtWaringThreshold = "xpath://mat-error[@class='mat-error ng-star-inserted']";
@@ -393,7 +393,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_avmViewGraph = "id:drawchart0";
 	String appedo_avm_addTochart = "xpath://div[@id='idx0']//span[@class='mgnleft10 pointer ng-star-inserted']";
 	String appedo_avm_chartName = "id:mcName";
-	String appedo_avm_btnSaveChart = "xpath://button[@class='mat-raised-button mat-primary ng-star-inserted']";
+	String appedo_avm_btnSaveChart = "xpath://span[contains(text(),'Save')]";
 	String appedo_verifyChartAdded = "xpath://span[@class='clrblack']";
 	String appedo_myDashboardDropdown = "id:ddMcName";
 	//String appedo_selectMyDashboard = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[3]/span[1]";

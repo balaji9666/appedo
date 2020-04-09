@@ -155,6 +155,7 @@ public class loadTesting extends ReusableMethods {
 			// click on button update
 			WaitforObject(appedo_load_btnUpdate);
 			browser.findElement(getObject(appedo_load_btnUpdate)).click();
+			WaitforObject(appedo_ConfigVerify);
 			//Thread.sleep(8000);
 
 			// verify scenarios updated

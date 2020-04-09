@@ -48,6 +48,7 @@ public class sumEnterpriseUser extends ReusableMethods {
 			
 			// Select an enterprise
 			Thread.sleep(1000);
+			WaitforObject(appedo_selectEnterpriseRum);
 			browser.findElement(getObject(appedo_selectEnterpriseRum)).click();
 			
 			// Click on end user monitor

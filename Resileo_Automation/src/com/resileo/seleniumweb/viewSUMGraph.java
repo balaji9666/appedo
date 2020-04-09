@@ -159,6 +159,7 @@ public class viewSUMGraph extends ReusableMethods {
 			Thread.sleep(5000);
 			
 			// Verify graph
+			WaitforObject(appedo_sum_viewGraph_btnapplySelection);
 			if (browser.findElement(getObject(appedo_sum_viewGraph_btnapplySelection)).isDisplayed()) 
 			{
 				test.log(LogStatus.PASS, "Successfully viewed SUM graph");

@@ -66,9 +66,9 @@ public class viewAvmGraph extends ReusableMethods {
 
 			// Verify graph
 			if (browser.findElement(getObject(appedo_sum_viewGraph_btnapplySelection)).isDisplayed()) {
-				test.log(LogStatus.PASS, "Successfully viewed SUM graph");
+				test.log(LogStatus.PASS, "Successfully viewed AVM graph");
 			} else {
-				test.log(LogStatus.FAIL, "Unable to view SUM graph");
+				test.log(LogStatus.FAIL, "Unable to view AVM graph");
 			}
 
 			// click on add to my chart in AVM

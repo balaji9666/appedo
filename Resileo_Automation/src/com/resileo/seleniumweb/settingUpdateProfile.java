@@ -57,6 +57,7 @@ public class settingUpdateProfile extends ReusableMethods {
 
 			// Click on update profile
 			browser.findElement(getObject(appedo_updateProfile_btnUpdate)).click();
+			WaitforObject(appedo_verify_updateProfile);
 			if (browser.findElement(getObject(appedo_verify_updateProfile)).getText().equalsIgnoreCase("Profile updated successfully")) 
 			{
 				test.log(LogStatus.PASS, " Profile updated Successfully");
