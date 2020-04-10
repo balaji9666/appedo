@@ -78,7 +78,7 @@ public class visualizerParameterization extends ReusableMethods {
 	public void addParentQuery() {
 		try {
 			//test = extent.startTest("Addition of Parent query to DB", "Adding parent query to DB");
-
+			test.log(LogStatus.PASS, "Addition of Parent query to DB");
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
@@ -254,7 +254,7 @@ public class visualizerParameterization extends ReusableMethods {
 	public void addChildQuery() {
 		try {
 			//test = extent.startTest("Addition of Child query to DB", "Adding child query to DB");
-
+			test.log(LogStatus.PASS, "Addition of Child query to DB");
 			// Click on add query
 			WaitforObject(appedo_db_addQuery);
 			browser.findElement(getObject(appedo_db_addQuery)).click();
@@ -380,7 +380,9 @@ public class visualizerParameterization extends ReusableMethods {
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) {
-
+				QueryName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[3]")).getText()
+						.toString();
+				if (QueryName.equalsIgnoreCase(childQuery)) {
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
 					Thread.sleep(12000);
 
@@ -396,10 +398,12 @@ public class visualizerParameterization extends ReusableMethods {
 					Thread.sleep(4000);
 					WaitforObject(appedo_db_viewQueries);
 					browser.findElement(getObject(appedo_db_viewQueries)).click();
-					//List<WebElement> table1 = browser.findElements(By.xpath("//table/tbody/tr"));
-					//int totalrows1 = table1.size();
-					for (int j = 0; j < totalrows; j++) {
-						
+					List<WebElement> table1 = browser.findElements(By.xpath("//table/tbody/tr"));
+					int totalrows1 = table1.size();
+					for (int j = 0; j < totalrows1; j++) {
+						QueryName1 = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (j + 1) + "] /td[3]"))
+								.getText().toString();
+						if (QueryName1.equalsIgnoreCase(parentQuery)) {
 							browser.findElement(By.xpath("//table/tbody/tr[" + (j + 1) + "]/td[1]")).click();
 							Thread.sleep(15000);
 							
@@ -423,7 +427,7 @@ public class visualizerParameterization extends ReusableMethods {
 							browser.findElement(getObject(appedo_myDashboardDropdown)).click();
 
 							// Select My dash board Appedo2
-							Thread.sleep(3000);
+							Thread.sleep(1000);
 							WaitforObject(appedo_selectMyDashboard);
 							browser.findElement(getObject(appedo_selectMyDashboard)).click();
 							
@@ -435,14 +439,12 @@ public class visualizerParameterization extends ReusableMethods {
 							String saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 							if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText()
 									.equalsIgnoreCase(saveQuery)) {
-								test.log(LogStatus.PASS, "Child Query Successfully Added");
+								test.log(LogStatus.PASS, "Successfully Added");
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
-							
-							
+
 							// Click on save icon
-							Thread.sleep(3000);
 							WaitforObject(appedo_db_addQuery_saveQuery);
 							browser.findElement(getObject(appedo_db_addQuery_saveQuery)).click();
 
@@ -464,97 +466,15 @@ public class visualizerParameterization extends ReusableMethods {
 							saveQuery = browser.findElement(getObject(appedo_db_verify_saveQuery)).getText();
 							if (browser.findElement(getObject(appedo_db_verify_saveQuery)).getText()
 									.equalsIgnoreCase(saveQuery)) {
-								test.log(LogStatus.PASS, "Mapping ID of child query to Parent Query Successfully saved");
+								test.log(LogStatus.PASS, "Successfully saved parent query");
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
-
-							// Click close icon
-							WaitforObject(appedo_db_addQuery_close);
-							browser.findElement(getObject(appedo_db_addQuery_close)).click();
-							//test = extent.startTest("View added chart in Dash Board", "Viewing added chart in Dash Board");
-							
-							// Click on toggle menu
-							WaitforObject(appedo_toggleMenu);
-							Thread.sleep(3000);
-							browser.findElement(getObject(appedo_toggleMenu)).click();
-							browser.findElement(getObject(appedo_toggleMenu)).click();
-							
-							// Click on Dash Board
-							browser.findElement(getObject(appedo_link_dashboard)).click();
-							Thread.sleep(3000);
-							
-							// Click on my dash board drop down
-							browser.findElement(getObject(appedo_dropdown_myDashboard)).click();
-							
-							// Select chart name
-							browser.findElement(getObject(appedo_select_chart_added_dashboard)).click();
-							Thread.sleep(3000);
-							
-							// Verify added chart is displayed
-							String getdashboardname = browser.findElement(getObject(appedo_db_verifyAddedChart)).getText();
-							Thread.sleep(2000);
-							if (getdashboardname.contains("custom")) 
-							{
-								test.log(LogStatus.PASS, "DashBoard : Added chart is updated in existing dashboard");
-							} else {
-								test.log(LogStatus.FAIL, "Added chart is not updated in existing dashboard");
-							}
-							Thread.sleep(2000);
-							//test = extent.startTest("Remove chart from DashBoard", "Removing chart from Dash Board");
-							
-							// Click on Remove
-							WaitforObject(appedo_db_removeChart);
-							browser.findElement(getObject(appedo_db_removeChart)).click();
-							
-							// Confirmation of alert
-							browser.switchTo().alert().accept();
-
-							// Verify Dash board Deletion
-							Thread.sleep(7000);
-							//WaitforObject(appedo_dashboard_verifyDelete);
-							//String Msg3 = browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText();
-							if (browser.findElement(getObject(appedo_systemMetrics_verifyGraphsNetwork)).isDisplayed()) 
-							//if(browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText().contains(Msg3)) 
-							{
-								test.log(LogStatus.PASS, "Removing chart from DashBoard :  Successfully deleted");
-							} else {
-								test.log(LogStatus.FAIL, "Dashboard Deletion failed");
-							}
-							
-							// Click on toggle menu
-							WaitforObject(appedo_toggleMenu);
-							Thread.sleep(3000);
-							browser.findElement(getObject(appedo_toggleMenu)).click();
-							browser.findElement(getObject(appedo_toggleMenu)).click();
-							
-							// Click on visualizer
-							WaitforObject(appedo_link_Visualizer);
-							browser.findElement(getObject(appedo_link_Visualizer)).click();
-							
-							// Click on delete icon
-							WaitforObject(appedo_deleteDB);
-							browser.findElement(getObject(appedo_deleteDB)).click();
-							
-							// Accept alert 
-							browser.switchTo().alert().accept();
-							
-							// Verify DB connector
-							WaitforObject(appedo_db_verify);
-							Thread.sleep(2000);
-							String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
-							if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteDB)) 
-							{
-								test.log(LogStatus.PASS, "Database Connector deleted Successfully");
-							} else {
-								test.log(LogStatus.FAIL, "Failed to delete Database Connector");
-							}
 						}
-					}
-				
-			
+					}				
+				}										
+			}
 							
-
 			extent.endTest(test);
 			extent.flush();
 		} catch (Exception e) {
@@ -568,7 +488,105 @@ public class visualizerParameterization extends ReusableMethods {
 		}
 	}
 	
+	public void RemoveChart() {
+		try {
+			
+			Thread.sleep(8000);
+			//----				// Click close icon
+			WaitforObject(appedo_db_addQuery_close);
+			browser.findElement(getObject(appedo_db_addQuery_close)).click();
+			//test = extent.startTest("View added chart in Dash Board", "Viewing added chart in Dash Board");
+			
+			// Click on toggle menu
+			WaitforObject(appedo_toggleMenu);
+			Thread.sleep(3000);
+			browser.findElement(getObject(appedo_toggleMenu)).click();
+			browser.findElement(getObject(appedo_toggleMenu)).click();
+			
+			// Click on Dash Board
+			browser.findElement(getObject(appedo_link_dashboard)).click();
+			Thread.sleep(3000);
+			
+			// Click on my dash board drop down
+			browser.findElement(getObject(appedo_dropdown_myDashboard)).click();
+			
+			// Select chart name
+			browser.findElement(getObject(appedo_select_chart_added_dashboard)).click();
+			Thread.sleep(7000);
+			
+			// Verify added chart is displayed
+			String getdashboardname = browser.findElement(getObject(appedo_db_verifyAddedChart)).getText();
+			Thread.sleep(2000);
+			if (getdashboardname.contains("custom")) 
+			{
+				test.log(LogStatus.PASS, "Added chart is updated in existing dashboard");
+			} else {
+				test.log(LogStatus.FAIL, "Added chart is not updated in existing dashboard");
+			}
+			Thread.sleep(2000);
+			//test = extent.startTest("Remove chart from Dash Board", "Removing chart from Dash Board");
+			
+			// Click on Remove
+			WaitforObject(appedo_db_removeChart);
+			browser.findElement(getObject(appedo_db_removeChart)).click();
+			
+			// Confirmation of alert
+			browser.switchTo().alert().accept();
 
+			// Verify Dash board Deletion
+			Thread.sleep(7000);
+			//WaitforObject(appedo_dashboard_verifyDelete);
+			//String Msg3 = browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText();
+			if (browser.findElement(getObject(appedo_systemMetrics_verifyGraphsNetwork)).isDisplayed()) 
+			//if(browser.findElement(getObject(appedo_dashboard_verifyDelete)).getText().contains(Msg3)) 
+			{
+				test.log(LogStatus.PASS, "Dashboard Deletion :  Successfully deleted");
+			} else {
+				test.log(LogStatus.FAIL, "Dashboard Deletion failed");
+			}
+			
+			// Click on toggle menu
+			WaitforObject(appedo_toggleMenu);
+			Thread.sleep(3000);
+			browser.findElement(getObject(appedo_toggleMenu)).click();
+			browser.findElement(getObject(appedo_toggleMenu)).click();
+			
+			// Click on visualizer
+			WaitforObject(appedo_link_Visualizer);
+			browser.findElement(getObject(appedo_link_Visualizer)).click();
+			
+			// Click on delete icon
+			WaitforObject(appedo_deleteDB);
+			browser.findElement(getObject(appedo_deleteDB)).click();
+			
+			// Accept alert 
+			browser.switchTo().alert().accept();
+			
+			// Verify DB connector
+			WaitforObject(appedo_db_verify);
+			Thread.sleep(2000);
+			String deleteDB = browser.findElement(getObject(appedo_db_verify)).getText();
+			if (browser.findElement(getObject(appedo_db_verify)).getText().contains(deleteDB)) 
+			{
+				test.log(LogStatus.PASS, "Database Connector deleted Successfully");
+			} else {
+				test.log(LogStatus.FAIL, "Failed to delete Database Connector");
+			}
+			
+			
+			extent.endTest(test);
+			extent.flush();
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, e.getMessage());
+			System.out.println(e.getMessage());
+			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+			String image = test.addScreenCapture(Snapshot1);
+			test.log(LogStatus.FAIL, "Test Failed", image);
+			extent.endTest(test);
+			extent.flush();
+		}
+	}
+	
 	@AfterMethod
 	public void tearDown() throws Exception {
 	

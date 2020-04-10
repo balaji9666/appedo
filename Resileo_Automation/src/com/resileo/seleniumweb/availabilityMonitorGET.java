@@ -269,6 +269,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_country)).click();
 
 					// Select Country as United Status in Drop down
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_selectCountry);
 					browser.findElement(getObject(appedo_avm_selectCountry)).click();
 					test.log(LogStatus.PASS, "country : United States is Selected");
@@ -279,6 +280,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_editCity)).click();
 
 					// Select city as Oregon in Drop down
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_editSelectcity);
 					browser.findElement(getObject(appedo_avm_editSelectcity)).click();
 					test.log(LogStatus.PASS, "City : Oregon-Boardman is selected");
@@ -288,6 +290,7 @@ public class availabilityMonitorGET extends ReusableMethods {
 					action.sendKeys(Keys.ESCAPE).build().perform();
 
 					// click on Save Button
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_btnsave);
 					browser.findElement(getObject(appedo_avm_btnsave)).click();
 

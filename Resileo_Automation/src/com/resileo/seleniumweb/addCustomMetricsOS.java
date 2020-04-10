@@ -59,9 +59,10 @@ public class addCustomMetricsOS extends ReusableMethods {
 			//browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
 			Robot robot = new Robot();
 			robot.keyPress(KeyEvent.VK_C);
+			Thread.sleep(2000);
 			//robot.keyPress(KeyEvent.VK_E);
 			robot.keyPress(KeyEvent.VK_ENTER);
-
+			Thread.sleep(1000);
 			// Click on counter name
 			WaitforObject(appedo_systemMetrics_counterName);
 			browser.findElement(getObject(appedo_systemMetrics_counterName)).click();
@@ -140,9 +141,13 @@ public class addCustomMetricsOS extends ReusableMethods {
 			// Click on a Category
 			//WaitforObject(appedo_systemMetrics_categoryOption);
 			//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
+			Thread.sleep(2000);
 			Robot robot = new Robot();
+			Thread.sleep(2000);
 			robot.keyPress(KeyEvent.VK_C);
+			Thread.sleep(1000);
 			robot.keyPress(KeyEvent.VK_ENTER);
+			Thread.sleep(1000);
 			// Select a Category
 			WaitforObject(appedo_systemMetrics_menuOption);
 			browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();
@@ -210,9 +215,13 @@ public class addCustomMetricsOS extends ReusableMethods {
 						// Click on a Category
 						//WaitforObject(appedo_systemMetrics_categoryOption);
 						//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
+						Thread.sleep(2000);
 						Robot robot = new Robot();
+						Thread.sleep(2000);
 						robot.keyPress(KeyEvent.VK_C);
+						Thread.sleep(1000);
 						robot.keyPress(KeyEvent.VK_ENTER);
+						Thread.sleep(1000);
 						// Select a Category
 						WaitforObject(appedo_systemMetrics_menuOption);
 						browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();

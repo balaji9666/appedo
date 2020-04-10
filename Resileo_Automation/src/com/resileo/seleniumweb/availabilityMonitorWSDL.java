@@ -105,6 +105,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 
 			// Validation for Test Request methods Status:false
 			Thread.sleep(3000);
+			WaitforObject(appedo_avm_successStatusfalse);
 			if (browser.findElement(getObject(appedo_avm_successStatusfalse)).getText().contains("false")) {
 				test.log(LogStatus.PASS, "Test Request validation is verified, Success:false, Invalid URL : " + URL);
 			} else {

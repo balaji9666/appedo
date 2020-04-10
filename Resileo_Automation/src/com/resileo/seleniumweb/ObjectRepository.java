@@ -314,7 +314,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_fromDateFunction="xpath://mat-datetimepicker-content[@class='mat-datetimepicker-content ng-star-inserted']";
 	String appedo_selectTodaydate="xpath://div[@class='mat-datetimepicker-calendar-body-cell-content mat-datetimepicker-calendar-body-selected mat-datetimepicker-calendar-body-today']";
 	String appedo_selectCurrentTime="xpath://div[@class='mat-datetimepicker-clock-cell mat-datetimepicker-clock-cell-selected ng-star-inserted']";
-	String appedo_selectCurrentMin="xpath://div[@class='mat-datetimepicker-clock-minutes active']//div[@class='mat-datetimepicker-clock-cell ng-star-inserted'][contains(text(),'20')]";
+	String appedo_selectCurrentMin="xpath://div[@class='mat-datetimepicker-clock-minutes active']//div[@class='mat-datetimepicker-clock-cell ng-star-inserted'][contains(text(),'20')]";                              
 	String appedo_selectCurDateMsg="xpath://span[@class='clrblack']";
 	
 

@@ -29,6 +29,7 @@ public class enterpriseUserAvm extends ReusableMethods {
 			test = extent.startTest("AVM Enterprise - User", "Enterprise - Creating AVM module");
 
 			// Verify login
+			Thread.sleep(2000);
 			WaitforObject(appedo_verifyLogin);
 			String UserName = browser.findElement(getObject(appedo_verifyLogin)).getText();
 			if (browser.findElement(getObject(appedo_verifyLogin)).getText().contains(UserName)) 

@@ -297,15 +297,14 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_linkSchedule)).click();
 
 					// click on Country Drop down
-					Thread.sleep(1500);
 					WaitforObject(appedo_avm_country);
 					browser.findElement(getObject(appedo_avm_country)).click();
 
 					// Select Country as United Status in Drop down
-					Thread.sleep(1000);
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_selectCountry);
 					browser.findElement(getObject(appedo_avm_selectCountry)).click();
-					test.log(LogStatus.PASS, "country : United Status is Selected");
+					test.log(LogStatus.PASS, "country : United States is Selected");
 
 					// click on city Drop down
 					Thread.sleep(3000);
@@ -313,15 +312,17 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_editCity)).click();
 
 					// Select city as Oregon in Drop down
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_editSelectcity);
 					browser.findElement(getObject(appedo_avm_editSelectcity)).click();
 					test.log(LogStatus.PASS, "City : Oregon-Boardman is selected");
 
-					// Keyboard Function to press Esc
+					// Keyboard Function to press Escape
 					Actions action = new Actions(browser);
 					action.sendKeys(Keys.ESCAPE).build().perform();
 
 					// click on Save Button
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_btnsave);
 					browser.findElement(getObject(appedo_avm_btnsave)).click();
 
