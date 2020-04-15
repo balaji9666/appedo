@@ -741,7 +741,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_systemMetrics_customVerify = "xpath://span[@class='clrblack']";
 	String appedo_systemMetrics_configure = "xpath://tr[1]//td[6]//mat-icon[1]";
 	String appedo_systemMetrics_selectCategory = "xpath:/html/body/div[1]/div[2]/div/mat-dialog-container/configure-setting-dialog/div[2]/div[1]/mat-form-field/div/div[1]/div/mat-select/div/div[1]";
-	String appedo_systemMetrics_categoryOption = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[87]/span[1]";
+	String appedo_systemMetrics_categoryOption = "xpath://span[@class='mat-option-text'][contains(text(),'cpu')]";
 	String appedo_systemMetrics_menuOption = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/configure-setting-dialog[1]/div[2]/div[2]/div[1]/div[1]/mat-checkbox[1]/label[1]";
 	String appedo_systemMetrics_btnUpdate = "xpath://span[contains(text(),'Update')]";
 	String appedo_systemMetrics_btncancel = "xpath://mat-icon[contains(text(),'cancel')]";

@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import com.relevantcodes.extentreports.LogStatus;
@@ -133,8 +132,8 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
 			
 			// Click on a Category
-			WaitforObject(appedo_systemMetrics_customSelect);
-			browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
+			WaitforObject(appedo_systemMetrics_categoryOption);
+			browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
 
 			// Select a Category
 			WaitforObject(appedo_systemMetrics_menuOption);
@@ -201,21 +200,13 @@ public class addCustomMetricsOS extends ReusableMethods {
 						browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
 						
 						// Click on a Category
-						//WaitforObject(appedo_systemMetrics_categoryOption);
-						//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
-						Thread.sleep(2000);
-						Robot robot = new Robot();
-						Thread.sleep(2000);
-						robot.keyPress(KeyEvent.VK_C);
-						Thread.sleep(1000);
-						robot.keyPress(KeyEvent.VK_ENTER);
-						Thread.sleep(1000);
+						WaitforObject(appedo_systemMetrics_categoryOption);
+						browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
+	
 						// Select a Category
 						WaitforObject(appedo_systemMetrics_menuOption);
 						browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();
-		/*	WaitforObject(appedo_systemMetrics_configureRemove1);
-			browser.findElement(getObject(appedo_systemMetrics_configureRemove1)).click();
-			*/
+
 			// Click on update button
 			WaitforObject(appedo_systemMetrics_btnUpdate);
 			browser.findElement(getObject(appedo_systemMetrics_btnUpdate)).click();
@@ -234,9 +225,6 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_os_drawChart)).click();
 			Thread.sleep(10000);
 			
-			// Scroll down
-			
-			robot.mouseWheel(200);
 			
 			// Verify added metrics in chart
 			WaitforObject(appedo_systemMetrics_os_addedChart);
