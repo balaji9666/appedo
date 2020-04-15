@@ -728,8 +728,7 @@ public class ObjectRepository extends ObjectMap {
 	// Add Custom Metrics
 	String appedo_systemMetrics_addcustom = "xpath://tr[1]//td[9]//mat-icon[1]";
 	String appedo_systemMetrics_createMetrics = "id:categorySelection";
-	String appedo_systemMetrics_customSelect = "xpath://span[contains(text(),'Memory')]";
-	//String appedo_systemMetrics_customSelect = "xpath://span[contains(text(),'Database ==> Instances')]";
+	String appedo_systemMetrics_customSelect = "xpath://span[contains(text(),'cpu')]";
 	String appedo_systemMetrics_counterName = "id:CounterNameCM";
 	String appedo_systemMetrics_unit = "name:UnitCM";
 	String appedo_systemMetrics_counterDesc = "id:CounterDescCM";

@@ -55,14 +55,8 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_createMetrics)).click();
 			Thread.sleep(2000);
 			// Select a category
-			//WaitforObject(appedo_systemMetrics_customSelect);
-			//browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_C);
-			Thread.sleep(2000);
-			//robot.keyPress(KeyEvent.VK_E);
-			robot.keyPress(KeyEvent.VK_ENTER);
-			Thread.sleep(1000);
+			WaitforObject(appedo_systemMetrics_customSelect);
+			browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
 			// Click on counter name
 			WaitforObject(appedo_systemMetrics_counterName);
 			browser.findElement(getObject(appedo_systemMetrics_counterName)).click();
