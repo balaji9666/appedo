@@ -133,15 +133,9 @@ public class addCustomMetricsOS extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_selectCategory)).click();
 			
 			// Click on a Category
-			//WaitforObject(appedo_systemMetrics_categoryOption);
-			//browser.findElement(getObject(appedo_systemMetrics_categoryOption)).click();
-			Thread.sleep(2000);
-			Robot robot = new Robot();
-			Thread.sleep(2000);
-			robot.keyPress(KeyEvent.VK_C);
-			Thread.sleep(1000);
-			robot.keyPress(KeyEvent.VK_ENTER);
-			Thread.sleep(1000);
+			WaitforObject(appedo_systemMetrics_customSelect);
+			browser.findElement(getObject(appedo_systemMetrics_customSelect)).click();
+
 			// Select a Category
 			WaitforObject(appedo_systemMetrics_menuOption);
 			browser.findElement(getObject(appedo_systemMetrics_menuOption)).click();
@@ -155,7 +149,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			String updateMetrics = "Metrics updated successfully";
 			if (browser.findElement(getObject(appedo_verify_configureMetrics)).getText().contains(updateMetrics)) 
 			{
-				test.log(LogStatus.PASS,"Add configure Metrics For OS From Custom Metrics"+updateMetrics);
+				test.log(LogStatus.PASS,"Add configure Metrics For OS From Custom Metrics "+updateMetrics);
 			} else {
 				test.log(LogStatus.FAIL, "Update failed");
 			}
