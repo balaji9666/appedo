@@ -18,6 +18,10 @@ public class viewOADChartMethodRunner extends ReusableMethods {
 		run.viewOsGraph();
         run.viewAppGraph();
 		run.viewDBGraph();
+		run.viewLogGraph();
+		run.viewNetworkGraph();
+		run.viewDotNetGraph();
+		run.viewProfilerGraph();
 		run.logoutFromApp();
 	}
 }

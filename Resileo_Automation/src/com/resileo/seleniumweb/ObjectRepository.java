@@ -592,6 +592,8 @@ public class ObjectRepository extends ObjectMap {
 	// View Graph - OS
 	String appedo_link_systemMetrics = "xpath://span[contains(text(),'System Metrics')]";
 	String OAD_sysAdmin_sysName = "xpath://td[contains(text(),'Amazon Linux 2')]";
+	String OAD_sysWindo_sysName = "xpath://td[contains(text(),'LAPTOP-BalajiMS')]";
+	String OAD_sysLinux_sysFedora = "xpath://td[contains(text(),'Fedora1')]";
 	String appedo_view_os_Graph1 = "xpath://span[contains(text(),'CPU% of Processes')]";
 	String appedo_view_os_Graph2 = "xpath://span[contains(text(),'Hardware CPU')]";
 	String appedo_view_os_Graph3 = "xpath://span[contains(text(),'Idle CPU% SERVER')]";
@@ -620,7 +622,36 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_view_Db_Graph3 = "xpath://span[contains(text(),'Threads_running')]";
 	String appedo_view_Db_Graph4 = "xpath://span[contains(text(),'Max_used_connections')]";
 	String appedo_view_Db_Graph5 = "xpath://span[contains(text(),'Innodb_rows_inserted')]";
+	
+	// View Graph - Log
+	String appedo_Log_graph = "xpath://table/tbody/tr[1]/td[7]";
+	String appedo_view_Log_Graph = "xpath://span[@class='font_14 mgnleft5']";
+	String appedo_Log_Details1 = "xpath://mat-icon[contains(text(),'assignment')]";
+	String appedo_Log_Rowcount = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[1]";
+	String appedo_Log_DispRow = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[2]";
+	String appedo_Log_Filterrow = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[3]";
 
+	// View Graph - Network
+	String appedo_Network_HTTP = "xpath://td[contains(text(),'HTTP')]";
+	String appedo_Network_ICMP = "xpath://td[contains(text(),'ICMP')]";
+	String appedo_view_HTTP_Graph1 = "xpath://span[contains(text(),'HTTP')]";
+	String appedo_view_HTTP_Graph2 = "xpath://span[contains(text(),'HTTP')]";
+	String appedo_view_ICMP_Graph1 = "xpath://span[contains(text(),'Hits')]";
+	String appedo_view_ICMP_Graph2 = "xpath://span[contains(text(),'Resp')]";
+	String appedo_view_ICMP_Graph3 = "xpath://span[contains(text(),'Destination')]";
+	
+	// View Graph - NETSTACK
+	String appedo_view_NetStack_Graph = "xpath://*[@id=\"0\"]/div/div[1]";
+	String appedo_view_NetStack_Grapharea1 = "xpath://*[name()='rect' and contains(@class,'overlay')]";
+	String appedo_view_NetStack_Graph2 = "xpath://*[@id=\"focusLineX\"]";
+	String appedo_view_NetStack_DrillGraph = "xpath://div[@class='font_12 mgnleft10 capitalize'][contains(text(),'From')]";
+	
+	// View Graph - PROFILER
+	String appedo_view_Profiler_Trans = "xpath://div[contains(text(),'TRANSACTION')]";
+	String appedo_view_Profiler_JVM = "xpath://div[contains(text(),'JVM')]";
+	String appedo_view_Profiler_Error = "xpath://div[contains(text(),'ERROR')]";
+	
+		
 	// OAD - Edit Delete
 	String appedo_oad_edit = "xpath://mat-icon[contains(text(),'edit')]";
 	String appedo_oad_name = "id:module_name";
