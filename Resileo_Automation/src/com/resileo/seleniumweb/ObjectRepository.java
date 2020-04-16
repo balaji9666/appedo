@@ -418,7 +418,7 @@ public class ObjectRepository extends ObjectMap {
 
 	// AVM - Alert Setting
 	String appedo_avm_alert_edit = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[4]/td[2]/mat-icon[1]";
-	String appedo_avm_alert_delete = "xpath://table/tbody/tr[4]/td[1]";
+	String appedo_avm_alert_delete = "xpath://div[@class='cdk-overlay-container lightindigotheme']//tr[4]//td[1]//mat-icon[1]";
 	
 	// AVM Details
 	String appedo_avm_details="xpath://table/tbody/tr[1]/td[10]";

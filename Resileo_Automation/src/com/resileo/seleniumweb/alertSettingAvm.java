@@ -312,10 +312,11 @@ public class alertSettingAvm extends ReusableMethods {
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
 
 					// Accept confirmation Pop up
+					Thread.sleep(1000);
 					browser.switchTo().alert().accept();
 
 					// Verify AVM Deletion
-					Thread.sleep(1000);
+					Thread.sleep(000);
 					WaitforObject(appedo_avm_verifyadd);
 					String msg1 = browser.findElement(getObject(appedo_avm_verifyadd)).getText().toString();
 					if (browser.findElement(getObject(appedo_avm_verifyadd)).getText()

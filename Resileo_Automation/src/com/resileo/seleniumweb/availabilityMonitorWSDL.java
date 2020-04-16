@@ -323,6 +323,7 @@ public class availabilityMonitorWSDL extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_country)).click();
 
 					// Select Country as United Status in Drop down
+					Thread.sleep(3000);
 					WaitforObject(appedo_avm_selectCountry);
 					browser.findElement(getObject(appedo_avm_selectCountry)).click();
 					test.log(LogStatus.PASS, "country : United States is Selected");
