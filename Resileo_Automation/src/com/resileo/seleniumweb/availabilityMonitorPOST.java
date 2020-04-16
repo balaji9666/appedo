@@ -318,9 +318,9 @@ public class availabilityMonitorPOST extends ReusableMethods {
 					Thread.sleep(3000);
 					WaitforObject(appedo_avm_linkSchedule);
 					browser.findElement(getObject(appedo_avm_linkSchedule)).click();
-					Thread.sleep(1000);
 					
 					// click on Country Drop down
+					Thread.sleep(7000);
 					WaitforObject(appedo_avm_country);
 					browser.findElement(getObject(appedo_avm_country)).click();
 

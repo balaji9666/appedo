@@ -297,6 +297,7 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					browser.findElement(getObject(appedo_avm_linkSchedule)).click();
 
 					// click on Country Drop down
+					Thread.sleep(7000);
 					WaitforObject(appedo_avm_country);
 					browser.findElement(getObject(appedo_avm_country)).click();
 
