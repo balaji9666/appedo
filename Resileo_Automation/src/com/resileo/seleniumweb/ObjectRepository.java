@@ -277,6 +277,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_sum_script_city = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/sum-addedit-dialog[1]/div[2]/form[1]/div[6]/mat-form-field[2]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]";
 	String appedo_sum_script_selectCity = "xpath://span[contains(text(),'Oregon')]";
 	String appedo_sum_script_btnSave = "xpath://span[contains(text(),'Save')]";
+	String appedo_sum_script_Closebtn = "xpath://mat-icon[@class='pointer mat-icon notranslate mat-warn material-icons']";
 
 	// Sum Activate Deactivate
 	String appedo_DeactivateSum = "xpath://span[contains(text(),'Active')]";

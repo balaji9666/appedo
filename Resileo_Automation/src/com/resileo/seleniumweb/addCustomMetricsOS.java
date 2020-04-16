@@ -36,7 +36,7 @@ public class addCustomMetricsOS extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-			String alphabet = "abcd";
+			String alphabet = "abcd1234";
 			String OSChartName = "test" + RandomStringUtils.random(4, alphabet);
 
 			// Click on OS link
