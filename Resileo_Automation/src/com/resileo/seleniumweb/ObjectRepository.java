@@ -594,7 +594,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_link_systemMetrics = "xpath://span[contains(text(),'System Metrics')]";
 	String OAD_sysAdmin_sysName = "xpath://td[contains(text(),'Amazon Linux 2')]";
 	String OAD_sysWindo_sysName = "xpath://td[contains(text(),'LAPTOP-BalajiMS')]";
-	String OAD_sysLinux_sysFedora = "xpath://td[contains(text(),'Fedora1')]";
+	String OAD_sysLinux_sysFedora = "xpath://td[contains(text(),'Fedora BVT')]";
 	String appedo_view_os_Graph1 = "xpath://span[contains(text(),'CPU% of Processes')]";
 	String appedo_view_os_Graph2 = "xpath://span[contains(text(),'Hardware CPU')]";
 	String appedo_view_os_Graph3 = "xpath://span[contains(text(),'Idle CPU% SERVER')]";

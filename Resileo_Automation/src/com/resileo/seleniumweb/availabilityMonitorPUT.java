@@ -306,7 +306,9 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					WaitforObject(appedo_avm_selectCountry);
 					browser.findElement(getObject(appedo_avm_selectCountry)).click();
 					test.log(LogStatus.PASS, "country : United States is Selected");
-
+					Actions action = new Actions(browser);
+					action.sendKeys(Keys.ESCAPE).build().perform();
+					
 					// click on city Drop down
 					Thread.sleep(3000);
 					WaitforObject(appedo_avm_editCity);
@@ -319,7 +321,6 @@ public class availabilityMonitorPUT extends ReusableMethods {
 					test.log(LogStatus.PASS, "City : Oregon-Boardman is selected");
 
 					// Keyboard Function to press Escape
-					Actions action = new Actions(browser);
 					action.sendKeys(Keys.ESCAPE).build().perform();
 
 					// click on Save Button

@@ -43,6 +43,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_os_configure)).click();
 			
 			// Click on select category
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_os_selectCategory);
 			browser.findElement(getObject(appedo_systemMetrics_os_selectCategory)).click();
 			
@@ -104,6 +105,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_os_configure)).click();
 			
 			// Click on the selected metrics
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_removeCategory);
 			browser.findElement(getObject(appedo_systemMetrics_removeCategory)).click();
 			
@@ -160,6 +162,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_app_configure)).click();
 			
 			// Click on select category
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_app_selectCategory);
 			browser.findElement(getObject(appedo_systemMetrics_app_selectCategory)).click();
 			
@@ -217,6 +220,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_app_configure)).click();
 			
 			// Click on the selected metrics
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_app_removeCategory);
 			browser.findElement(getObject(appedo_systemMetrics_app_removeCategory)).click();
 			
@@ -274,6 +278,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_db_configure)).click();
 			
 			// Click on select category
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_db_selectCategory);
 			browser.findElement(getObject(appedo_systemMetrics_db_selectCategory)).click();
 			
@@ -334,6 +339,7 @@ public class configureMetrics extends ReusableMethods {
 			browser.findElement(getObject(appedo_systemMetrics_db_configure)).click();
 			
 			// Click on the selected metrics
+			Thread.sleep(3000);
 			WaitforObject(appedo_systemMetrics_db_removeCategory);
 			browser.findElement(getObject(appedo_systemMetrics_db_removeCategory)).click();
 			
