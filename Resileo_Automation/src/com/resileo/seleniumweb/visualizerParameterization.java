@@ -380,11 +380,10 @@ public class visualizerParameterization extends ReusableMethods {
 			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
 			int totalrows = table.size();
 			for (int i = 0; i < totalrows; i++) {
-				QueryName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[3]")).getText()
-						.toString();
+				QueryName = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (i + 1) + "] /td[3]")).getText().toString();
 				if (QueryName.equalsIgnoreCase(childQuery)) {
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[1]")).click();
-					Thread.sleep(12000);
+					Thread.sleep(8000);
 
 					// Get ID of Child Query
 					String idValue = browser.findElement(getObject(appedo_db_editGetid)).getText().toString();
@@ -401,9 +400,9 @@ public class visualizerParameterization extends ReusableMethods {
 					List<WebElement> table1 = browser.findElements(By.xpath("//table/tbody/tr"));
 					int totalrows1 = table1.size();
 					for (int j = 0; j < totalrows1; j++) {
-						QueryName1 = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (j + 1) + "] /td[3]"))
+					String QueryName11 = browser.findElement(By.xpath("//table[1]/tbody[1]/tr[" + (j + 1) + "] /td[3]"))
 								.getText().toString();
-						if (QueryName1.equalsIgnoreCase(parentQuery)) {
+						if (QueryName11.equalsIgnoreCase(parentQuery)) {
 							browser.findElement(By.xpath("//table/tbody/tr[" + (j + 1) + "]/td[1]")).click();
 							Thread.sleep(15000);
 							
@@ -470,9 +469,10 @@ public class visualizerParameterization extends ReusableMethods {
 							} else {
 								test.log(LogStatus.FAIL, "Failed to save Query");
 							}
-						}
-					}				
-				}										
+							
+							break;	}
+					}					
+				}									
 			}
 							
 			extent.endTest(test);
