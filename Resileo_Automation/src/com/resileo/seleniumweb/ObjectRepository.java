@@ -627,11 +627,13 @@ public class ObjectRepository extends ObjectMap {
 	// View Graph - Log
 	String appedo_Log_graph = "xpath://table/tbody/tr[1]/td[7]";
 	String appedo_view_Log_Graph = "xpath://span[@class='font_14 mgnleft5']";
-	String appedo_Log_Details1 = "xpath://mat-icon[contains(text(),'assignment')]";
+	String appedo_Log_Details1 = "xpath://tr[1]//td[8]//mat-icon[1]";
+	String appedo_Log_Details2 = "xpath://tr[2]//td[8]//mat-icon[1]";
 	String appedo_Log_Rowcount = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[1]";
 	String appedo_Log_DispRow = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[2]";
 	String appedo_Log_Filterrow = "xpath://html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-label[3]";
-
+    String appedo_Log_Filterinputclick = "xpath://div[@class='mat-form-field-infix']";
+    String appedo_Log_Filterinput = "xpath://*[@id='mat-input-0']";
 	// View Graph - Network
 	String appedo_Network_HTTP = "xpath://td[contains(text(),'HTTP')]";
 	String appedo_Network_ICMP = "xpath://td[contains(text(),'ICMP')]";
@@ -640,6 +642,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_view_ICMP_Graph1 = "xpath://span[contains(text(),'Hits')]";
 	String appedo_view_ICMP_Graph2 = "xpath://span[contains(text(),'Resp')]";
 	String appedo_view_ICMP_Graph3 = "xpath://span[contains(text(),'Destination')]";
+	String appedo_LogdetailsBackbtn = "xpath://mat-icon[contains(text(),'arrow_back_ios')]";
 	
 	// View Graph - NETSTACK
 	String appedo_view_NetStack_Graph = "xpath://*[@id=\"0\"]/div/div[1]";
@@ -685,12 +688,12 @@ public class ObjectRepository extends ObjectMap {
 	
 	// Configure Metrics - APP
 	String appedo_systemMetrics_app = "xpath://table/tbody/tr[1]/td[5]";
-	String appedo_systemMetrics_app_configure = "xpath://mat-icon[@class='pointer mat-icon notranslate mat-warn material-icons ng-star-inserted'][contains(text(),'settings')]";
+	String appedo_systemMetrics_app_configure = "xpath://tr[2]//td[6]//mat-icon[1]";
 	String appedo_systemMetrics_app_selectCategory = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/configure-setting-dialog[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]/span[1]";
 	String appedo_systemMetrics_app_category = "xpath://span[@class='mat-option-text'][contains(text(),'apache counters')]";
 	String appedo_systemMetrics_app_category_selectCheckbox = "xpath://span[contains(text(),'BusyWorkers')]";
 	String appedo_systemMetrics_app_btnUpdate = "xpath://span[contains(text(),'Update')]";
-	String appedo_systemMetrics_app_drawChart = "xpath://mat-icon[contains(text(),'show_chart')]";
+	String appedo_systemMetrics_app_drawChart = "xpath://tr[2]//td[10]//mat-icon[1]";
 	String appedo_systemMetrics_app_addedChart = "cssSelector:body.mat-typography:nth-child(2) div.wrapper.lightindigotheme app-sidenav.ng-star-inserted:nth-child(2) mat-sidenav-container.mgntop10.mat-drawer-container.mat-sidenav-container:nth-child(2) mat-sidenav-content.mat-drawer-content.mat-sidenav-content:nth-child(5) app-dashboard.ng-star-inserted:nth-child(2) div.mgnleft10.mgnrgt10.dbwrapper85:nth-child(2) div.mat-elevation-z8.mgntop10.dbwrapper85.ng-star-inserted:nth-child(43) div.ng-star-inserted > span.font_14.mgnleft5";
 	String appedo_systemMetrics_app_removeCategory = "xpath://span[contains(text(),'apache counters.BusyWorkers')]";
 	
