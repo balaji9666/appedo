@@ -46,6 +46,7 @@
       <class name="com.resileo.seleniumweb.avmLocation"/>
       <class name="com.resileo.seleniumweb.editDeleteOADRunner"/>
       <class name="com.resileo.seleniumweb.viewOADChartMethodRunner"/>
+      <class name="com.resileo.seleniumweb.viewLogDetailsMethodRunner"/>
       <class name="com.resileo.seleniumweb.configureMetricsMethodRunner"/>
       <class name="com.resileo.seleniumweb.addCustomMetricsOSMethodRunner"/>
       <class name="com.resileo.seleniumweb.systemMetricsCopyMetrics"/>
