@@ -415,6 +415,7 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_avm_alert2polnameVal = "xpath://td[contains(text(),'Response Time for AVM Test Id ')]";
 	String appedo_avm_configAlertTable = "id:mat-dialog-1";
 	String appedo_avmDel = "id:del0";
+	String appedo_avmDeld = "id:del0";//delete
 
 	// AVM - Alert Setting
 	String appedo_avm_alert_edit = "xpath:/html[1]/body[1]/div[1]/div[2]/div[1]/mat-dialog-container[1]/alert-log[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[4]/td[2]/mat-icon[1]";
