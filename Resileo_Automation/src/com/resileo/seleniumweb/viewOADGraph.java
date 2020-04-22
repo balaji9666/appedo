@@ -32,6 +32,12 @@ public class viewOADGraph extends ReusableMethods {
 	String IcmpGraph2;
 	String IcmpGraph3;
 
+	String Tomcat = "Apache Tomcat";
+	String JBoss = "JBoss";
+	String Apache = "Apache";
+	String GlassFish = "GlassFish";
+	String WebLogic = "WebLogic";
+	
 	@BeforeMethod
 	public void setUp() throws Exception {
 		InitiateTest("LogPerformancechrome");
@@ -569,6 +575,66 @@ public class viewOADGraph extends ReusableMethods {
 		}
 	
 	}
+	
+	public void viewLinuxAPP() {
+		try {
+			test = extent.startTest("System Metrics - Applications", "Viewing System Metrics Applications");
+			Thread.sleep(5000);	
+			// Click on Menu icon
+			WaitforObject(appedo_menu);
+			browser.findElement(getObject(appedo_menu)).click();
+			browser.findElement(getObject(appedo_menu)).click();
+			
+			// Click on System Metrics link
+			WaitforObject(appedo_link_systemMetrics);
+			browser.findElement(getObject(appedo_link_systemMetrics)).click();
+			
+			Thread.sleep(6000);
+			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
+			int totalrows = table.size();
+			for (int i = 0; i < totalrows; i++) 
+				viewChart = browser.findElement(By.xpath("//table/tbody/tr[3]/td[2]")).getText().toString();
+			String rowname = browser.findElement(getObject(OAD_sysLinux_sysFedora)).getText();
+			if (viewChart.equalsIgnoreCase(rowname))
+				browser.findElement(By.xpath("//table/tbody/tr[3]/td[5]")).click();
+			
+			// App - Sindhu Machine
+			Thread.sleep(3000);
+			
+			List<WebElement> table1 = browser.findElements(By.xpath("//tr//td[4]"));
+			int totalrows1 = table1.size();
+			for (int i = 0; i < totalrows1; i++) {
+			String moduleType = browser.findElement(By.xpath("//tr[" + (i + 1) + "]//td[4]")).getText().toString();
+			System.out.println(moduleType);
+			
+			if (moduleType.equals(Tomcat))
+	
+			{
+				//String tomcatName1 = browser.findElement(By.xpath("//tr[" + (i + 1) + "]//td[5]")).getText().toString();
+				//System.out.println(tomcatName1);
+				test.log(LogStatus.PASS, "Apache Tomcat Card Layout Verfied Successfully");
+				//test.log(LogStatus.PASS, "Verfied Apache Tomcat Module Name : " +tomcatName1);
+				
+			} else {
+				test.log(LogStatus.FAIL, "Apache Tomcat Card Layout Verfication failed");
+					}
+			
+				}
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+			catch (Exception e) {
+			test.log(LogStatus.FAIL, e.getMessage());
+			System.out.println(e.getMessage());
+			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+			String image = test.addScreenCapture(Snapshot1);
+			test.log(LogStatus.FAIL, "Test Failed", image);
+			extent.endTest(test);
+			extent.flush();
+		}
+	
+	}	
 	
 	@AfterMethod
 	public void logoutFromApp() throws Exception {

@@ -22,6 +22,8 @@ public class viewOADChartMethodRunner extends ReusableMethods {
 		run.viewNetworkGraph();
 		run.viewDotNetGraph();
 		run.viewProfilerGraph();
+		//run.viewLinuxAPP();
+		
 		run.logoutFromApp();
 	}
 }
