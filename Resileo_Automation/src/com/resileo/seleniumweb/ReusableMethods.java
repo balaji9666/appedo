@@ -36,10 +36,10 @@ public class ReusableMethods extends ObjectRepository {
 			
 			//For Headless
 	     	ChromeOptions options=new ChromeOptions();
-			options.addArguments("--headless","window-size=1920,1080");
+			options.addArguments("--headless","window-size=1366,768");
 			
 			browser = new ChromeDriver(options);//For Headless Operation
-		//	browser = new ChromeDriver();//For Normal Operation
+		//	browser = new ChromeDriver();//For Normal Operation 
 		} else {
 			
 			browser = new FirefoxDriver();
@@ -288,7 +288,7 @@ public class ReusableMethods extends ObjectRepository {
 
 	// Synchronization Point
 	public void WaitforObject(String ObjectName) throws Exception {
-		WebDriverWait wait = new WebDriverWait(browser, 120);
+		WebDriverWait wait = new WebDriverWait(browser, 60);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(getObject(ObjectName)));
 	}
 
