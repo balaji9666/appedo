@@ -6,7 +6,6 @@
     </listeners> -->
   <test thread-count="2" name="Appedo Test Env">
     <classes>
-
       <class name="com.resileo.seleniumweb.appedoRegistration"/>
       <class name="com.resileo.seleniumweb.forgotPassword"/>
       <class name="com.resileo.seleniumweb.appedoMenuMethodRunner"/>
@@ -69,7 +68,6 @@
       <class name="com.resileo.seleniumweb.visualizerNormalDrilldownViewchartsinDashboard"/>
       <class name="com.resileo.seleniumweb.visualizerParameterizationMethodRunner"/>
       <class name="com.resileo.seleniumweb.loadTesting"/>
-
     </classes>
   </test> 
 </suite> <!-- Appedo Test Env -->
