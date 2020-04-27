@@ -198,9 +198,11 @@ public class sumTransaction extends ReusableMethods {
 					browser.findElement(By.xpath("//table/tbody/tr[" + (i + 1) + "]/td[2]")).click();
 					
 					// Edit details in fields
+					Thread.sleep(3000);
 					WaitforObject(appedo_sum_txtTestName);
 					browser.findElement(getObject(appedo_sum_txtTestName)).clear();
-					sumeditname = drawData.getdata("TestData.xlsx", "SUM", 1, 5);
+					String alphabet1="abc";
+					sumeditname = drawData.getdata("TestData.xlsx", "SUM", 1, 5) + RandomStringUtils.random(8, alphabet1);
 					browser.findElement(getObject(appedo_sum_txtTestName)).sendKeys(sumeditname);
 					
 					// Scroll down

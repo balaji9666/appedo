@@ -38,18 +38,19 @@ public class enterpriseUserAvm extends ReusableMethods {
 			} else {
 				test.log(LogStatus.FAIL, "Login failed");
 			}
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			// Choose the enterprise name
 			WaitforObject(appedo_enterprisedropdown);
 			browser.findElement(getObject(appedo_enterprisedropdown)).click();
 			
 			// Select an enterprise
+			Thread.sleep(1500);
 			browser.findElement(getObject(appedo_selectEnterpriseRum)).click();
 			
 			// Click on end user monitor
+			Thread.sleep(3000);
 			WaitforObject(appedo_link_EndUserMonitors);
 			browser.findElement(getObject(appedo_link_EndUserMonitors)).click();
-			Thread.sleep(1000);
 			
 			// click on AVM Link
 			Thread.sleep(7000);
@@ -59,7 +60,7 @@ public class enterpriseUserAvm extends ReusableMethods {
 			// Click on view chart
 			Thread.sleep(2000);
 			browser.findElement(getObject(appedo_enterprise_viewChart)).click();
-			Thread.sleep(10000);			
+			Thread.sleep(8000);			
 
 			WaitforObject(appedo_drilDownicon);
 			if (browser.findElement(getObject(appedo_drilDownicon)).isDisplayed()) 
