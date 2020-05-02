@@ -73,6 +73,7 @@ public class rumEnterpriseOwner extends ReusableMethods {
 			// Enter text fields
 			browser.findElement(getObject(appedo_rum_txtTestName)).click();
 			browser.findElement(getObject(appedo_rum_txtTestDesc)).click();
+			Thread.sleep(1000);
 
 			// Verify validation
 			if (browser.findElement(getObject(appedo_validation_txtName)).getText().contains("You must enter a value")) 

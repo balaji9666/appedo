@@ -626,6 +626,7 @@ public class ObjectRepository extends ObjectMap {
 	
 	// View Graph - Log
 	String appedo_Log_graph = "xpath://table/tbody/tr[1]/td[7]";
+	String appedo_cLog_graph = "xpath://table/tbody/tr[2]/td[7]";
 	String appedo_view_Log_Graph = "xpath://span[@class='font_14 mgnleft5']";
 	String appedo_Log_Details1 = "xpath://tr[1]//td[8]//mat-icon[1]";
 	String appedo_Log_Details2 = "xpath://tr[2]//td[8]//mat-icon[1]";
@@ -729,6 +730,17 @@ public class ObjectRepository extends ObjectMap {
 	String appedo_customSelectApp = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[2]/span[1]";
 	String appedo_customListHttp = "xpath:/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/mat-option[11]/span[1]";
 
+	// Custom Log for Linux Auto Update
+    String appedo_view_custom_logGraph = "xpath://span[contains(text(),'49625')]";
+	//String appedo_view_customLog_totalrows ="xpath://mat-label[contains(text(),'Total Rows')]";
+	//String appedo_avm_details="xpath://table/tbody/tr[4]/td[10]";
+	String appedo_customLog_totalRows="xpath://mat-label[contains(text(),'Total Rows')]";
+	String appedo_customLog_displayedRows="xpath://mat-label[contains(text(),'Displayed Rows')]";
+	String appedo_customLog_filteredRows="xpath://mat-label[contains(text(),'Filtered Rows')]";
+	String appedo_customLog_txtfilter="xpath:/html[1]/body[1]/app-root[1]/div[1]/app-sidenav[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/log-details[1]/mat-card[1]/mat-card-content[1]/section[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]";
+	String appedo_systemMetrics_customlog_alert = "xpath://table/tbody/tr[2]/td[6]";
+		
+		
 	// Add Custom Metrics
 	String appedo_systemMetrics_addcustom = "xpath://tr[1]//td[9]//mat-icon[1]";
 	String appedo_systemMetrics_createMetrics = "id:categorySelection";

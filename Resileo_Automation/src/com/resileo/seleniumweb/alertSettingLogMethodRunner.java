@@ -20,6 +20,9 @@ public class alertSettingLogMethodRunner extends ReusableMethods {
 		run.addlogalertSetting();
 		run.editlogalertSetting();
 		run.deletelogalertSetting();
+        run.addclogalertSetting();//Custom Log
+		run.editclogalertSetting();//Custom Log
+		run.deleteclogalertSetting();//Custom Log
 		run.logoutAppedo();
 	}
 

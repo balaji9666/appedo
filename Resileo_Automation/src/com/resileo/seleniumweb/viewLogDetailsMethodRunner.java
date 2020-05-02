@@ -21,6 +21,7 @@ public class viewLogDetailsMethodRunner extends ReusableMethods {
 	public void doTest() throws Exception {
 		run.setBrowser(browser);
 		run.viewLogDetailsGraph();
+		run.viewCLogDetails();
 		run.viewNetworkDetailsGraph();
 	}
 	

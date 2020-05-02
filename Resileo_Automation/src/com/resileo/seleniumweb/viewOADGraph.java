@@ -322,6 +322,60 @@ public class viewOADGraph extends ReusableMethods {
 	
 	}
 	
+	public void viewcLogGraph() {
+		try {
+			test = extent.startTest("System Metrics Custom Log - Draw Chart", "Viewing Custom Log graphs");
+			Thread.sleep(5000);	
+			// Click on Menu icon
+			WaitforObject(appedo_menu);
+			browser.findElement(getObject(appedo_menu)).click();
+			browser.findElement(getObject(appedo_menu)).click();
+			
+			// Click on System Metrics link
+			WaitforObject(appedo_link_systemMetrics);
+			browser.findElement(getObject(appedo_link_systemMetrics)).click();
+			
+			Thread.sleep(6000);
+			List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
+			int totalrows = table.size();
+			for (int i = 0; i < totalrows; i++) 
+				viewChart = browser.findElement(By.xpath("//table/tbody/tr[1]/td[2]")).getText().toString();
+			String rowname = browser.findElement(getObject(OAD_sysAdmin_sysName)).getText();
+			if (viewChart.equalsIgnoreCase(rowname))
+				browser.findElement(By.xpath("//table/tbody/tr[1]/td[7]")).click();
+			
+			// Click Log Graph
+			Thread.sleep(3000);
+			WaitforObject(appedo_cLog_graph);
+			browser.findElement(getObject(appedo_cLog_graph)).click();
+			Thread.sleep(4000);
+			
+			// View graph
+			WaitforObject(appedo_view_custom_logGraph);
+			String LogGraphc = browser.findElement(getObject(appedo_view_custom_logGraph)).getText().toString();
+			if (browser.findElement(getObject(appedo_view_custom_logGraph)).isDisplayed()) 
+			{
+				test.log(LogStatus.PASS, "Custom Log Graph viewed successfully");
+				test.log(LogStatus.PASS,"The Custom Log Chart Viewd is : " +LogGraphc);
+			} else {
+				test.log(LogStatus.FAIL, "Custom Log Graph view failed");
+			}
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+			catch (Exception e) {
+			test.log(LogStatus.FAIL, e.getMessage());
+			System.out.println(e.getMessage());
+			String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+			String image = test.addScreenCapture(Snapshot1);
+			test.log(LogStatus.FAIL, "Test Failed", image);
+			extent.endTest(test);
+			extent.flush();
+		}
+	
+	}
+	
 	public void viewNetworkGraph() {
 		try {
 			test = extent.startTest("System Metrics Network - Draw Chart", "Viewing Network graphs");

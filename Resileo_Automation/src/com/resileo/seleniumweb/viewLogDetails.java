@@ -128,6 +128,74 @@ public class viewLogDetails extends ReusableMethods {
 		}	
 	}
 	
+	public void viewCLogDetails() {
+		try {
+					test = extent.startTest("System Metrics Custom Log - Log Details", "Viewing Log Details of Log Module");
+
+					// Click on Menu icon
+					WaitforObject(appedo_menu);
+					browser.findElement(getObject(appedo_menu)).click();
+					browser.findElement(getObject(appedo_menu)).click();
+					Thread.sleep(8000);
+					// Click on System Metrics link
+					WaitforObject(appedo_link_systemMetrics);
+					browser.findElement(getObject(appedo_link_systemMetrics)).click();
+				//	browser.navigate().refresh();
+					Thread.sleep(8000);
+					
+					List<WebElement> table = browser.findElements(By.xpath("//table/tbody/tr"));
+					int totalrows = table.size();
+					for (int i = 0; i < totalrows; i++) 
+						
+						viewChart = browser.findElement(By.xpath("//table/tbody/tr[1]/td[2]")).getText().toString();
+					String rowname = browser.findElement(getObject(OAD_sysAdmin_sysName)).getText();
+					if (viewChart.equalsIgnoreCase(rowname))
+						
+					browser.findElement(By.xpath("//table/tbody/tr[1]/td[7]")).click();
+												
+					// View Log details
+					Thread.sleep(3000);
+					WaitforObject(appedo_Log_Details1);
+					browser.findElement(getObject(appedo_Log_Details2)).click();
+					Thread.sleep(5000);
+					
+					// Get Total Rows
+					String totalRows=browser.findElement(getObject(appedo_customLog_totalRows)).getText().toString();
+					test.log(LogStatus.PASS, totalRows);
+					
+					// Get Displayed Rows
+					String displayedRows=browser.findElement(getObject(appedo_customLog_displayedRows)).getText().toString();
+					test.log(LogStatus.PASS, displayedRows);
+					
+					// Get Filtered Rows
+					String filteredRows=browser.findElement(getObject(appedo_customLog_filteredRows)).getText().toString();
+					test.log(LogStatus.PASS, "Before Filtering: "+filteredRows);
+					
+					// Click on Filter
+					Thread.sleep(7000);
+					browser.findElement(getObject(appedo_customLog_txtfilter)).click();
+					browser.findElement(getObject(appedo_customLog_txtfilter)).sendKeys("same");
+					
+					// Get Rows Filtered
+					String rowsFiltered=browser.findElement(getObject(appedo_Log_Filterrow)).getText().toString();
+					test.log(LogStatus.PASS, "After Filtering: "+rowsFiltered);
+					extent.endTest(test);
+					extent.flush();
+
+		}
+
+		catch (Exception e) {
+		test.log(LogStatus.FAIL, e.getMessage());
+		System.out.println(e.getMessage());
+		String Snapshot1 = Utility.captureScreenshot(browser, this.getClass().getSimpleName() + Utility.Datetime());
+		String image = test.addScreenCapture(Snapshot1);
+		test.log(LogStatus.FAIL, "Test Failed", image);
+		extent.endTest(test);
+		extent.flush();
+		}
+
+		}
+	
 	public void viewNetworkDetailsGraph() {
 		try {
 			test = extent.startTest("System Metrics Network - Log Details", "Viewing Log Details of Network Module");
